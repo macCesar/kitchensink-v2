@@ -1,28 +1,28 @@
-let timerId = null;
+let timerId = null
 
 function stopProgress() {
-	if (timerId) {
-		clearInterval(timerId);
-		timerId = null;
-	}
+  if (timerId) {
+    clearInterval(timerId)
+    timerId = null
+  }
 }
 
 function startProgress() {
-	stopProgress();
-	timerId = setInterval(() => {
-		if ($.progressBar.value < $.progressBar.max) {
-			$.progressBar.value++;
-			$.progressBar.message = `Progress at ${$.progressBar.value}%`;
-		} else {
-			stopProgress();
-		}
-	}, 50);
+  stopProgress()
+  timerId = setInterval(() => {
+    if ($.progressBar.value < $.progressBar.max) {
+      $.progressBar.value++
+      $.progressBar.message = `Progress at ${$.progressBar.value}%`
+    } else {
+      stopProgress()
+    }
+  }, 50)
 }
 
 function onOpen() {
-	startProgress();
+  startProgress()
 }
 
 function onClose() {
-	stopProgress();
+  stopProgress()
 }

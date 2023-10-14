@@ -1,11 +1,11 @@
 <Alloy>
-    <Tab title="Mashups">
-        <Window title="Mashups">
-            <ListView id="listView" onItemclick="openComponent">
-                <ListSection>
-                    <ListItem title="Facebook" itemId="facebook" platform="android,ios"/>
-                </ListSection>
-            </ListView>
-        </Window>
-    </Tab>
+  <Tab title="Mashups">
+    <Window title="Mashups">
+      <ListView id="listView" onItemclick="openComponent">
+        <ListSection>
+          <ListItem title="Facebook" itemId="facebook" platform="android,ios"/>
+        </ListSection>
+      </ListView>
+    </Window>
+  </Tab>
 </Alloy>

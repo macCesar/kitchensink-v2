@@ -1,6 +1,6 @@
 <Alloy>
-    <Window title="Video Player">
-        <Button top="50" onClick="changeVideoSource">Change to Remote Source</Button>
-        <VideoPlayer id="myPlayer" />
-    </Window>
+  <Window title="Video Player">
+    <Button top="50" onClick="changeVideoSource">Change to Remote Source</Button>
+    <VideoPlayer id="myPlayer" />
+  </Window>
 </Alloy>

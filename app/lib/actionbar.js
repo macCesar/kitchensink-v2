@@ -16,90 +16,90 @@
  */
 
 export default class ActionBarHelper {
-	constructor(window) {
-		if (!Ti.Platform.osname === 'android') {
-			return;
-		}
+  constructor(window) {
+    if (!Ti.Platform.osname === 'android') {
+      return
+    }
 
-		this.win = window;
-		this.activity = this.win.activity;
-		this.actionBar = this.activity.actionBar;
-	}
+    this.win = window
+    this.activity = this.win.activity
+    this.actionBar = this.activity.actionBar
+  }
 
-	setTitle(title) {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  setTitle(title) {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		this.actionBar.title = title;
-	}
+    this.actionBar.title = title
+  }
 
-	setUpAction(action) {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  setUpAction(action) {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		if (action) {
-			this.actionBar.displayHomeAsUp = true;
-			this.actionBar.onHomeIconItemSelected = action;
-		} else {
-			this.actionBar.displayHomeAsUp = false;
-			this.actionBar.onHomeIconItemSelected = null;
-		}
-	}
+    if (action) {
+      this.actionBar.displayHomeAsUp = true
+      this.actionBar.onHomeIconItemSelected = action
+    } else {
+      this.actionBar.displayHomeAsUp = false
+      this.actionBar.onHomeIconItemSelected = null
+    }
+  }
 
-	setBackgroundImage(image) {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  setBackgroundImage(image) {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		this.actionBar.backgroundImage = image;
-	}
+    this.actionBar.backgroundImage = image
+  }
 
-	setIcon(icon) {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  setIcon(icon) {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		this.actionBar.icon = icon;
-		this.actionBar.logo = icon;
-	}
+    this.actionBar.icon = icon
+    this.actionBar.logo = icon
+  }
 
-	hide() {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  hide() {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		this.actionBar.hide();
-	}
+    this.actionBar.hide()
+  }
 
-	show() {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  show() {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		this.actionBar.show();
-	}
+    this.actionBar.show()
+  }
 
-	reloadMenu() {
-		if (!this._isValidActivity()) {
-			return;
-		}
+  reloadMenu() {
+    if (!this._isValidActivity()) {
+      return
+    }
 
-		this.activity.invalidateOptionsMenu();
-	}
+    this.activity.invalidateOptionsMenu()
+  }
 
-	_isValidActivity() {
-		if (!this.activity) {
-			Ti.API.error('Unable to get activity. Did you open your window alread?');
-			return false;
-		}
+  _isValidActivity() {
+    if (!this.activity) {
+      Ti.API.error('Unable to get activity. Did you open your window alread?')
+      return false
+    }
 
-		if (!this.actionBar) {
-			Ti.API.error('No ActionBar available');
-			return false;
-		}
+    if (!this.actionBar) {
+      Ti.API.error('No ActionBar available')
+      return false
+    }
 
-		return true;
-	}
+    return true
+  }
 }

@@ -5,12 +5,12 @@ import { logger } from 'logger';
  **/
 (function constructor() {
 
-}());
+}())
 
 function openSoundComponent(e) {
-	const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-	const component = Alloy.createController(identifier).getView();
+  const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId
+  const component = Alloy.createController(identifier).getView()
 
-	Alloy.CFG.tabGroup.activeTab.open(component);
-	logger.log('Ti.UI.TabGroup.activeTab.open', identifier);
+  Alloy.CFG.tabGroup.activeTab.open(component)
+  logger.log('Ti.UI.TabGroup.activeTab.open', identifier)
 }

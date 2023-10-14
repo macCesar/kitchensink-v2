@@ -5,9 +5,9 @@ import { logger } from 'logger';
  **/
 (function constructor() {
 
-}());
+}())
 
 function sliderValueChanged({ source, value }) {
-	$.state.text = `Current value: ${value.toFixed(2)} / ${source.max}`;
-	logger.log(`Ti.UI.Slider value changed to ${value}`);
+  $.state.text = `Current value: ${value.toFixed(2)} / ${source.max}`
+  logger.log(`Ti.UI.Slider value changed to ${value}`)
 }

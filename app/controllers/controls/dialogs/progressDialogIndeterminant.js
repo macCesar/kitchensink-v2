@@ -1,17 +1,17 @@
-let timerId = null;
+let timerId = null
 
 function onWindowClose() {
-	if (timerId) {
-		clearTimeout(timerId);
-		timerId = null;
-	}
+  if (timerId) {
+    clearTimeout(timerId)
+    timerId = null
+  }
 }
 
 function onShowProgressDialog() {
-	$.progressDialog.show();
+  $.progressDialog.show()
 
-	timerId = setTimeout(() => {
-		timerId = null;
-		$.progressDialog.hide();
-	}, 2000);
+  timerId = setTimeout(() => {
+    timerId = null
+    $.progressDialog.hide()
+  }, 2000)
 }

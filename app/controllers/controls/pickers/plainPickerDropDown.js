@@ -1,3 +1,3 @@
 function onPickerValueChanged(e) {
-	$.valueLabel.text = `Selected: ${e.row.title}`;
+  $.valueLabel.text = `Selected: ${e.row.title}`
 }

@@ -5,14 +5,14 @@ import { logger } from 'logger';
  **/
 (function constructor() {
 
-}());
+}())
 
 function openComponent(e) {
-	const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-	const component = Alloy.createController(identifier).getView();
+  const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId
+  const component = Alloy.createController(identifier).getView()
 
-	Alloy.Globals.setAndroidBackButton(component);
-	Alloy.CFG.tabGroup.activeTab.open(component);
+  Alloy.Globals.setAndroidBackButton(component)
+  Alloy.CFG.tabGroup.activeTab.open(component)
 
-	logger.log('Ti.UI.TabGroup.activeTab.open', identifier);
+  logger.log('Ti.UI.TabGroup.activeTab.open', identifier)
 }

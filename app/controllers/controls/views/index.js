@@ -5,16 +5,16 @@ import { logger } from 'logger';
  **/
 (function constructor() {
 
-}());
+}())
 
 function openComponent(e) {
-	const identifier = 'controls/views/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-	const component = Alloy.createController(identifier).getView();
+  const identifier = 'controls/views/' + e.section.getItemAt(e.itemIndex).properties.itemId
+  const component = Alloy.createController(identifier).getView()
 
-	if (OS_ANDROID && identifier !== 'controls/views/listviewMultiSelect') {
-		Alloy.Globals.setAndroidBackButton(component);
-	}
-	Alloy.CFG.tabGroup.activeTab.open(component);
+  if (OS_ANDROID && identifier !== 'controls/views/listviewMultiSelect') {
+    Alloy.Globals.setAndroidBackButton(component)
+  }
+  Alloy.CFG.tabGroup.activeTab.open(component)
 
-	logger.log('Ti.UI.TabGroup.activeTab.open', identifier);
+  logger.log('Ti.UI.TabGroup.activeTab.open', identifier)
 }

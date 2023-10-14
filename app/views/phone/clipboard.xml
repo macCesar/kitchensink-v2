@@ -1,8 +1,8 @@
 <Alloy>
-	<Window title="Clipboard" layout="vertical">
-		<TextField id="copyField" class="field" />
-		<Button onClick="copyText" class="button">Copy Text</Button>
-		<TextField id="pasteField" class="field" />
-		<Button onClick="pasteText" class="button">Paste Text</Button>
-	</Window>
+  <Window title="Clipboard" layout="vertical">
+    <TextField id="copyField" class="field" />
+    <Button onClick="copyText" class="button">Copy Text</Button>
+    <TextField id="pasteField" class="field" />
+    <Button onClick="pasteText" class="button">Paste Text</Button>
+  </Window>
 </Alloy>
