@@ -1,8 +1,3 @@
-// PurgeTSS v6.2.35
-// Created by César Estrada
-// https://github.com/macCesar/purgeTSS
-
-// _app.tss styles
 'Window[platform=ios]': {
 	backgroundColor: 'white',
 	barColor: Alloy.CFG.styles.tintColor,
@@ -61,21 +56,3 @@
 	borderRadius: 4,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
-
-// Ti Elements
-'ImageView[platform=ios]': { hires: true }
-'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#FFFFFF' }
-
-// Main Styles
-'.black': { color: '#000000' }
-'.compact': { compact: true }
-'.scrollable': { scrollable: true }
-'.vertical': { layout: 'vertical' }
-'.visible': { visible: true }
-
-// Unused or unsupported classes
-// '.DELETE': { }
-// '.LIKE': { }
-// '.picker': { }
-// '.scaleOptionBar': { }
