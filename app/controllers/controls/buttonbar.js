@@ -7,8 +7,8 @@ import { logger } from 'logger';
 
 }())
 
-function onTextButtonBarClicked(e) {
-  const message = `Clicked on button: ${e.source.labels[e.index].title}`
+function onTextButtonBarClicked(event) {
+  const message = `Clicked on button: ${event.source.labels[event.index].title}`
   alert(message)
   logger.log(message)
 }

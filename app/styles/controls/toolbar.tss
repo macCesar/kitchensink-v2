@@ -1,8 +1,0 @@
-'.toolbar': {
-	bottom: 0,
-	width: Ti.UI.FILL
-}
-
-'.toolbar[platform=android]': {
-	elevation: 2
-}

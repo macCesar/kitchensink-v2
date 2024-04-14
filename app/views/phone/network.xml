@@ -1,6 +1,8 @@
 <Alloy>
   <Window title="Network">
-    <Label id="statusLabel" />
-    <Label id="eventLabel" />
+    <View class="vertical">
+      <Label id="statusLabel" />
+      <Label id="eventLabel" />
+    </View>
   </Window>
 </Alloy>

@@ -1,8 +1,12 @@
 ## Kitchen Sink 2.0
 
+This rendition of the Kitchen Sink 2.0 introduces a specialized **PurgeTSS** Edition, incorporating advanced utility classes and the Animation module for an elevated development experience. Leveraging the power of **PurgeTSS**, this edition boasts enhanced styling capabilities and improved performance.
+
+Furthermore, TiKit UI components have been seamlessly integrated, providing an additional layer of sophistication to the user interface. Developers can delve into the codebase, explore the nuances of **PurgeTSS** utilities, and contribute to making this version even more refined.
+
 This project gives an overview of native components available in Titanium.
 The components are grouped into multiple groups and can be logged in the "Logs" tab.
-It also includes full support for iOS, Android & Windows.
+It also includes full support for iOS & Android.
 
 ![screenshot](screenshot.png)
 

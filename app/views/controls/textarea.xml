@@ -1,7 +1,5 @@
 <Alloy>
   <Window title="Text Area">
-    <TextArea class="textarea" onChange="textAreaValueChanged" onFocus="textAreaFocussed" onBlur="textAreaBlurred">
-            My Text Area
-    </TextArea>
+    <TextArea value="My Text Area" class="w-75 ios:h-25 ios:bg-(#f0f0f0) ios:rounded-2 android:lines-4 android:border-style-filled" onChange="textAreaValueChanged" onFocus="textAreaFocussed" onBlur="textAreaBlurred" />
   </Window>
 </Alloy>

@@ -1,12 +1,14 @@
 <Alloy>
   <Window title="Alert Dialog">
-    <Label id="resultLabel" top="30"/>
-    <Button title="Show Alert Dialog" onClick="onShowAlertDialog"/>
-    <AlertDialog id="alert" title="Logout" message="Do you really want to log-out?" onClick="onAlertDialogClicked">
+    <Label id="resultLabel" class="mt-8" />
+
+    <Button title="Show Alert Dialog" onClick="onShowAlertDialog" />
+
+    <AlertDialog id="alert" class="cancel-(0) destructive-(1) preferred-(2)" title="Logout" message="Do you really want to log-out?" onClick="onAlertDialogClicked">
       <ButtonNames>
-        <ButtonName>Confirm</ButtonName>
-        <ButtonName>Delete</ButtonName>
         <ButtonName>Cancel</ButtonName>
+        <ButtonName>Delete</ButtonName>
+        <ButtonName>Confirm</ButtonName>
       </ButtonNames>
     </AlertDialog>
   </Window>

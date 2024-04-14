@@ -1,7 +1,8 @@
 <Alloy>
-  <Window title="Masked Image (Tint)" layout="vertical">
-    <MaskedImage id="myMaskedImage" top="30" width="160" height="160"/>
-    <OptionBar onClick="onColorOptionBarClicked" top="30">
+  <Window title="Masked Image (Tint)" class="vertical">
+    <MaskedImage id="myMaskedImage" class="wh-40 tint-(red) mt-8" mask="/images/mask-titanium-logo.png" />
+
+    <OptionBar onClick="onColorOptionBarClicked" class="mt-8">
       <Labels>
         <Label>Red</Label>
         <Label>Green</Label>

@@ -1,10 +1,11 @@
 <Alloy>
   <Window title="Card View" layout="vertical">
-    <CardView class="cardView" elevation="16" onClick="onCardView1Clicked">
-      <Label class="cardLabel">Elevated Appearance\n(Tap Me)</Label>
+    <CardView class="padding-6 elevation-4 mx-5 mt-5" onClick="onCardView1Clicked">
+      <Label text="Elevated Appearance\n(Tap Me)" class="touch-enabled-false text-center" />
     </CardView>
-    <CardView class="cardView" elevation="0" borderWidth="1" borderColor="gray" onClick="onCardView2Clicked">
-      <Label class="cardLabel">Flat Outline Appearance\n(Tap Me)</Label>
+
+    <CardView class="padding-6 elevation-0 border-1 mx-5 mt-5 border-gray-500" onClick="onCardView2Clicked">
+      <Label text="Flat Outline Appearance\n(Tap Me)" class="touch-enabled-false text-center" />
     </CardView>
   </Window>
 </Alloy>

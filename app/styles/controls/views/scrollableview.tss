@@ -1,5 +1,0 @@
-
-'#scrollable': {
-	showPagingControl: true,
-	pagingControlColor: Alloy.CFG.styles.tintColor
-}

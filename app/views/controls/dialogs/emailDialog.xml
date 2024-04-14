@@ -1,5 +1,5 @@
 <Alloy>
   <Window title="E-Mail Dialog">
-    <Button title="Compose E-Mail" onClick="onShowEMailDialog"/>
+    <Button title="Compose E-Mail" onClick="onShowEMailDialog" />
   </Window>
 </Alloy>

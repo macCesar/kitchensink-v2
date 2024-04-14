@@ -1,8 +1,9 @@
 <Alloy>
   <Window title="Clipboard" layout="vertical">
-    <TextField id="copyField" class="field" />
-    <Button onClick="copyText" class="button">Copy Text</Button>
-    <TextField id="pasteField" class="field" />
-    <Button onClick="pasteText" class="button">Paste Text</Button>
+    <TextField id="copyField" hintText="Enter text ..." class="w-(80%) border-style-rounded android:hint-type-animated mt-10" />
+    <Button onClick="copyText" class="mr-(10%) mt-2">Copy Text</Button>
+
+    <TextField id="pasteField" hintText="(Paste here)" class="w-(80%) border-style-rounded android:hint-type-animated editable-false mt-10" />
+    <Button onClick="pasteText" class="mr-(10%) mt-2">Paste Text</Button>
   </Window>
 </Alloy>

@@ -1,7 +1,0 @@
-'#authenticate[platform=ios]': {
-	width: 300,
-	height: 100,
-	font: {
-		fontSize: 18
-	}
-}

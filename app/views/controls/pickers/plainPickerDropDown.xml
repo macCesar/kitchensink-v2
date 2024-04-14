@@ -1,13 +1,14 @@
 <Alloy>
   <Window title="Plain Picker (Drop-Down)">
-    <Label id="valueLabel" top="30"/>
-    <Picker id="picker" useSpinner="false" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" hintText="Select Item" width="80%" onChange="onPickerValueChanged">
+    <Label id="valueLabel" class="mt-8" />
+
+    <Picker id="picker" class="use-spinner-false border-style-rounded w-4/5" hintText="Select Item" onChange="onPickerValueChanged">
       <PickerColumn>
-        <PickerRow title="Item 1"/>
-        <PickerRow title="Item 2"/>
-        <PickerRow title="Item 3"/>
-        <PickerRow title="Item 4"/>
-        <PickerRow title="Item 5"/>
+        <PickerRow title="Item 1" />
+        <PickerRow title="Item 2" />
+        <PickerRow title="Item 3" />
+        <PickerRow title="Item 4" />
+        <PickerRow title="Item 5" />
       </PickerColumn>
     </Picker>
   </Window>

@@ -1,18 +1,23 @@
 <Alloy>
-  <Window id="win" title="List View (Multi-Select)" layout="vertical" tabBarHidden="true" theme="Theme.KitchenSink.ToolbarTitleBar" onOpen="onWindowOpen" onPostlayout="onWindowPostLayout" onAndroidback="onAndroidBack">
-    <Toolbar id="mainToolbar" visible="true" hiddenBehavior="Ti.UI.HIDDEN_BEHAVIOR_GONE" platform="android"/>
-    <Toolbar id="editToolbar" visible="false" hiddenBehavior="Ti.UI.HIDDEN_BEHAVIOR_GONE" platform="android"/>
-    <ListView id="listView" showSelectionCheck="true" allowsSelectionDuringEditing="true" allowsMultipleSelectionDuringEditing="true" onItemclick="onItemClicked" onLongpress="onLongPressed" onItemsselected="onItemsSelected"/>
-    <Toolbar id="mainToolbar" visible="true" height="Ti.UI.SIZE" platform="ios"/>
-    <Toolbar id="editToolbar" visible="false" height="0" platform="ios">
+  <Window id="win" title="List View (Multi-Select)" class="vertical tab-bar-hidden" theme="Theme.KitchenSink.ToolbarTitleBar" onOpen="onWindowOpen" onPostlayout="onWindowPostLayout" onAndroidback="onAndroidBack">
+    <Toolbar platform="android" id="mainToolbar" class="hidden-behavior-gone block" />
+
+    <Toolbar platform="android" id="editToolbar" class="hidden-behavior-gone hidden" />
+
+    <ListView id="listView" class="show-selection-check allows-selection-during-editing allows-multiple-selection-during-editing" onItemclick="onItemClicked" onLongpress="onLongPressed" onItemsselected="onItemsSelected" />
+
+    <Toolbar platform="ios" id="mainToolbar" class="block h-auto" />
+
+    <Toolbar platform="ios" id="editToolbar" class="hidden h-0">
       <Items>
-        <Button id="shareButton" systemButton="Ti.UI.iOS.SystemButton.ACTION" onClick="shareSelectedItems"/>
-        <Button systemButton="Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE"/>
-        <Label id="itemsSelectedLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" width="200"/>
-        <Button systemButton="Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE"/>
-        <Button id="deleteButton" systemButton="Ti.UI.iOS.SystemButton.TRASH" onClick="deleteSelectedItems"/>
+        <Button id="shareButton" class="system-button-action" onClick="shareSelectedItems" />
+        <Button class="system-button-flexible-space" />
+        <Label id="itemsSelectedLabel" class="w-50 text-center" />
+        <Button class="system-button-flexible-space" />
+        <Button id="deleteButton" class="system-button-trash" onClick="deleteSelectedItems" />
       </Items>
     </Toolbar>
-    <View id="bottomPaddingView" backgroundColor="#f7f7f7" width="Ti.UI.FILL" bottom="0" platform="ios"/>
+
+    <View platform="ios" id="bottomPaddingView" class="bg-(#f7f7f7) mb-0 w-screen" />
   </Window>
 </Alloy>

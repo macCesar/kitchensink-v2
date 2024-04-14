@@ -1,5 +1,5 @@
-import { logger } from 'logger'
-import Map from 'ti.map';
+import Map from 'ti.map'
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -51,34 +51,34 @@ import Map from 'ti.map';
   }
 }())
 
-function updatePosition(e) {
-  if (!e.success || e.error) {
-    Ti.API.debug(JSON.stringify(e))
-    Ti.API.debug(e)
+function updatePosition(event) {
+  if (!event.success || event.error) {
+    Ti.API.debug(JSON.stringify(event))
+    Ti.API.debug(event)
     return
   }
 
-  const geoPackage = JSON.stringify(e),
-    latitude = e.coords.latitude,
-    longitude = e.coords.longitude
+  const geoPackage = JSON.stringify(event),
+    latitude = event.coords.latitude,
+    longitude = event.coords.longitude
 
   $.geoloc.value = geoPackage
-  $.geo_lat.text = 'Latitude: ' + latitude
-  $.geo_long.text = 'Longitude: ' + longitude
+  $.geo_lat.text = `Latitude: ${latitude}`
+  $.geo_long.text = `Longitude: ${longitude}`
 
-  logger.log('Ti.Geolocation', 'location: ' + geoPackage)
+  logger.log('Ti.Geolocation', 'location:', geoPackage)
 }
 
 function getCurrentPosition() {
-  Ti.Geolocation.getCurrentPosition((e) => {
-    if (!e.success || e.error) {
-      Ti.API.debug(JSON.stringify(e))
-      Ti.API.debug(e)
+  Ti.Geolocation.getCurrentPosition((event) => {
+    if (!event.success || event.error) {
+      Ti.API.debug(JSON.stringify(event))
+      Ti.API.debug(event)
       alert('Error getting current position')
       return
     }
-    const latitude = e.coords.latitude,
-      longitude = e.coords.longitude
+    const latitude = event.coords.latitude,
+      longitude = event.coords.longitude
 
     const mapview = Map.createView({
       userLocation: true,
@@ -96,8 +96,8 @@ function getCurrentPosition() {
     $.map.add(mapview)
 
     // Handle click events on any annotations on this map.
-    mapview.addEventListener('click', (e) => {
-      Ti.API.info('Clicked ' + e.clicksource + ' on ' + e.latitude + ',' + e.longitude)
+    mapview.addEventListener('click', (event) => {
+      Ti.API.info(`Clicked ${event.clicksource} on ${event.latitude}, ${event.longitude}`)
     })
   })
 }

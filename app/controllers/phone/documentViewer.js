@@ -10,9 +10,10 @@ function openFile(filePath) {
     // - Must define a <queries/> intent for every mime-type passed to canOpenURL(). See "tiapp.xml" file.
     // - openURL() method can only open external files or non-compressed files within APK.
     // - See "./platform/android/build.gradle" file on how to use "noCompress" per file extension.
+    // eslint-disable-next-line no-lonely-if
     if (Ti.Platform.canOpenURL(filePath)) {
-      Ti.Platform.openURL(filePath, (e) => {
-        if (!e.success) {
+      Ti.Platform.openURL(filePath, ({ success }) => {
+        if (!success) {
           alert('Failed to open PDF file.')
         }
       })

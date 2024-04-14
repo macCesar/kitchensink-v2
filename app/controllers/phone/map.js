@@ -1,21 +1,21 @@
 import { logger } from 'logger'
 
-function handleMapClick(e) {
+function handleMapClick(event) {
   let clickedAnnotation = null
 
   // check if annotation was clicked
-  if (e.hasOwnProperty('annotation')) {
+  if (event.hasOwnProperty('annotation')) {
 
     // check if the annotation was selected or deselected based on previous state
-    if (e.annotation.id === clickedAnnotation) {
-      logger.log('annotation deselected', e.annotation)
+    if (event.annotation.id === clickedAnnotation) {
+      logger.log('annotation deselected', event.annotation)
       clickedAnnotation = null
     } else {
-      logger.log('annotation selected', e.annotation)
-      clickedAnnotation = e.annotation.id
+      logger.log('annotation selected', event.annotation)
+      clickedAnnotation = event.annotation.id
     }
-  } else if (e.clicksource === 'circle') {
-    logger.log('circle clicked', e.latitude, e.longitude)
+  } else if (event.clicksource === 'circle') {
+    logger.log('circle clicked', event.latitude, event.longitude)
   }
 }
 

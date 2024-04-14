@@ -7,8 +7,8 @@ import { logger } from 'logger';
 
 }())
 
-function openComponent(e) {
-  const action = e.itemId
+function openComponent(event) {
+  const action = event.itemId
 
   switch (action) {
     case 'showCameraPhoto':
@@ -27,12 +27,12 @@ function openComponent(e) {
       openFromGallery()
       break
     default:
-      logger.log('Ti.Media', 'Unknown action selected: ' + action)
+      logger.log('Ti.Media', `Unknown action selected: ${action}`)
       break
   }
 
   if (OS_IOS) {
-    e.source.deselectItem(e.sectionIndex, e.itemIndex)
+    event.source.deselectItem(event.sectionIndex, event.itemIndex)
   }
 }
 
@@ -44,12 +44,12 @@ function showCamera(mediaTypes) {
     }
     Ti.Media.showCamera({
       mediaTypes: mediaTypes,
-      success: (e) => {
+      success: ({ media }) => {
         logger.log('Ti.Media', 'Image taken successfully!')
-        processImage(e.media)
+        processImage(media)
       },
       error: ({ error }) => {
-        logger.log('Ti.Media', 'Error showing camera: ' + error)
+        logger.log('Ti.Media', `Error showing camera: ${error}`)
       },
       cancel: () => {
         logger.log('Ti.Media', 'Camera was cancelled')
@@ -101,7 +101,7 @@ function saveToGallery() {
       logger.log('Ti.Media', 'Image saved to photo-gallery successfully!')
     },
     error: ({ error }) => {
-      logger.log('Ti.Media', 'Error saving image to photo-gallery: ' + error)
+      logger.log('Ti.Media', `Error saving image to photo-gallery: ${error}`)
     }
   })
 }
@@ -114,12 +114,12 @@ function openFromGallery() {
     }
 
     Ti.Media.openPhotoGallery({
-      success: (e) => {
+      success: ({ media }) => {
         logger.log('Ti.Media', 'Image open successfully!')
-        processImage(e.media)
+        processImage(media)
       },
       error: ({ error }) => {
-        logger.log('Ti.Media', 'Error opening image: ' + error)
+        logger.log('Ti.Media', `Error opening image: ${error}`)
       },
       cancel: () => {
         logger.log('Ti.Media', 'Opening photo-gallery was cancelled')

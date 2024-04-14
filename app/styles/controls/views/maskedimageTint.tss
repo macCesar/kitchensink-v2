@@ -1,5 +1,0 @@
-
-'#myMaskedImage': {
-	mask: '/images/mask-titanium-logo.png',
-	tint: 'red'
-}

@@ -2,20 +2,22 @@
   <Window id="win" title="Drawer" onAndroidback="onAndroidBack" onOpen="onWindowOpen">
     <DrawerLayout platform="android" id="drawerLayout">
       <LeftView>
-        <View class="views">
-          <Label text="Left"/>
+        <View class="bg-primary-500">
+          <Label text="Left" />
         </View>
       </LeftView>
+
       <CenterView>
         <View>
-          <Button id="btn_left" title="Toggle left" onClick="onClickLeft"/>
-          <Button id="close" title="Close window" onClick="onClickClose"/>
-          <Button id="btn_right" title="Toggle right" onClick="onClickRight"/>
+          <Button id="btn_left" title="Toggle left" onClick="onClickLeft" class="mt-25" />
+          <Button id="close" title="Close window" onClick="onClickClose" />
+          <Button id="btn_right" title="Toggle right" onClick="onClickRight" class="mb-25" />
         </View>
       </CenterView>
+
       <RightView>
-        <View class="views">
-          <Label text="Right"/>
+        <View class="bg-primary-500">
+          <Label text="Right" />
         </View>
       </RightView>
     </DrawerLayout>

@@ -1,3 +1,3 @@
-function onPickerValueChanged(e) {
-  $.state.text = `Selected: ${e.selectedValue}`
+function onPickerValueChanged(event) {
+  $.state.text = `Selected: ${event.selectedValue}`
 }

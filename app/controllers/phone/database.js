@@ -33,8 +33,8 @@ function intitializeDatabase() {
   db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)', 4, 'Name 4')
   db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)', 5, '\u2070 \u00B9 \u00B2 \u00B3 \u2074 \u2075 \u2076 \u2077 \u2078 \u2079')
 
-  logger.log('Ti.Database', 'JUST INSERTED, rowsAffected = ' + db.rowsAffected)
-  logger.log('Ti.Database', 'JUST INSERTED, lastInsertRowId = ' + db.lastInsertRowId)
+  logger.log('Ti.Database', `JUST INSERTED, rowsAffected = ${db.rowsAffected}`)
+  logger.log('Ti.Database', `JUST INSERTED, lastInsertRowId = ${db.lastInsertRowId}`)
 
   /**
 	 *	Update the previously inserted data.
@@ -55,10 +55,10 @@ function intitializeDatabase() {
 	 *	Select (query) data from the database.
 	 **/
   const rows = db.execute('SELECT * FROM DATABASETEST')
-  logger.log('Ti.Database', 'ROW COUNT = ' + rows.rowCount)
+  logger.log('Ti.Database', `ROW COUNT = ${rows.rowCount}`)
 
   while (rows.isValidRow()) {
-    logger.log('Ti.Database', ' - ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name') + ' COLUMN NAME ' + rows.fieldName(0))
+    logger.log('Ti.Database', ` - ID: ${rows.field(0)} NAME: ${rows.fieldByName('name')} COLUMN NAME ${rows.fieldName(0)}`)
     rows.next()
   }
 

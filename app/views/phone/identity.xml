@@ -1,5 +1,5 @@
 <Alloy>
   <Window id="identity" title="Identity" onOpen="handleOpen">
-    <Button id="authenticate" title="Authenticate" onClick="validate" />
+    <Button id="authenticate" class="ios:w-75 h-25 text-lg" title="Authenticate" onClick="validate" />
   </Window>
 </Alloy>

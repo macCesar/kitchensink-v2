@@ -1,11 +1,11 @@
 <Alloy>
-  <Window title="Shortcut Items" layout="vertical">
-    <Button class="actionButton" onClick="listStaticShortcuts">listStaticShortcuts()</Button>
-    <Button class="actionButton" onClick="listDynamicShortcuts">listDynamicShortcuts()</Button>
-    <Button class="actionButton" onClick="dynamicShortcutExists">dynamicShortcutExists('details')</Button>
-    <Button class="actionButton" onClick="getDynamicShortcut">getDynamicShortcut('details')</Button>
-    <Button class="actionButton" onClick="createDynamicShortcut">createDynamicShortcut()</Button>
-    <Button class="actionButton" onClick="removeDynamicShortcut">removeDynamicShortcut('details')</Button>
-    <Button class="actionButton" onClick="removeAllDynamicShortcuts">removeAllDynamicShortcuts()</Button>
+  <Window title="Shortcut Items" class="vertical">
+    <Button class="mt-5" onClick="listStaticShortcuts" title="listStaticShortcuts()" />
+    <Button class="mt-5" onClick="listDynamicShortcuts" title="listDynamicShortcuts()" />
+    <Button class="mt-5" onClick="dynamicShortcutExists" title="dynamicShortcutExists('details')" />
+    <Button class="mt-5" onClick="getDynamicShortcut" title="getDynamicShortcut('details')" />
+    <Button class="mt-5" onClick="createDynamicShortcut" title="createDynamicShortcut('details')" />
+    <Button class="mt-5" onClick="removeDynamicShortcut" title="removeDynamicShortcut('details')" />
+    <Button class="mt-5" onClick="removeAllDynamicShortcuts" title="removeAllDynamicShortcuts()" />
   </Window>
 </Alloy>

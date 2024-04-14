@@ -1,3 +1,3 @@
-function onPickerValueChanged(e) {
-  $.valueLabel.text = `Selected: ${e.row.title}`
+function onPickerValueChanged(event) {
+  $.valueLabel.text = `Selected: ${event.row.title}`
 }

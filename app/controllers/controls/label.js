@@ -18,7 +18,7 @@ function changeToRightAlignment() {
 }
 
 function changeToJustifyAlignment() {
-  $.myLabel.textAlign = 3 // or 'justify' in Titanium 6.1.0 and later (TIMOB-3408)
+  $.myLabel.textAlign = 'justify'
 }
 
 function changeColor() {

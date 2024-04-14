@@ -61,16 +61,16 @@ import fb from 'facebook';
   function getGraphPath() {
     fb.requestWithGraphPath('me', {
       fields: 'id,name,picture,friends,posts'
-    }, 'GET', (e) => {
-      if (e.success) {
-        const respObj = JSON.parse(e.result)
+    }, 'GET', (event) => {
+      if (event.success) {
+        const respObj = JSON.parse(event.result)
         logger.log('Modules.Facebook.requestWithGraphPath', respObj)
 
         $.fbUserImage.image = respObj.picture.data.url
-        $.fbUserName.text = 'Welcome ' + respObj.name
-        $.fbFriends.text = 'Total Friends ' + respObj.friends.summary.total_count
-      } else if (e.error) {
-        logger.log(e.error)
+        $.fbUserName.text = `Welcome ${respObj.name}`
+        $.fbFriends.text = `Total Friends ${respObj.friends.summary.total_count}`
+      } else if (event.error) {
+        logger.log(event.error)
       } else {
         logger.log('Unknown response')
       }

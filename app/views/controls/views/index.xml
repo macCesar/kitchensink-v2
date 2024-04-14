@@ -2,8 +2,8 @@
   <Window title="Views">
     <ListView id="listView" onItemclick="openComponent">
       <ListSection>
-        <ListItem title="Blur View" itemId="blurview" platform="ios"/>
-        <ListItem title="Card View" itemId="cardview" platform="android"/>
+        <ListItem platform="ios" title="Blur View" itemId="blurview" />
+        <ListItem platform="android" title="Card View" itemId="cardview" />
         <ListItem title="Gradients" itemId="gradients" />
         <ListItem title="Image View" itemId="imageview" />
         <ListItem title="Image View (Scaled)" itemId="imageviewScaled" />

@@ -32,10 +32,10 @@ function validate() {
   Identity.authenticate({
     reason: 'Please authenticate to continue',
     fallbackTitle: '',
-    callback: (e) => {
+    callback: ({ success, error }) => {
       Identity.invalidate()
-      if (!e.success) {
-        alert(e.error)
+      if (!success) {
+        alert(error)
       } else {
         setTimeout(() => {
           alert('Successfully authenticated!')

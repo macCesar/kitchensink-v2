@@ -17,8 +17,8 @@ function getNameFromOrientationId(orientationId) {
 }
 
 // Called when the device orientation changes. (This is not the window's orientation.)
-function onOrientationChanged(e) {
-  $.orientationLabel.text = `Device Orientation:\n${getNameFromOrientationId(e.orientation)}`
+function onOrientationChanged({ orientation }) {
+  $.orientationLabel.text = `Device Orientation:\n${getNameFromOrientationId(orientation)}`
 }
 
 // Called when the device has been shaked.

@@ -1,6 +1,6 @@
 <Alloy>
   <Window customToolbar="toolbar" theme="Theme.Titanium">
-    <Toolbar class="toolbar">
+    <Toolbar title="MyMenu" subtitle="Subtitle" class="bar-green-500 display-home-as-up home-button-enabled mt-0 w-screen">
       <!-- The Items tag sets the Toolbar.items property. -->
       <Items>
         <Button id="ok" title="OK" />

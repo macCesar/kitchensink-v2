@@ -7,8 +7,8 @@ import { logger } from 'logger';
 
 }())
 
-function openSoundComponent(e) {
-  const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId
+function openSoundComponent(event) {
+  const identifier = `phone/${event.section.getItemAt(event.itemIndex).properties.itemId}`
   const component = Alloy.createController(identifier).getView()
 
   Alloy.CFG.tabGroup.activeTab.open(component)

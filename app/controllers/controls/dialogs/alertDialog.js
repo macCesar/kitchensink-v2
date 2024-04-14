@@ -4,7 +4,7 @@ function onShowAlertDialog() {
   $.alert.show()
 }
 
-function onAlertDialogClicked(e) {
-  $.resultLabel.text = `Selected button at index: ${e.index}`
-  logger.log(`Ti.UI.AlertDialog selected button at index: ${e.index}`)
+function onAlertDialogClicked({ index }) {
+  $.resultLabel.text = `Selected button at index: ${index}`
+  logger.log(`Ti.UI.AlertDialog selected button at index: ${index}`)
 }

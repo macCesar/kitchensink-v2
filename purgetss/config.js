@@ -1,19 +1,78 @@
-// ./purgetss/config.js
 module.exports = {
   purge: {
     mode: 'all',
-    method: 'sync', // set how to execute auto-purging: sync or async
-
-    // These options are passed directly to PurgeTSS
+    method: 'sync',
     options: {
-      legacy: false, // Generates & Purge tailwind.tss v5.x classes
-      missing: true, // Report missing classes
-      widgets: false, // Purge widgets too
-      safelist: [], // Array of classes to keep
-      plugins: [] // Array of properties to ignore
+      legacy: false,
+      missing: true,
+      widgets: false,
+      safelist: [],
+      plugins: []
     }
   },
   theme: {
-    extend: {}
+    extend: {
+      spacing: {
+        25: 100,
+        35: 140,
+        50: 200,
+        55: 220,
+        75: 300
+      },
+      colors: {
+        primary: {
+          50: '#fff1f2',
+          100: '#ffe0e3',
+          200: '#ffc7cd',
+          300: '#ffa0aa',
+          400: '#ff6979',
+          500: '#f93a4e',
+          600: '#e71b30',
+          700: '#c91326',
+          800: '#a11322',
+          900: '#851722',
+          950: '#49060d',
+          default: '#c91326'
+        }
+      }
+    },
+    fontFamily: {
+      mono: 'Courier New',
+      sans: 'opensans-regular'
+    },
+
+    // Ti Elements
+    Window: {
+      android: { apply: 'android:soft-keyboard-on-focus-show' },
+      ios: {  backButtonTitle: '', apply: 'bar-primary nav-tint-white translucent title-attributes-white bg-white' }
+    },
+
+    Label: { default: { apply: 'font-sans' } },
+    Button: { default: { apply: 'font-sans' } },
+    Picker: { default: { apply: 'font-sans' } },
+    Switch: { default: { apply: 'font-sans' } },
+    TextArea: { default: { apply: 'font-sans' } },
+    TextField: { default: { apply: 'font-sans' } },
+    PickerRow: { default: { apply: 'font-sans' } },
+    ProgressBar: { default: { apply: 'font-sans' } },
+    PickerColumn: { default: { apply: 'font-sans' } },
+    TableViewRow: { default: { apply: 'font-sans' } },
+    ActivityIndicator: { default: { apply: 'font-sans' } },
+
+    Tab: { default: { icon: '/images/icons/tab.png' } },
+    ListView: { ios: { apply: 'list-item-template-subtitle bg-white' } },
+    TabGroup: { ios: { apply: 'translucent-false active-tint-primary active-title-primary bg-white' } },
+    ListItem: { default: { apply: 'accessory-type-list-disclosure subtitle-(#777) font-sans' } },
+
+    // Custom Classes
+    '.state-label': { default: { apply: 'mt-(100) text-(15) mx-5 w-screen text-center' } },
+    '.action-button': { default: { apply: 'w-(300) tint-white rounded-2 bg-primary h-10 text-white' } },
+    '.placeholder-label': { default: { apply: 'w-(250) h-(125) text-(#333) rounded-2 bg-(#eee) text-center' } },
+    '.textfield': {
+      default: { apply: 'w-(300) bubble-parent-false mt-2.5' },
+      ios: { apply: 'rounded-2 py-(5) h-10 bg-white px-5' },
+      android: { apply: 'hint-type-animated border-style-rounded h-auto' }
+    },
+    '.textlabel': { default: { apply: 'w-(300) bubble-parent-false mt-2.5 text-sm font-bold' } }
   }
 }

@@ -1,7 +1,7 @@
 import { logger } from 'logger'
 
-function openComponent(e) {
-  const identifier = 'controls/pickers/' + e.section.getItemAt(e.itemIndex).properties.itemId
+function openComponent(event) {
+  const identifier = `controls/pickers/${event.section.getItemAt(event.itemIndex).properties.itemId}`
   const component = Alloy.createController(identifier).getView()
 
   Alloy.Globals.setAndroidBackButton(component)

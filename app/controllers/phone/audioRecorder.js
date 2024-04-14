@@ -1,5 +1,5 @@
-let audioRecorder
 let record
+let audioRecorder
 let currentSessionCategory = Ti.Media.audioSessionCategory;
 
 /**
@@ -18,12 +18,12 @@ let currentSessionCategory = Ti.Media.audioSessionCategory;
 
 function onOpen() {
   if (!Ti.Media.hasAudioRecorderPermissions()) {
-    Ti.Media.requestAudioRecorderPermissions((e) => {
-      if (e.success) {
+    Ti.Media.requestAudioRecorderPermissions(event => {
+      if (event.success) {
         $.startRecordingButton.visible = true
       } else {
         Ti.API.error('Error: Unable to request audio recorder permissions:')
-        Ti.API.error(e)
+        Ti.API.error(event)
       }
     })
   } else {

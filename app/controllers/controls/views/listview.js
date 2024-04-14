@@ -15,9 +15,9 @@ function fetchData() {
   }, 1000)
 }
 
-function handleListViewClick(e) {
-  logger.log('Ti.UI.ListView clicked cell at index', e.sectionIndex  + ' / ' + e.itemIndex)
+function handleListViewClick(event) {
+  logger.log('Ti.UI.ListView clicked cell at index', event.sectionIndex  + ' / ' + event.itemIndex)
   if (OS_IOS) {
-    this.deselectItem(e.sectionIndex, e.itemIndex)
+    this.deselectItem(event.sectionIndex, event.itemIndex)
   }
 }

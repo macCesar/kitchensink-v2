@@ -10,8 +10,8 @@ const globalData = Alloy.Globals.listViewEditData
 
 /**
  * Creates an array of ListItem objects from the given name array.
- * @param nameArray Array of names to create ListItems from.
- * @returns Returns an array of ListItem objects.
+ * @param {string[]} nameArray Array of names to create ListItems from.
+ * @returns {Object[]} Returns an array of ListItem objects.
  */
 function createListItemsFromArray(nameArray) {
   const items = []
@@ -31,27 +31,27 @@ function createListItemsFromArray(nameArray) {
  * Called when user has deleted an item from the ListView.
  * @param {Object} e The delete event object.
  */
-function onDeletedItem(e) {
-  globalData.itemNames.splice(e.itemIndex, 1)
+function onDeletedItem({ itemIndex }) {
+  globalData.itemNames.splice(itemIndex, 1)
 }
 
 /**
  * Called when user has moved an item to a different position in the ListView via drag-and-drop.
  * @param {Object} e The move event object.
  */
-function onMovedItem(e) {
+function onMovedItem(event) {
   if (OS_ANDROID) {
-    // Android does not support "e.target*" event properties telling us where item was moved to.
+    // Android does not support "event.target*" event properties telling us where item was moved to.
     // So, fetch all ListView items (with new positions) and replace old global items with it.
     globalData.itemNames = $.listView.sections[0].items.map((nextItem) => {
       return nextItem.properties.title
     })
   } else {
-    // "e.itemIndex" was the moved item's old index position in list.
-    // "e.targetItemIndex" is the moved item's new insert index position in list.
-    const movedItemName = globalData.itemNames[e.itemIndex]
-    globalData.itemNames.splice(e.itemIndex, 1)
-    globalData.itemNames.splice(e.targetItemIndex, 0, movedItemName)
+    // "event.itemIndex" was the moved item's old index position in list.
+    // "event.targetItemIndex" is the moved item's new insert index position in list.
+    const movedItemName = globalData.itemNames[event.itemIndex]
+    globalData.itemNames.splice(event.itemIndex, 1)
+    globalData.itemNames.splice(event.targetItemIndex, 0, movedItemName)
   }
 }
 
@@ -72,8 +72,8 @@ $.listView.sections = [
 
 // Set up Android "Add" menu item in ActionBar.
 if (OS_ANDROID) {
-  $.win.activity.onCreateOptionsMenu = (e) => {
-    const addMenuItem = e.menu.add({
+  $.win.activity.onCreateOptionsMenu = ({ menu }) => {
+    const addMenuItem = menu.add({
       title: 'Add',
       showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
     })

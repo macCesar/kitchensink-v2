@@ -1,24 +1,24 @@
 <Alloy>
-  <Tab title="Phone">
+  <Tab module="tikit.ui" title="Phone" icon="mio ios:mi-phone_iphone android:mi-phone_android text-3xl" activeIcon="mit ios:mi-phone_iphone android:mi-phone_android text-3xl">
     <Window title="Phone">
       <ListView id="listView" onItemclick="openComponent">
         <ListSection>
-          <ListItem itemId="accelerometer" title="Accelerometer"/>
-          <ListItem itemId="audioPlayer" title="Audio Player"/>
-          <ListItem itemId="audioRecorder" title="Audio Recorder"/>
-          <ListItem itemId="bundleSettings" platform="ios" title="Bundle Settings"/>
-          <ListItem itemId="cameraGallery" title="Camera + Gallery"/>
-          <ListItem itemId="clipboard" title="Clipboard"/>
-          <ListItem itemId="database" title="Database"/>
-          <ListItem itemId="documentViewer" title="Document Viewer"/>
-          <ListItem itemId="geolocation" title="Geolocation"/>
-          <ListItem itemId="gesture" title="Gesture"/>
-          <ListItem itemId="identity" title="Identity (Biometric Authentication)"/>
-          <ListItem itemId="map" title="Maps"/>
-          <ListItem itemId="network" title="Network"/>
-          <ListItem itemId="shortcutItems" platform="ios" title="3D/Haptic Touch: Shortcut Items"/>
-          <ListItem itemId="sound" title="Sound"/>
-          <ListItem itemId="videoPlayer" title="Video Player"/>
+          <ListItem itemId="accelerometer" title="Accelerometer" />
+          <ListItem itemId="audioPlayer" title="Audio Player" />
+          <ListItem itemId="audioRecorder" title="Audio Recorder" />
+          <ListItem platform="ios" itemId="bundleSettings" title="Bundle Settings" />
+          <ListItem itemId="cameraGallery" title="Camera + Gallery" />
+          <ListItem itemId="clipboard" title="Clipboard" />
+          <ListItem itemId="database" title="Database" />
+          <ListItem itemId="documentViewer" title="Document Viewer" />
+          <ListItem itemId="geolocation" title="Geolocation" />
+          <ListItem itemId="gesture" title="Gesture" />
+          <ListItem itemId="identity" title="Identity (Biometric Authentication)" />
+          <ListItem itemId="map" title="Maps" />
+          <ListItem itemId="network" title="Network" />
+          <ListItem platform="ios" itemId="shortcutItems" title="3D/Haptic Touch: Shortcut Items" />
+          <ListItem itemId="sound" title="Sound" />
+          <ListItem itemId="videoPlayer" title="Video Player" />
         </ListSection>
       </ListView>
     </Window>

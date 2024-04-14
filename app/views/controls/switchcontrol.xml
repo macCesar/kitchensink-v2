@@ -1,18 +1,18 @@
 <Alloy>
   <Window title="Switch" layout="vertical">
-    <Label class="switchValueLabel" id="switchValueLabel1">value: false</Label>
-    <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_SLIDER" title="Slider Style" onChange="onSwitch1Changed"/>
+    <Label class="mt-8" id="switchValueLabel1">value: false</Label>
+    <Switch class="ios:on-tint-blue-500 mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_SLIDER" title="Slider Style" onChange="onSwitch1Changed" />
 
-    <View class="separatorView" platform="android"/>
-    <Label class="switchValueLabel" id="switchValueLabel2" platform="android">value: false</Label>
-    <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_CHECKBOX" title="Checkbox Style" onChange="onSwitch2Changed" platform="android"/>
+    <View platform="android" class="h-(1) w-screen bg-gray-100" />
+    <Label platform="android" class="mt-8" id="switchValueLabel2">value: false</Label>
+    <Switch platform="android" class="mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_CHECKBOX" title="Checkbox Style" onChange="onSwitch2Changed" />
 
-    <View class="separatorView" platform="android"/>
-    <Label class="switchValueLabel" id="switchValueLabel3" platform="android">value: false</Label>
-    <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_CHIP" title="Chip Style" onChange="onSwitch3Changed" platform="android"/>
+    <View platform="android" class="h-(1) w-screen bg-gray-100" />
+    <Label platform="android" class="mt-8" id="switchValueLabel3">value: false</Label>
+    <Switch platform="android" class="mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_CHIP" title="Chip Style" onChange="onSwitch3Changed" />
 
-    <View class="separatorView" platform="android"/>
-    <Label class="switchValueLabel" id="switchValueLabel4" platform="android">value: false</Label>
-    <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_TOGGLE_BUTTON" onChange="onSwitch4Changed" platform="android"/>
+    <View platform="android" class="h-(1) w-screen bg-gray-100" />
+    <Label platform="android" class="mt-8" id="switchValueLabel4">value: false</Label>
+    <Switch platform="android" class="mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_TOGGLE_BUTTON" onChange="onSwitch4Changed" />
   </Window>
 </Alloy>

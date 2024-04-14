@@ -1,25 +1,24 @@
 <Alloy>
-  <Tab title="Controls">
+  <Tab module="tikit.ui" title="Controls" icon="mio mi-tune text-3xl" activeIcon="mit mi-tune text-3xl">
     <Window id="window" title="Controls" onFocus="onFocus">
       <ListView id="listView" onItemclick="openComponent">
         <ListSection>
           <ListItem title="Activity Indicator" itemId="activityindicator" />
-          <ListItem title="Button Bar" itemId="buttonbar" platform="android,ios" />
+          <ListItem title="Button Bar" itemId="buttonbar" />
           <ListItem title="Button" itemId="button" />
-          <ListItem title="Command Bar" itemId="commandbar" platform="windows"/>
           <ListItem title="Dialogs" itemId="dialogs/index" />
-          <ListItem title="Drawer Layout" itemId="drawer" platform="android"/>
+          <ListItem platform="android" title="Drawer Layout" itemId="drawer" />
           <ListItem title="Label" itemId="label" />
-          <ListItem title="Option Bar" itemId="optionbar" platform="android,ios" />
+          <ListItem title="Option Bar" itemId="optionbar" />
           <ListItem title="Pickers" itemId="pickers/index" />
           <ListItem title="Progress Bar" itemId="progressbar" />
           <ListItem title="Slider" itemId="slider" />
-          <ListItem title="Stepper" itemId="stepper" platform="ios"/>
+          <ListItem platform="ios" title="Stepper" itemId="stepper" />
           <ListItem title="Switch" itemId="switchcontrol" />
-          <ListItem title="Tabbed Bar" itemId="tabbedbar" platform="android,ios" />
+          <ListItem title="Tabbed Bar" itemId="tabbedbar" />
           <ListItem title="Text Area" itemId="textarea" />
           <ListItem title="Text Field" itemId="textfield" />
-          <ListItem title="Toolbar" itemId="toolbar" platform="android,ios"/>
+          <ListItem title="Toolbar" itemId="toolbar" />
           <ListItem title="Views" itemId="views/index" />
         </ListSection>
       </ListView>

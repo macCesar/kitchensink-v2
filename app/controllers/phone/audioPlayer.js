@@ -5,9 +5,7 @@ if (OS_IOS) {
 }
 
 function handleOpen() {
-  audioProgression({
-    progress: 0
-  })
+  audioProgression({ progress: 0 })
   $.player.start()
 }
 
@@ -29,9 +27,9 @@ function toggleBattle() {
   }
 }
 
-function changeVolume(e) {
+function changeVolume({ value }) {
   // Both slider & volume is ranged from 0-1
-  $.player.volume = e.value
+  $.player.volume = value
 }
 
 // Android only because STATE_STOPPED doesn't fire there
@@ -42,15 +40,15 @@ function handleMusicComplete() {
   changeMusic({ state: Ti.Media.AUDIO_STATE_STOPPED })
 }
 
-function changeMusic(e) {
+function changeMusic({ state }) {
   // Restart player when play is stopped
-  if (e.state === Ti.Media.AUDIO_STATE_STOPPED && !closingWindow) {
+  if (state === Ti.Media.AUDIO_STATE_STOPPED && !closingWindow) {
     $.player.start()
   }
 }
 
-function audioProgression(e) {
-  $.progress.text = timeFormat(e.progress) + '/' + timeFormat($.player.duration)
+function audioProgression({ progress }) {
+  $.progress.text = timeFormat(progress) + '/' + timeFormat($.player.duration)
 }
 
 // Android only because STATE_STOPPING/STATE_STOPPED doesn't fire there
@@ -62,10 +60,10 @@ function handleBattleComplete() {
   completeBattle({ state: Ti.Media.AUDIO_STATE_STOPPED })
 }
 
-function completeBattle(e) {
-  if (e.state === Ti.Media.AUDIO_STATE_STOPPING) {
+function completeBattle({ state }) {
+  if (state === Ti.Media.AUDIO_STATE_STOPPING) {
     $.applause.start()
-  } else if (e.state === Ti.Media.AUDIO_STATE_STOPPED) {
+  } else if (state === Ti.Media.AUDIO_STATE_STOPPED) {
     $.toggleBattle.title = 'Play battle sounds'
   }
 }

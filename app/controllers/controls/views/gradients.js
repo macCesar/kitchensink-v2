@@ -61,11 +61,11 @@ function updateGradient() {
   $.gradientView.backgroundGradient = gradient
 }
 
-function handleTouchMove(e) {
+function handleTouchMove(event) {
   const size = $.gradientView.rect
 
-  normalizedCenterX = (size.width > 0) ? (e.x / size.width) : 0.5
-  normalizedCenterY = (size.height > 0) ? (e.y / size.height) : 0.5
+  normalizedCenterX = (size.width > 0) ? (event.x / size.width) : 0.5
+  normalizedCenterY = (size.height > 0) ? (event.y / size.height) : 0.5
 
   updateGradient()
 }
@@ -88,9 +88,9 @@ function generateRandomColor() {
   return color
 }
 
-function handleGradientType(e) {
-  let isLinear = (e.index === Gradient.LINEAR)
-  selectedGradient = e.index
+function handleGradientType({ index }) {
+  selectedGradient = index
+  let isLinear = (index === Gradient.LINEAR)
   $.startFillSwitch.enabled = !isLinear
   $.endFillSwitch.enabled = !isLinear
   $.startRadiusLabel.text = isLinear ? 'Start Point:' : 'Start Radius:'

@@ -1,9 +1,11 @@
 <Alloy>
-  <Window title="Geolocation" layout="vertical">
-    <Label id="geo_lat" class="mapElmSeparation" />
-    <Label id="geo_long" class="mapElmSeparation" />
-    <Label class="mapElmSeparation" text="Package" />
-    <TextArea editable="false" id="geoloc" class="mapElmSeparation geolocationTextArea" />
-    <View id="map" class="mapElmSeparation" />
+  <Window title="Geolocation" class="vertical">
+    <Label id="geo_lat" class="mt-2 text-base" />
+    <Label id="geo_long" class="mt-2 text-base" />
+    <Label class="mt-2 text-base" text="Package" />
+
+    <TextArea id="geoloc" class="editable-false ios:text-xs ios:bg-(#f0f0f0) ios:text-black mt-2 h-28 w-96 font-mono" />
+
+    <View id="map" class="mt-2" />
   </Window>
 </Alloy>

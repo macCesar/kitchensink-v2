@@ -1,16 +1,16 @@
-function onColorOptionBarClicked(e) {
-  switch (e.index) {
+function onColorOptionBarClicked({ index }) {
+  switch (index) {
     case 0:
-      $.myMaskedImage.tint = 'red'
+      $.myMaskedImage.applyProperties({ tint: 'red' })
       break
     case 1:
-      $.myMaskedImage.tint = 'green'
+      $.myMaskedImage.applyProperties({ tint: 'green' })
       break
     case 2:
-      $.myMaskedImage.tint = 'blue'
+      $.myMaskedImage.applyProperties({ tint: 'blue' })
       break
     case 3:
-      $.myMaskedImage.tint = 'black'
+      $.myMaskedImage.applyProperties({ tint: 'black' })
       break
   }
 }

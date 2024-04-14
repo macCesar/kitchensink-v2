@@ -1,6 +1,6 @@
 <Alloy>
   <Window title="Toolbar">
-    <Toolbar class="toolbar">
+    <Toolbar class="android:elevation-0.5 mb-0 w-screen">
       <Items>
         <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_POSITIVE">Action 1</Button>
         <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL">Action 2</Button>

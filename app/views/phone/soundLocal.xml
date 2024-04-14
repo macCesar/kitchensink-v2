@@ -1,16 +1,19 @@
 <Alloy>
   <Window title="Local Sound" onOpen="startInterval" onClose="stopInterval">
     <View class="verticalContainer">
-      <Button onClick="startPlayback" class="actionButton" title="Start" />
-      <Button onClick="stopPlayback" class="actionButton" title="Stop" />
-      <Button onClick="pausePlayback" class="actionButton" title="Pause" />
-      <Button onClick="resetPlayback" class="actionButton" title="Reset" />
+      <Button onClick="startPlayback" class="action-button" title="Start" />
+      <Button onClick="stopPlayback" class="action-button" title="Stop" />
+      <Button onClick="pausePlayback" class="action-button" title="Pause" />
+      <Button onClick="resetPlayback" class="action-button" title="Reset" />
+
       <View class="horizontalContainer">
-        <Button onClick="setVolumeUp" class="actionButton buttonVolume" id="buttonVolumeUp" title="Volume++" />
-        <Button onClick="setVolumeDown" class="actionButton buttonVolume" id="buttonVolumeDown" title="Volume--" />
+        <Button onClick="setVolumeUp" class="action-button buttonVolume" id="buttonVolumeUp" title="Volume++" />
+        <Button onClick="setVolumeDown" class="action-button buttonVolume" id="buttonVolumeDown" title="Volume--" />
       </View>
-      <Button onClick="toggleLooping" class="actionButton" id="buttonLooping" title="Looping (false)" />
+
+      <Button onClick="toggleLooping" class="action-button" id="buttonLooping" title="Looping (false)" />
     </View>
+
     <Toolbar platform="ios" class="playbackProgressToolbar">
       <Items>
         <FlexSpace/>
@@ -18,6 +21,7 @@
         <FlexSpace/>
       </Items>
     </Toolbar>
-    <ProgressBar platform="android,windows" id="playbackProgress" />
+
+    <ProgressBar platform="android" id="playbackProgress" />
   </Window>
 </Alloy>

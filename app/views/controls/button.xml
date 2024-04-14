@@ -1,8 +1,8 @@
 <Alloy>
-  <Window title="Button" layout="vertical">
-    <Button top="20" title="Text-Only Button" style="Ti.UI.BUTTON_STYLE_TEXT" onClick="onButtonClicked"/>
-    <Button top="20" title="Outline Button" style="Ti.UI.BUTTON_STYLE_OUTLINED" onClick="onButtonClicked" platform="android"/>
-    <Button top="20" title="Filled Button" style="Ti.UI.BUTTON_STYLE_FILLED" onClick="onButtonClicked" platform="android"/>
-    <Button top="20" title=" Image Button" image="/images/icons/controls.png" onClick="onButtonClicked"/>
+  <Window title="Button" class="vertical">
+    <Button title="Text-Only Button" class="style-button-text mt-5" onClick="onButtonClicked" />
+    <Button platform="android" title="Outline Button" class="style-button-outlined mt-5" onClick="onButtonClicked" />
+    <Button platform="android" title="Filled Button" class="style-button-filled mt-5" onClick="onButtonClicked" />
+    <Button title="Image Button" image="/images/icons/controls.png" class="mt-5" onClick="onButtonClicked" />
   </Window>
 </Alloy>

@@ -22,8 +22,8 @@ function onDoubleTap() {
   $.scrollView.setZoomScale(scale, { animated: true })
 }
 
-function onScale(e) {
-  if (e.scale > 1.0) {
+function onScale({ scale }) {
+  if (scale > 1.0) {
     hideNavBar()
   }
 }

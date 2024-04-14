@@ -1,31 +1,31 @@
-function onSwipe(e) {
-  $.lbl_swipe_event.text = 'Swipe: direction ' + e.direction
+function onSwipe(event) {
+  $.lbl_swipe_event.applyProperties({ text: `Swipe: direction ${event.direction}` })
 }
 
-function onTouchstart(e) {
-  $.lbl_touch_event.text = 'Touch (start): x=' + e.x + ', y=' + e.y
+function onTouchstart(event) {
+  $.lbl_touch_event.applyProperties({ text: `Touch (start): x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }
 
-function onTouchend(e) {
-  $.lbl_touch_event.text = 'Touch (end): x=' + e.x + ', y=' + e.y
+function onTouchend(event) {
+  $.lbl_touch_event.applyProperties({ text: `Touch (end): x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }
 
-function onTouchmove(e) {
-  $.lbl_touch_move_event.text = 'Touch (move): x=' + e.x + ', y=' + e.y
+function onTouchmove(event) {
+  $.lbl_touch_move_event.applyProperties({ text: `Touch (move): x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }
 
-function onClick(e) {
-  $.lbl_click_event.text = 'Click: x=' + e.x + ', y=' + e.y
+function onClick(event) {
+  $.lbl_click_event.applyProperties({ text: `Click: x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }
 
-function onSingleTap(e) {
-  $.lbl_tap_event.text = 'Single tap: x=' + e.x + ', y=' + e.y
+function onSingleTap(event) {
+  $.lbl_tap_event.applyProperties({ text: `Single tap: x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }
 
-function onDbltap(e) {
-  $.lbl_tap_event.text = 'Double tap: x=' + e.x + ', y=' + e.y
+function onDbltap(event) {
+  $.lbl_tap_event.applyProperties({ text: `Double tap: x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }
 
-function onDblclick(e) {
-  $.lbl_click_event.text = 'Double click: x=' + e.x + ', y=' + e.y
+function onDblclick(event) {
+  $.lbl_click_event.applyProperties({ text: `Double click: x=${Math.round(event.x)}, y=${Math.round(event.y)}` })
 }

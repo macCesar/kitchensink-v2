@@ -1,7 +1,7 @@
 import { logger } from 'logger'
 
-function onTextOptionBarClicked(e) {
-  const message = `Clicked on text-only button: ${e.source.labels[e.index].title}`
+function onTextOptionBarClicked(event) {
+  const message = `Clicked on text-only button: ${event.source.labels[event.index].title}`
   alert(message)
   logger.log(message)
 }
@@ -12,14 +12,14 @@ function onImageOptionBarClicked({ index }) {
   logger.log(message)
 }
 
-function onImageTextOptionBarClicked(e) {
-  const message = `Clicked on image/text button: ${e.source.labels[e.index].title}`
+function onImageTextOptionBarClicked(event) {
+  const message = `Clicked on image/text button: ${event.source.labels[event.index].title}`
   alert(message)
   logger.log(message)
 }
 
-function onVerticalOptionBarClicked(e) {
-  const message = `Clicked on vertical button: ${e.source.labels[e.index].title}`
+function onVerticalOptionBarClicked(event) {
+  const message = `Clicked on vertical button: ${event.source.labels[event.index].title}`
   alert(message)
   logger.log(message)
 }

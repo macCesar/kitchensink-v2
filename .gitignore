@@ -13,3 +13,4 @@ Thumbs.db
 plugins/ti.alloy
 node_modules/
 retirejs.output.json
+/node_modules

@@ -3,21 +3,23 @@
     <ListView onItemclick="handleListViewClick">
 
       <!-- Enable Pull-to-Refresh -->
-      <RefreshControl id="refresh" onRefreshstart="fetchData" platform="android,ios"/>
+      <RefreshControl id="refresh" onRefreshstart="fetchData" />
 
       <!-- Add custom item templates -->
       <Templates>
         <ItemTemplate name="MyCustomTemplate">
-          <Label bindId="title" class="titleLabel" />
-          <Label bindId="detail" class="detailLabel" />
+          <!-- Apply custom margins for Android since the ListItem -->
+          <!-- behaves different natively -->
+          <Label bindId="title" class="android:ml-0 ml-4 h-10 text-red-500" />
+          <Label bindId="detail" class="mr-6 h-10 font-bold text-green-500" />
         </ItemTemplate>
       </Templates>
 
       <ListSection headerTitle="System Item Templates">
         <ListItem title="Bananas" image="/images/icons/tab.png" />
-        <ListItem title="Apples" subtitle="Oranges" template="Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE" />
-        <ListItem title="Mangos" subtitle="Strawberries" template="Ti.UI.LIST_ITEM_TEMPLATE_SETTINGS" />
-        <ListItem title="Lemon" subtitle="Melone" template="Ti.UI.LIST_ITEM_TEMPLATE_CONTACTS" />
+        <ListItem title="Apples" subtitle="Oranges" class="list-item-template-subtitle" />
+        <ListItem title="Mangos" subtitle="Strawberries" class="list-item-template-settings" />
+        <ListItem title="Lemon" subtitle="Melone" class="list-item-template-contacts" />
       </ListSection>
 
       <ListSection headerTitle="Custom Item Templates">
@@ -26,10 +28,10 @@
       </ListSection>
 
       <ListSection headerTitle="Accessory Types">
-        <ListItem title="No Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_NONE" />
-        <ListItem title="Detail Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_DETAIL" />
-        <ListItem title="Disclosure Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE" />
-        <ListItem title="Checkmark Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_CHECKMARK" />
+        <ListItem title="No Accessory" class="accessory-type-list-none" />
+        <ListItem title="Detail Accessory" class="accessory-type-list-detail" />
+        <ListItem title="Disclosure Accessory" class="accessory-type-list-disclosure" />
+        <ListItem title="Checkmark Accessory" class="accessory-type-list-checkmark" />
       </ListSection>
     </ListView>
   </Window>

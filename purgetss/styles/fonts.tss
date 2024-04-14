@@ -1,0 +1,134 @@
+// Fonts TSS file generated with PurgeTSS
+// https://purgetss.com/docs/commands#build-fonts-command
+
+/**
+ * Open Sans Bold
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-bold': { font: { fontFamily: 'OpenSans-Bold' } }
+
+/**
+ * Open Sans Bold Italic
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-bolditalic': { font: { fontFamily: 'OpenSans-BoldItalic' } }
+
+/**
+ * Open Sans ExtraBold
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-extrabold': { font: { fontFamily: 'OpenSans-ExtraBold' } }
+
+/**
+ * Open Sans ExtraBold Italic
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-extrabolditalic': { font: { fontFamily: 'OpenSans-ExtraBoldItalic' } }
+
+/**
+ * Open Sans Italic
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-italic': { font: { fontFamily: 'OpenSans-Italic' } }
+
+/**
+ * Open Sans Light
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-light': { font: { fontFamily: 'OpenSans-Light' } }
+
+/**
+ * Open Sans Light Italic
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-lightitalic': { font: { fontFamily: 'OpenSans-LightItalic' } }
+
+/**
+ * Open Sans Medium
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-medium': { font: { fontFamily: 'OpenSans-Medium' } }
+
+/**
+ * Open Sans Medium Italic
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-mediumitalic': { font: { fontFamily: 'OpenSans-MediumItalic' } }
+
+/**
+ * Open Sans Regular
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-regular': { font: { fontFamily: 'OpenSans-Regular' } }
+
+/**
+ * Open Sans SemiBold
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-semibold': { font: { fontFamily: 'OpenSans-SemiBold' } }
+
+/**
+ * Open Sans SemiBold Italic
+ * Version 3.000
+ * http://www.google.com/get/noto/
+ * Monotype Design Team - http://www.monotype.com/studio
+ * Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+ * Open Sans is a trademark of Google and may be registered in certain jurisdictions.
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL - http://scripts.sil.org/OFL
+ */
+'.opensans-semibolditalic': { font: { fontFamily: 'OpenSans-SemiBoldItalic' } }

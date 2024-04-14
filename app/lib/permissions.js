@@ -23,8 +23,8 @@ exports.checkCameraPermission = (cb) => {
       }
     }
 
-    Ti.Media.requestCameraPermissions((e) => {
-      cb(e.success)
+    Ti.Media.requestCameraPermissions(({ success }) => {
+      cb(success)
     })
   }
 }

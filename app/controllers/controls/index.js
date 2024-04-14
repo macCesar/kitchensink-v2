@@ -34,8 +34,8 @@ function validateDocsInfo() {
   }
 }
 
-function openComponent(e) {
-  const identifier = `controls/${e.section.getItemAt(e.itemIndex).properties.itemId}`
+function openComponent(event) {
+  const identifier = `controls/${event.section.getItemAt(event.itemIndex).properties.itemId}`
   const component = Alloy.createController(identifier).getView()
 
   if (OS_ANDROID && identifier !== 'controls/drawer') {

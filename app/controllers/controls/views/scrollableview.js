@@ -29,11 +29,11 @@ function removeLastView() {
   validateButtons()
 }
 
-function scrollableViewDidScroll(e) {
-  logger.log('Ti.UI.ScrollableView did scroll to index ' + e.currentPage)
+function scrollableViewDidScroll({ currentPage }) {
+  logger.log('Ti.UI.ScrollableView did scroll to index ' + currentPage)
 }
 
 function validateButtons() {
-  $.remove.enabled = $.scrollable.views.length > 0
-  $.scrollTo.enabled = $.scrollable.views.length >= 2
+  $.remove.applyProperties({ enabled: $.scrollable.views.length > 0 })
+  $.scrollTo.applyProperties({ enabled: $.scrollable.views.length >= 2 })
 }

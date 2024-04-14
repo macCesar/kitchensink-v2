@@ -1,6 +1,7 @@
 <Alloy>
   <Window title="Date Picker (Wheels)">
-    <Label id="valueLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" top="30"/>
-    <Picker id="datePicker" type="Ti.UI.PICKER_TYPE_DATE" datePickerStyle="Ti.UI.DATE_PICKER_STYLE_WHEELS" onChange="onPickerValueChanged"/>
+    <Label id="valueLabel" class="mt-8 text-center" />
+
+    <Picker id="datePicker" class="type-picker-date date-picker-style-wheels" onChange="onPickerValueChanged" />
   </Window>
 </Alloy>

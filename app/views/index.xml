@@ -1,6 +1,7 @@
 <Alloy>
-  <TabGroup>
+  <TabGroup class="android:shift-mode-none android:style-tabs-bottom-navigation">
     <ActionBar platform="android" logo="appicon.png" />
+
     <Require src="controls/index" />
     <Require src="phone/index" />
     <Require src="mashups/index" />

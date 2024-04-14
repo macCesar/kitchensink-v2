@@ -2,6 +2,7 @@
   <Window id="peekpop" title="Peek and Pop">
     <Button id="button"/>
   </Window>
+
   <Window id="detailWin">
     <PreviewContext id="context" onPop="pop">
       <Preview>
@@ -9,13 +10,16 @@
           <Label id="detailText"/>
         </View>
       </Preview>
+
       <Actions>
-        <PreviewAction id="actionTitle" onClick="actionTitle"></PreviewAction>
+        <PreviewAction id="actionTitle" onClick="actionTitle" />
+
         <PreviewActionGroup id="actionGroup">
-          <PreviewAction id="action" onClick="action"></PreviewAction>
-          <PreviewAction id="subAction" onClick="subAction"></PreviewAction>
+          <PreviewAction id="action" onClick="action" />
+          <PreviewAction id="subAction" onClick="subAction" />
         </PreviewActionGroup>
       </Actions>
+
       <Button id="buttonBack" onClick="goBack"/>
     </PreviewContext>
   </Window>

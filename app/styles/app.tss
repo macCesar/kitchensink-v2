@@ -1,81 +1,250 @@
-// PurgeTSS v6.2.35
+// PurgeTSS v6.2.43
 // Created by César Estrada
-// https://github.com/macCesar/purgeTSS
-
-// _app.tss styles
-'Window[platform=ios]': {
-	backgroundColor: 'white',
-	barColor: Alloy.CFG.styles.tintColor,
-	navTintColor: 'white',
-	translucent: false,
-	backButtonTitle: '',
-	titleAttributes: {
-		color: 'white',
-	}
-}
-
-'Window[platform=android]': {
-	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
-}
-
-'TabGroup[platform=ios]': {
-	activeTabIconTint: Alloy.CFG.styles.tintColor,
-	translucent: false,
-	backgroundColor: 'white',
-}
-
-'Tab': {
-	icon: '/images/icons/tab.png'
-}
-
-'ListItem': {
-	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
-	subtitleColor: '#777' // Titanium 6.1.0 and later
-}
-
-'.actionButton': {
-	width: 300,
-	height: 40,
-	tintColor: 'white',
-	borderRadius: 4,
-	backgroundColor: Alloy.CFG.styles.tintColor,
-	color: 'white'
-}
-
-'.stateLabel': {
-	top: 100,
-	left: 20,
-	right: 20,
-	width: Ti.UI.FILL,
-	textAlign: 'center',
-	font: {
-		fontSize: 15
-	}
-}
-
-'.placeholderLabel': {
-	width: 250,
-	height: 125,
-	color: '#333',
-	backgroundColor: '#eee',
-	borderRadius: 4,
-	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
-}
+// https://purgetss.com
 
 // Ti Elements
+'ActivityIndicator': { font: { fontFamily: 'opensans-regular' } }
+'Button': { font: { fontFamily: 'opensans-regular' } }
 'ImageView[platform=ios]': { hires: true }
+'Label': { font: { fontFamily: 'opensans-regular' } }
+'ListItem': { accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE, subtitleColor: '#777777', font: { fontFamily: 'opensans-regular' } }
+'ListView[platform=ios]': { backgroundColor: '#ffffff', defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE }
+'Picker': { font: { fontFamily: 'opensans-regular' } }
+'PickerColumn': { font: { fontFamily: 'opensans-regular' } }
+'PickerRow': { font: { fontFamily: 'opensans-regular' } }
+'ProgressBar': { font: { fontFamily: 'opensans-regular' } }
+'Switch': { font: { fontFamily: 'opensans-regular' } }
+'Tab': { icon: '/images/icons/tab.png' }
+'TabGroup[platform=ios]': { activeTintColor: '#c91326', activeTitleColor: '#c91326', backgroundColor: '#ffffff', translucent: false }
+'TableViewRow': { font: { fontFamily: 'opensans-regular' } }
+'TextArea': { font: { fontFamily: 'opensans-regular' } }
+'TextField': { font: { fontFamily: 'opensans-regular' } }
 'View': { width: Ti.UI.SIZE, height: Ti.UI.SIZE }
-'Window': { backgroundColor: '#FFFFFF' }
+'Window[platform=android]': { softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS }
+'Window[platform=ios]': { backButtonTitle: '', backgroundColor: '#ffffff', barColor: '#c91326', navTintColor: '#ffffff', titleAttributes: { color: '#ffffff' }, translucent: true }
+
+// Custom Styles
+'.action-button': { backgroundColor: '#c91326', borderRadius: 4, color: '#ffffff', textColor: '#ffffff', height: 40, tint: '#ffffff', width: 300 }
+'.placeholder-label': { backgroundColor: '#eeeeee', borderRadius: 4, color: '#333333', textColor: '#333333', height: 125, textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, width: 250 }
+'.state-label': { right: 20, left: 20, textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, top: 100, width: Ti.UI.FILL, font: { fontSize: 15 } }
+'.textfield': { bubbleParent: false, top: 10, width: 300 }
+'.textfield[platform=android]': { borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, height: Ti.UI.SIZE, hintType: Ti.UI.HINT_TYPE_ANIMATED }
+'.textfield[platform=ios]': { backgroundColor: '#ffffff', borderRadius: 4, height: 40, padding: { bottom: 5, left: 20, right: 20, top: 5 } }
+'.textlabel': { bubbleParent: false, top: 10, width: 300, font: { fontSize: 14, fontWeight: 'bold' } }
 
 // Main Styles
-'.black': { color: '#000000' }
+'.accessory-type-list-checkmark': { accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_CHECKMARK }
+'.accessory-type-list-detail': { accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DETAIL }
+'.accessory-type-list-disclosure': { accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE }
+'.accessory-type-list-none': { accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_NONE }
+'.allows-multiple-selection-during-editing': { allowsMultipleSelectionDuringEditing: true }
+'.allows-multiple-selection-during-editing-false': { allowsMultipleSelectionDuringEditing: false }
+'.allows-selection-during-editing': { allowsSelectionDuringEditing: true }
+'.allows-selection-during-editing-false': { allowsSelectionDuringEditing: false }
+'.allows-selection-false': { allowsSelection: false }
+'.autocapitalization-text-none': { autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE }
+'.autocorrect': { autocorrect: true }
+'.autofill-type-email': { autofillType: Ti.UI.AUTOFILL_TYPE_EMAIL }
+'.autofill-type-password': { autofillType: Ti.UI.AUTOFILL_TYPE_PASSWORD }
+'.autoplay': { autoplay: true }
+'.bar-green-500': { barColor: '#22c55e' }
+'.bg-black': { backgroundColor: '#000000' }
+'.bg-blue-500': { backgroundColor: '#3b82f6' }
+'.bg-gray-100': { backgroundColor: '#f3f4f6' }
+'.bg-gray-200': { backgroundColor: '#e5e7eb' }
+'.bg-gray-500': { backgroundColor: '#6b7280' }
+'.bg-green-500': { backgroundColor: '#22c55e' }
+'.bg-primary-500': { backgroundColor: '#f93a4e' }
+'.bg-red-500': { backgroundColor: '#ef4444' }
+'.block': { visible: true }
+'.border-1': { borderWidth: 1 }
+'.border-gray-500': { borderColor: '#6b7280' }
+'.border-style-rounded': { borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED }
 '.compact': { compact: true }
+'.content-h-auto': { contentHeight: Ti.UI.SIZE }
+'.content-w-screen': { contentWidth: Ti.UI.FILL }
+'.date-picker-style-compact': { datePickerStyle: Ti.UI.DATE_PICKER_STYLE_COMPACT }
+'.date-picker-style-inline': { datePickerStyle: Ti.UI.DATE_PICKER_STYLE_INLINE }
+'.date-picker-style-wheels': { datePickerStyle: Ti.UI.DATE_PICKER_STYLE_WHEELS }
+'.disable-bounce': { disableBounce: true }
+'.display-home-as-up': { displayHomeAsUp: true }
+'.editable-false': { editable: false }
+'.editing': { editing: true }
+'.elevation-0': { elevation: 0 }
+'.elevation-4': { elevation: 16 }
+'.enable-zoom-controls': { enableZoomControls: true }
+'.font-bold': { font: { fontWeight: 'bold' } }
+'.font-mono': { font: { fontFamily: 'Courier New' } }
+'.h-0': { height: 0 }
+'.h-1/2': { height: '50%' }
+'.h-10': { height: 40 }
+'.h-25': { height: 100 }
+'.h-28': { height: 112 }
+'.h-40': { height: 160 }
+'.h-75': { height: 300 }
+'.h-auto': { height: Ti.UI.SIZE }
+'.hidden': { visible: false }
+'.hidden-behavior-gone': { hiddenBehavior: Ti.UI.HIDDEN_BEHAVIOR_GONE }
+'.home-button-enabled': { homeButtonEnabled: true }
+'.horizontal': { layout: 'horizontal' }
+'.keyboard-type': { keyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT }
+'.keyboard-type-decimal-pad': { keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD }
+'.keyboard-type-email': { keyboardType: Ti.UI.KEYBOARD_TYPE_EMAIL }
+'.keyboard-type-number-pad': { keyboardType: Ti.UI.KEYBOARD_TYPE_NUMBER_PAD }
+'.keyboard-type-numbers-punctuation': { keyboardType: Ti.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION }
+'.keyboard-type-phone-pad': { keyboardType: Ti.UI.KEYBOARD_TYPE_PHONE_PAD }
+'.keyboard-type-url': { keyboardType: Ti.UI.KEYBOARD_TYPE_URL }
+'.list-item-template-contacts': { defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_CONTACTS }
+'.list-item-template-settings': { defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_SETTINGS }
+'.list-item-template-subtitle': { defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE }
+'.loading': { loading: true }
+'.location-progress-indicator-dialog[platform=android]': { location: Ti.UI.Android.PROGRESS_INDICATOR_DIALOG }
+'.mb-0': { bottom: 0 }
+'.mb-2': { bottom: 8 }
+'.mb-2.5': { bottom: 10 }
+'.mb-24': { bottom: 96 }
+'.mb-25': { bottom: 100 }
+'.mb-5': { bottom: 20 }
+'.mb-8': { bottom: 32 }
+'.ml-2': { left: 8 }
+'.ml-4': { left: 16 }
+'.mr-6': { right: 24 }
+'.mt-0': { top: 0 }
+'.mt-1/6': { top: '16.666667%' }
+'.mt-10': { top: 40 }
+'.mt-12': { top: 48 }
+'.mt-2': { top: 8 }
+'.mt-20': { top: 80 }
+'.mt-24': { top: 96 }
+'.mt-25': { top: 100 }
+'.mt-35': { top: 140 }
+'.mt-4': { top: 16 }
+'.mt-5': { top: 20 }
+'.mt-50': { top: 200 }
+'.mt-55': { top: 220 }
+'.mt-8': { top: 32 }
+'.mx-12': { right: 48, left: 48 }
+'.mx-2': { right: 8, left: 8 }
+'.mx-5': { right: 20, left: 20 }
+'.my-1': { top: 4, bottom: 4 }
+'.my-2': { top: 8, bottom: 8 }
+'.opacity-0': { opacity: 0 }
+'.opacity-50': { opacity: 0.5 }
+'.padding-6': { padding: 24 }
+'.paging-control-primary': { pagingControlColor: '#c91326' }
+'.password-mask': { passwordMask: true }
+'.portrait': { orientationModes: [ Ti.UI.PORTRAIT ] }
+'.scaling-mode-image-aspect-fit': { scalingMode: Ti.Media.IMAGE_SCALING_ASPECT_FIT }
+'.scaling-mode-image-fill': { scalingMode: Ti.Media.IMAGE_SCALING_FILL }
+'.scaling-mode-image-none': { scalingMode: Ti.Media.IMAGE_SCALING_NONE }
 '.scrollable': { scrollable: true }
+'.selection-indicator': { selectionIndicator: true }
+'.show-paging-control': { showPagingControl: true }
+'.show-selection-check': { showSelectionCheck: true }
+'.shows-controls': { showsControls: true }
+'.style-activity-indicator-big': { style: Ti.UI.ActivityIndicatorStyle.BIG }
+'.style-activity-indicator-dark': { style: Ti.UI.ActivityIndicatorStyle.DARK }
+'.style-activity-indicator-plain': { style: Ti.UI.ActivityIndicatorStyle.PLAIN }
+'.style-button-filled': { style: Ti.UI.BUTTON_STYLE_FILLED }
+'.style-button-neutral': { style: Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL }
+'.style-button-outlined': { style: Ti.UI.BUTTON_STYLE_OUTLINED }
+'.style-button-positive': { style: Ti.UI.BUTTON_STYLE_OPTION_POSITIVE }
+'.style-button-text': { style: Ti.UI.BUTTON_STYLE_TEXT }
+'.system-button-action[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ACTION }
+'.system-button-add[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ADD }
+'.system-button-flexible-space[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE }
+'.system-button-trash[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.TRASH }
+'.tab-bar-hidden': { tabBarHidden: true }
+'.text-2xl': { font: { fontSize: 24 } }
+'.text-3xl': { font: { fontSize: 30 } }
+'.text-base': { font: { fontSize: 16 } }
+'.text-center': { textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER }
+'.text-green-500': { color: '#22c55e', textColor: '#22c55e' }
+'.text-left': { textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT }
+'.text-lg': { font: { fontSize: 18 } }
+'.text-primary': { color: '#c91326', textColor: '#c91326' }
+'.text-red-500': { color: '#ef4444', textColor: '#ef4444' }
+'.text-sm': { font: { fontSize: 14 } }
+'.text-style-footnote': { textStyle: Ti.UI.TEXT_STYLE_FOOTNOTE }
+'.text-xs': { font: { fontSize: 12 } }
+'.tint-primary': { tint: '#c91326' }
+'.touch-enabled-false': { touchEnabled: false }
+'.type-picker-count-down-timer': { type: Ti.UI.PICKER_TYPE_COUNT_DOWN_TIMER }
+'.type-picker-date': { type: Ti.UI.PICKER_TYPE_DATE }
+'.type-picker-date-and-time': { type: Ti.UI.PICKER_TYPE_DATE_AND_TIME }
+'.type-picker-time': { type: Ti.UI.PICKER_TYPE_TIME }
+'.type-progress-indicator-determinant[platform=android]': { type: Ti.UI.Android.PROGRESS_INDICATOR_DETERMINANT }
+'.type-progress-indicator-indeterminant[platform=android]': { type: Ti.UI.Android.PROGRESS_INDICATOR_INDETERMINANT }
+'.use-spinner': { useSpinner: true }
+'.use-spinner-false': { useSpinner: false }
 '.vertical': { layout: 'vertical' }
 '.visible': { visible: true }
+'.w-4/5': { width: '80%' }
+'.w-44': { width: 176 }
+'.w-50': { width: 200 }
+'.w-72': { width: 288 }
+'.w-75': { width: 300 }
+'.w-96': { width: 384 }
+'.w-screen': { width: Ti.UI.FILL }
+'.wh-12': { width: 48, height: 48 }
+'.wh-25': { width: 100, height: 100 }
+'.wh-40': { width: 160, height: 160 }
+'.wh-full': { width: '100%', height: '100%' }
+'.wh-screen': { width: Ti.UI.FILL, height: Ti.UI.FILL }
 
-// Unused or unsupported classes
-// '.DELETE': { }
-// '.LIKE': { }
-// '.picker': { }
-// '.scaleOptionBar': { }
+// Platform and Device Modifiers
+'.android:border-style-filled[platform=android]': { borderStyle: Ti.UI.INPUT_BORDERSTYLE_FILLED }
+'.android:elevation-0.5[platform=android]': { elevation: 2 }
+'.android:extend-safe-area[platform=android]': { extendSafeArea: true }
+'.android:hint-type-animated[platform=android]': { hintType: Ti.UI.HINT_TYPE_ANIMATED }
+'.android:lines-4[platform=android]': { lines: 4 }
+'.android:ml-0[platform=android]': { left: 0 }
+'.android:shift-mode-none[platform=android]': { shiftMode: 0 }
+'.android:style-tabs-bottom-navigation[platform=android]': { style: Ti.UI.Android.TABS_STYLE_BOTTOM_NAVIGATION }
+'.android:theme-titanium-dark-solid[platform=android]': { theme: 'Theme.Titanium.Dark.Solid' }
+'.ios:extend-edges-all[platform=ios]': { extendEdges: Ti.UI.EXTEND_EDGE_ALL }
+'.ios:h-25[platform=ios]': { height: 100 }
+'.ios:include-opaque-bars[platform=ios]': { includeOpaqueBars: true }
+'.ios:keyboard-dismiss-mode-interactive[platform=ios]': { keyboardDismissMode: Ti.UI.iOS.KEYBOARD_DISMISS_MODE_INTERACTIVE }
+'.ios:nav-bar-hidden-false[platform=ios]': { navBarHidden: false }
+'.ios:on-tint-blue-500[platform=ios]': { onTintColor: '#3b82f6' }
+'.ios:rounded-2[platform=ios]': { borderRadius: 4 }
+'.ios:tab-bar-hidden[platform=ios]': { tabBarHidden: true }
+'.ios:text-black[platform=ios]': { color: '#000000', textColor: '#000000' }
+'.ios:text-xs[platform=ios]': { font: { fontSize: 12 } }
+'.ios:tint-primary[platform=ios]': { tint: '#c91326' }
+'.ios:w-75[platform=ios]': { width: 300 }
+
+// Arbitrary Values
+'.bg-(#111)': { backgroundColor: '#111111' }
+'.bg-(#246)': { backgroundColor: '#224466' }
+'.bg-(#48b)': { backgroundColor: '#4488bb' }
+'.bg-(#836)': { backgroundColor: '#883366' }
+'.bg-(#aaa)': { backgroundColor: '#aaaaaa' }
+'.bg-(#f7f7f7)': { backgroundColor: '#f7f7f7' }
+'.cancel-(0)': { cancel: 0 }
+'.destructive-(1)': { destructive: 1 }
+'.h-(1)': { height: 1 }
+'.index-(0)': { index: 0 }
+'.index-(1)': { index: 1 }
+'.ios:bg-(#f0f0f0)[platform=ios]': { backgroundColor: '#f0f0f0' }
+'.max-(1)': { max: 1 }
+'.max-(100)': { max: 100 }
+'.max-zoom-scale-(5)': { maxZoomScale: 5 }
+'.maximum-(10)': { maximum: 10 }
+'.min-(0)': { min: 0 }
+'.minimum-(0)': { minimum: 0 }
+'.mr-(10%)': { right: '10%' }
+'.preferred-(2)': { preferred: 2 }
+'.tint-(red)': { tint: 'red' }
+'.value-(0)': { value: '0' }
+'.value-(0.75)': { value: '0.75' }
+'.w-(80%)': { width: '80%' }
+
+// Material Icons
+'.android:mi-phone_android[platform=android]': { text: '\ue324', title: '\ue324' }
+'.ios:mi-phone_iphone[platform=ios]': { text: '\ue325', title: '\ue325' }
+'.mi-terminal': { text: '\ueb8e', title: '\ueb8e' }
+'.mi-tune': { text: '\ue429', title: '\ue429' }
+'.mio': { font: { fontFamily: 'MaterialIconsOutlined-Regular' } }
+'.mit': { font: { fontFamily: 'MaterialIconsTwoTone-Regular' } }

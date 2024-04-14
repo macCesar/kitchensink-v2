@@ -1,15 +1,11 @@
 <Alloy>
-  <Tab title="Console">
+  <Tab module="tikit.ui" title="Console" icon="mio mi-terminal text-3xl" activeIcon="mit mi-terminal text-3xl">
     <Window title="Console" onOpen="showLogs">
       <RightNavButton platform="ios" systemButton="TRASH" onClick="clearLogs" />
-      <ScrollView id="scrollView">
-        <Label id="log" />
+
+      <ScrollView id="scrollView" class="content-w-screen content-h-auto">
+        <Label id="log" class="mx-2 mt-2 h-auto w-screen font-mono" />
       </ScrollView>
-      <CommandBar platform="windows">
-        <Items>
-          <AppBarButton icon="DELETE" onClick="clearLogs"></AppBarButton>
-        </Items>
-      </CommandBar>
     </Window>
   </Tab>
 </Alloy>

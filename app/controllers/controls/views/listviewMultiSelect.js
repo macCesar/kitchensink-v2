@@ -31,22 +31,18 @@ function enableSelectionMode() {
   }
 
   // Enable edit mode.
-  $.listView.editing = true
+  $.listView.applyProperties({ editing: true })
 
   // Show selection options in top title bar.
   const selectedMessage = `${$.listView.selectedItems.length} Selected`
   if (OS_IOS) {
     $.itemsSelectedLabel.text = selectedMessage
-    $.editToolbar.height = Ti.UI.SIZE
-    $.editToolbar.visible = true
-    $.mainToolbar.height = 0
-    $.mainToolbar.visible = false
-    $.win.leftNavButton = $.selectAllButton
-    $.win.rightNavButton = $.cancelButton
+    $.editToolbar.applyProperties({ height: Ti.UI.SIZE, visible: true })
+    $.mainToolbar.applyProperties({ height: 0, visible: false })
+    $.win.applyProperties({ leftNavButton: $.selectAllButton, rightNavButton: $.cancelButton })
   } else if (OS_ANDROID) {
-    $.editToolbar.title = selectedMessage
-    $.editToolbar.visible = true
-    $.mainToolbar.visible = false
+    $.editToolbar.applyProperties({ title: selectedMessage, visible: true })
+    $.mainToolbar.applyProperties({ visible: false })
     $.win.activity.setSupportActionBar($.editToolbar)
   }
 }
@@ -63,15 +59,12 @@ function disableSelectionMode() {
 
   // Hide selection options in top title bar.
   if (OS_IOS) {
-    $.editToolbar.height = 0
-    $.editToolbar.visible = false
-    $.mainToolbar.height = Ti.UI.SIZE
-    $.mainToolbar.visible = true
-    $.win.leftNavButton = null
-    $.win.rightNavButton = $.editButton
+    $.editToolbar.applyProperties({ height: 0, visible: false })
+    $.mainToolbar.applyProperties({ height: Ti.UI.SIZE, visible: true })
+    $.win.applyProperties({ leftNavButton: null, rightNavButton: $.editButton })
   } else if (OS_ANDROID) {
-    $.editToolbar.visible = false
-    $.mainToolbar.visible = true
+    $.editToolbar.applyProperties({ visible: false })
+    $.mainToolbar.applyProperties({ visible: true })
     $.win.activity.setSupportActionBar($.mainToolbar)
   }
 }
@@ -103,9 +96,9 @@ function deleteSelectedItems() {
     message: 'Are you sure you want to delete the selected items?',
     buttonNames: ['Yes', 'No'],
   })
-  dialog.addEventListener('click', function(e) {
+  dialog.addEventListener('click', function({ index }) {
     // Do not continue unless "Yes" was selected.
-    if (e.index !== 0) {
+    if (index !== 0) {
       return
     }
 
@@ -190,10 +183,10 @@ function onAndroidBack() {
  * Called on Android when ListView has been long-pressed. Enables "edit" mode.
  * @param {Object} e - The event object.
  */
-function onLongPressed(e) {
-  if (OS_ANDROID && e.section && !$.listView.editing) {
+function onLongPressed(event) {
+  if (OS_ANDROID && event.section && !$.listView.editing) {
     enableSelectionMode()
-    $.listView.selectItem(e.sectionIndex, e.itemIndex)
+    $.listView.selectItem(event.sectionIndex, event.itemIndex)
   }
 }
 
@@ -201,8 +194,8 @@ function onLongPressed(e) {
  * Called when a ListView item has been selected/checked in "edit" mode.
  * @param {Object} e - The event object.
  */
-function onItemsSelected(e) {
-  const message = `${e.selectedItems.length} Selected`
+function onItemsSelected({ selectedItems }) {
+  const message = `${selectedItems.length} Selected`
   if (OS_IOS) {
     $.itemsSelectedLabel.text = message
   } else if (OS_ANDROID) {
@@ -210,7 +203,7 @@ function onItemsSelected(e) {
     $.editToolbar.title = message
 
     // Disable "edit" mode once all items have been unselected.
-    if (e.selectedItems.length <= 0) {
+    if (selectedItems.length <= 0) {
       disableSelectionMode()
     }
   }
@@ -220,9 +213,9 @@ function onItemsSelected(e) {
  * Called when a ListView item has been tapped on while "edit" mode is disabled.
  * @param {Object} e - The event object.
  */
-function onItemClicked(e) {
+function onItemClicked(event) {
   if (!$.listView.editing) {
-    alert(`Tapped on...\n${e.section.headerTitle}: ${e.section.getItemAt(e.itemIndex).properties.title}`)
+    alert(`Tapped on...\n${event.section.headerTitle}: ${event.section.getItemAt(event.itemIndex).properties.title}`)
   } else if (OS_IOS) {
     onItemsSelected({ selectedItems: $.listView.selectedItems })
   }
@@ -251,33 +244,40 @@ if (OS_IOS) {
 if (OS_ANDROID) {
   $.win.activity.supportToolbar = $.mainToolbar
   $.editToolbar.navigationIcon = Ti.App.Android.R.drawable.ic_baseline_close_24
-  $.win.activity.onCreateOptionsMenu = (e) => {
+
+  $.win.activity.onCreateOptionsMenu = ({ menu }) => {
     if ($.mainToolbar.visible) {
-      const selectMenuItem = e.menu.add({
+      const selectMenuItem = menu.add({
         title: 'Select',
         showAsAction: Ti.Android.SHOW_AS_ACTION_NEVER,
       })
+
       selectMenuItem.addEventListener('click', enableSelectionMode)
     } else {
-      const shareMenuItem = e.menu.add({
+      const shareMenuItem = menu.add({
         title: 'Share',
         titleCondensed: '',
         icon: Ti.App.Android.R.drawable.ic_baseline_share_24,
         showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
       })
+
       shareMenuItem.addEventListener('click', shareSelectedItems)
-      const deleteMenuItem = e.menu.add({
+
+      const deleteMenuItem = menu.add({
         title: 'Delete',
         titleCondensed: '',
         icon: Ti.App.Android.R.drawable.ic_baseline_delete_24,
         showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
       })
+
       deleteMenuItem.addEventListener('click', deleteSelectedItems)
     }
-    const selectAllMenuItem = e.menu.add({
+
+    const selectAllMenuItem = menu.add({
       title: 'Select All',
       showAsAction: Ti.Android.SHOW_AS_ACTION_NEVER,
     })
+
     selectAllMenuItem.addEventListener('click', selectAll)
   }
 }

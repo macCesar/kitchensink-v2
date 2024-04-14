@@ -1,19 +1,22 @@
 <Alloy>
-  <Window title="Button Bar" layout="vertical">
-    <Label top="15%">Text-Only Buttons</Label>
-    <ButtonBar top="10" onClick="onTextButtonBarClicked">
+  <Window title="Button Bar" class="vertical">
+    <Label text="Text-Only Buttons" class="mt-1/6" />
+
+    <ButtonBar onClick="onTextButtonBarClicked" class="mt-4">
       <Labels>
         <Label>One</Label>
         <Label>Two</Label>
         <Label>Three</Label>
       </Labels>
     </ButtonBar>
-    <Label top="40">Image-Only Buttons</Label>
-    <ButtonBar top="10" onClick="onImageButtonBarClicked">
+
+    <Label text="Image-Only Buttons" class="mt-10" />
+
+    <ButtonBar onClick="onImageButtonBarClicked" class="mt-4">
       <Labels>
-        <Label image="/images/icons/controls.png"/>
-        <Label image="/images/icons/phone.png"/>
-        <Label image="/images/icons/mashups.png"/>
+        <Label image="/images/icons/controls.png" />
+        <Label image="/images/icons/phone.png" />
+        <Label image="/images/icons/mashups.png" />
       </Labels>
     </ButtonBar>
   </Window>

@@ -1,16 +1,16 @@
 // Assign the 'pop' feature to the button
 $.button.previewContext = $.context
 
-function actionTitle(e) {
-  alert('Title: ' + e.title + ' / Style: ' + e.style + ' / Index: ' + e.index)
+function actionTitle(event) {
+  alert(`Title: ${event.title} / Style: ${event.style} / Index: ${event.index}`)
 }
 
-function action(e) {
-  alert('Title: ' + e.title + ' / Style: ' + e.style + ' / Index: ' + e.index)
+function action(event) {
+  alert(`Title: ${event.title} / Style: ${event.style} / Index: ${event.index}`)
 }
 
-function subAction(e) {
-  alert('Title: ' + e.title + ' / Style: ' + e.style + ' / Subindex: ' + e.index)
+function subAction(event) {
+  alert(`Title: ${event.title} / Style: ${event.style} / Subindex: ${event.index}`)
 }
 
 // Pop the preview

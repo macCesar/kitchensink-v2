@@ -9,9 +9,10 @@ import { logger } from 'logger';
   }
 
   Alloy.CFG.tabGroup = $.index
+
   $.index.open()
 }())
 
-function handleShortcutItem(e) {
-  logger.log('Ti.App.iOS.shortcutitemclick', e)
+function handleShortcutItem(event) {
+  logger.log('Ti.App.iOS.shortcutitemclick', event)
 }

@@ -14,6 +14,7 @@
   <guid>11111111-1111-1111-1111-111111111111</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>
   <property name="run-on-main-thread" type="bool">true</property>
+
   <ios>
     <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
     <default-background-color>#c91326</default-background-color>
@@ -115,8 +116,10 @@
       </dict>
     </plist>
   </ios>
+
   <android xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:versionCode="800" android:versionName="8.0.0">
+      <uses-sdk android:targetSdkVersion="33" />
       <uses-permission android:name="android.permission.RECORD_AUDIO"/>
       <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
       <!-- Ti.Platform.canOpenURL() method will return false unless mime-type is specified in below queries section. -->
@@ -143,14 +146,17 @@
       </application>
     </manifest>
   </android>
+
   <deployment-targets>
     <target device="android">true</target>
     <target device="ipad">true</target>
     <target device="iphone">true</target>
   </deployment-targets>
+
   <plugins>
     <plugin version="1.0">ti.alloy</plugin>
   </plugins>
+
   <modules>
     <module platform="iphone">ti.map</module>
     <module platform="android">ti.map</module>
@@ -159,5 +165,6 @@
     <module platform="android">facebook</module>
     <module platform="iphone">facebook</module>
   </modules>
-  <sdk-version>12.2.1.GA</sdk-version>
+
+  <sdk-version>12.3.0.GA</sdk-version>
 </ti:app>

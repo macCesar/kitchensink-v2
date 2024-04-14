@@ -3,7 +3,7 @@
 	width: 300
 }
 
-'.actionButton': {
+'.action-button': {
 	top: 20
 }
 

@@ -1,3 +1,3 @@
-function onButtonClicked(e) {
-  alert(`Clicked on: ${e.source.title}`)
+function onButtonClicked(event) {
+  alert(`Clicked on: ${event.source.title}`)
 }

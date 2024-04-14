@@ -1,7 +1,9 @@
 <Alloy>
   <Window title="Date Picker (Inline)">
-    <Label id="valueLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" top="30"/>
-    <Picker id="datePicker" type="Ti.UI.PICKER_TYPE_DATE" datePickerStyle="Ti.UI.DATE_PICKER_STYLE_INLINE" onChange="onPickerValueChanged"/>
-    <Label id="footnoteLabel" platform="ios" bottom="20">The "inline" style is only supported on iOS 14.0+.</Label>
+    <Label id="valueLabel" class="mt-8 text-center" />
+
+    <Picker id="datePicker" class="type-picker-date date-picker-style-inline" onChange="onPickerValueChanged" />
+
+    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="The 'inline' style is only supported on iOS 14.0+." />
   </Window>
 </Alloy>
