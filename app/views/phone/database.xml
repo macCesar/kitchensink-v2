@@ -1,5 +1,5 @@
 <Alloy>
-  <Window title="Database" onOpen="intitializeDatabase">
-    <Label text="Check out the Console!" />
+  <Window title="L('database')" onOpen="intitializeDatabase">
+    <Label text="L('check_out_the_console')"/>
   </Window>
 </Alloy>

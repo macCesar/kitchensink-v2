@@ -1,9 +1,9 @@
 <Alloy>
-  <Window title="Time Picker (Compact)">
-    <Label id="valueLabel" class="mt-8 text-center" />
+  <Window title="L('time_picker_compact')">
+    <Label id="valueLabel" class="mt-8 text-center"/>
 
-    <Picker id="timePicker" class="type-picker-time date-picker-style-compact border-style-rounded" hintText="Time" onChange="onPickerValueChanged" />
+    <Picker id="timePicker" class="type-picker-time date-picker-style-compact border-style-rounded" hintText="L('time')" onChange="onPickerValueChanged"/>
 
-    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="The 'compact' style is only supported on iOS 13.4+." />
+    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="L('supported_on_ios_134_plus')"/>
   </Window>
 </Alloy>

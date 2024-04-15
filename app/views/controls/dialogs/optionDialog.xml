@@ -1,14 +1,14 @@
 <Alloy>
-  <Window title="Option Dialog">
-    <Label id="resultLabel" class="mt-8" />
+  <Window title="L('option_dialog')">
+    <Label id="resultLabel" class="mt-8"/>
 
-    <Button title="Show Option Dialog" onClick="onShowOptionDialog" />
+    <Button title="L('show_option_dialog')" onClick="onShowOptionDialog"/>
 
-    <OptionDialog id="dialog" title="Available Options" class="cancel-(0) destructive-(1) preferred-(2)" onClick="onOptionDialogClicked">
+    <OptionDialog id="dialog" title="L('available_options')" class="cancel-(0) destructive-(1) preferred-(2)" onClick="onOptionDialogClicked">
       <Options>
-        <Option>Cancel</Option>
-        <Option>Delete</Option>
-        <Option>Confirm</Option>
+        <Option>L('cancel')</Option>
+        <Option>L('delete')</Option>
+        <Option>L('confirm')</Option>
       </Options>
     </OptionDialog>
   </Window>

@@ -1,10 +1,10 @@
 <Alloy>
-  <Window title="Sound">
+  <Window title="L('sound')">
     <ListView id="listView" onItemclick="openSoundComponent">
       <ListSection>
-        <ListItem title="Local Sound" itemId="soundLocal" />
-        <ListItem title="Remote Sound" itemId="soundRemote" />
-        <ListItem title="Remote Streaming" itemId="soundRemoteStreaming" />
+        <ListItem title="L('local_sound')" itemId="soundLocal"/>
+        <ListItem title="L('remote_sound')" itemId="soundRemote"/>
+        <ListItem title="L('remote_streaming')" itemId="soundRemoteStreaming"/>
       </ListSection>
     </ListView>
   </Window>

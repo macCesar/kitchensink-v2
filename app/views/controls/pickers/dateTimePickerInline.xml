@@ -1,9 +1,9 @@
 <Alloy>
-  <Window title="Date/TIME Picker (Inline)">
-    <Label id="valueLabel" class="mt-8 text-center" />
+  <Window title="L('date_time_picker_inline')">
+    <Label id="valueLabel" class="mt-8 text-center"/>
 
-    <Picker id="datePicker" class="type-picker-date-and-time date-picker-style-inline" onChange="onPickerValueChanged" />
+    <Picker id="datePicker" class="type-picker-date-and-time date-picker-style-inline" onChange="onPickerValueChanged"/>
 
-    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="The 'inline' style is only supported on iOS 14.0+." />
+    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="L('supported_on_ios_140_plus')"/>
   </Window>
 </Alloy>

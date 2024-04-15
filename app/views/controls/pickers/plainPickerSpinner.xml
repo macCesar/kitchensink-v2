@@ -1,21 +1,21 @@
 <Alloy>
-  <Window title="Plain Picker (Spinner)">
-    <Label id="state" class="state-label" />
+  <Window title="L('plain_picker_spinner')">
+    <Label id="state" class="state-label"/>
 
     <Picker class="selection-indicator use-spinner" onChange="onPickerValueChanged">
       <PickerColumn>
-        <PickerRow title="Bananas" />
-        <PickerRow title="Strawberries" />
-        <PickerRow title="Mangos" />
-        <PickerRow title="Grapes" />
+        <PickerRow title="L('bananas')"/>
+        <PickerRow title="L('strawberries')"/>
+        <PickerRow title="L('mangos')"/>
+        <PickerRow title="L('grapes')"/>
       </PickerColumn>
 
       <!-- Picker shorthand notation -->
       <Column id="column2">
-        <Row title="Red" />
-        <Row title="Green" />
-        <Row title="Blue" />
-        <Row title="Orange" />
+        <Row title="L('red')"/>
+        <Row title="L('green')"/>
+        <Row title="L('blue')"/>
+        <Row title="L('orange')"/>
       </Column>
     </Picker>
   </Window>

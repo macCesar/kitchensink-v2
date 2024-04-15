@@ -1,27 +1,27 @@
 <Alloy>
-  <Window title="Local Sound" onOpen="startInterval" onClose="stopInterval">
+  <Window title="L('local_sound')" onOpen="startInterval" onClose="stopInterval">
     <View class="verticalContainer">
-      <Button onClick="startPlayback" class="action-button" title="Start" />
-      <Button onClick="stopPlayback" class="action-button" title="Stop" />
-      <Button onClick="pausePlayback" class="action-button" title="Pause" />
-      <Button onClick="resetPlayback" class="action-button" title="Reset" />
+      <Button onClick="startPlayback" class="action-button" title="L('start')"/>
+      <Button onClick="stopPlayback" class="action-button" title="L('stop')"/>
+      <Button onClick="pausePlayback" class="action-button" title="L('pause')"/>
+      <Button onClick="resetPlayback" class="action-button" title="L('reset')"/>
 
       <View class="horizontalContainer">
-        <Button onClick="setVolumeUp" class="action-button buttonVolume" id="buttonVolumeUp" title="Volume++" />
-        <Button onClick="setVolumeDown" class="action-button buttonVolume" id="buttonVolumeDown" title="Volume--" />
+        <Button onClick="setVolumeUp" class="action-button buttonVolume" id="buttonVolumeUp" title="L('volumne_up')"/>
+        <Button onClick="setVolumeDown" class="action-button buttonVolume" id="buttonVolumeDown" title="L('volumne_down')"/>
       </View>
 
-      <Button onClick="toggleLooping" class="action-button" id="buttonLooping" title="Looping (false)" />
+      <Button onClick="toggleLooping" class="action-button" id="buttonLooping" title="L('looping_false')"/>
     </View>
 
     <Toolbar platform="ios" class="playbackProgressToolbar">
       <Items>
         <FlexSpace/>
-        <ProgressBar id="playbackProgress" />
+        <ProgressBar id="playbackProgress"/>
         <FlexSpace/>
       </Items>
     </Toolbar>
 
-    <ProgressBar platform="android" id="playbackProgress" />
+    <ProgressBar platform="android" id="playbackProgress"/>
   </Window>
 </Alloy>

@@ -1,13 +1,13 @@
 <Alloy>
-  <Window title="Masked Image (Tint)" class="vertical">
-    <MaskedImage id="myMaskedImage" class="wh-40 tint-(red) mt-8" mask="/images/mask-titanium-logo.png" />
+  <Window title="L('masked_image_tint')" class="vertical">
+    <MaskedImage id="myMaskedImage" class="wh-40 tint-(red) mt-8" mask="/images/mask-titanium-logo.png"/>
 
     <OptionBar onClick="onColorOptionBarClicked" class="mt-8">
       <Labels>
-        <Label>Red</Label>
-        <Label>Green</Label>
-        <Label>Blue</Label>
-        <Label>Black</Label>
+        <Label>L('red')</Label>
+        <Label>L('green')</Label>
+        <Label>L('blue')</Label>
+        <Label>L('black')</Label>
       </Labels>
     </OptionBar>
   </Window>

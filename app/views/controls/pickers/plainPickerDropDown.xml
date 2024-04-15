@@ -1,14 +1,14 @@
 <Alloy>
-  <Window title="Plain Picker (Drop-Down)">
-    <Label id="valueLabel" class="mt-8" />
+  <Window title="L('plain_picker_drop_down')">
+    <Label id="valueLabel" class="mt-8"/>
 
-    <Picker id="picker" class="use-spinner-false border-style-rounded w-4/5" hintText="Select Item" onChange="onPickerValueChanged">
+    <Picker id="picker" class="use-spinner-false border-style-rounded w-4/5" hintText="L('select_item')" onChange="onPickerValueChanged">
       <PickerColumn>
-        <PickerRow title="Item 1" />
-        <PickerRow title="Item 2" />
-        <PickerRow title="Item 3" />
-        <PickerRow title="Item 4" />
-        <PickerRow title="Item 5" />
+        <PickerRow title="L('item_1')"/>
+        <PickerRow title="L('item_2')"/>
+        <PickerRow title="L('item_3')"/>
+        <PickerRow title="L('item_4')"/>
+        <PickerRow title="L('item_5')"/>
       </PickerColumn>
     </Picker>
   </Window>

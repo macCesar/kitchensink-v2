@@ -1,7 +1,7 @@
 <Alloy>
-  <Window title="Gesture" onOpen="onWindowOpen" onClose="onWindowClose">
-    <Label id="orientationLabel" class="mt-24 text-center" />
-    <Label id="shakeLabel" class="text-primary mb-24 text-2xl font-bold opacity-0" text="Shake Detected!" />
-    <Label class="mb-5" text="(Shake device to receive 'shake' events.)" />
+  <Window title="L('gesture')" onOpen="onWindowOpen" onClose="onWindowClose">
+    <Label id="orientationLabel" class="mt-24 text-center"/>
+    <Label id="shakeLabel" class="text-primary mb-24 text-2xl font-bold opacity-0" text="L('shake_detected')"/>
+    <Label class="mb-5" text="L('shake_device_to_receive_shake_events')"/>
   </Window>
 </Alloy>

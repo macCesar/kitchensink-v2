@@ -1,5 +1,5 @@
 <Alloy>
-  <Window title="Remote Sound">
-    <Label class="placeholder-label" text="To be added ⚒" />
+  <Window title="L('remote_sound')">
+    <Label class="placeholder-label" text="L('to_be_added')"/>
   </Window>
 </Alloy>

@@ -1,23 +1,23 @@
 <Alloy>
-  <Window id="win" title="Drawer" onAndroidback="onAndroidBack" onOpen="onWindowOpen">
+  <Window id="win" title="L('drawer')" onAndroidback="onAndroidBack" onOpen="onWindowOpen">
     <DrawerLayout platform="android" id="drawerLayout">
       <LeftView>
         <View class="bg-primary-500">
-          <Label text="Left" />
+          <Label text="L('left')"/>
         </View>
       </LeftView>
 
       <CenterView>
         <View>
-          <Button id="btn_left" title="Toggle left" onClick="onClickLeft" class="mt-25" />
-          <Button id="close" title="Close window" onClick="onClickClose" />
-          <Button id="btn_right" title="Toggle right" onClick="onClickRight" class="mb-25" />
+          <Button id="btn_left" title="L('toggle_left')" onClick="onClickLeft" class="mt-25"/>
+          <Button id="close" title="L('close_window')" onClick="onClickClose"/>
+          <Button id="btn_right" title="L('toggle_right')" onClick="onClickRight" class="mb-25"/>
         </View>
       </CenterView>
 
       <RightView>
         <View class="bg-primary-500">
-          <Label text="Right" />
+          <Label text="L('right')"/>
         </View>
       </RightView>
     </DrawerLayout>

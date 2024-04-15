@@ -1,12 +1,12 @@
 <Alloy>
-  <Window title="Dialogs">
+  <Window title="L('dialogs')">
     <ListView id="listView" onItemclick="openComponent">
       <ListSection>
-        <ListItem title="Alert Dialog" itemId="alertDialog" />
-        <ListItem title="E-Mail Dialog" itemId="emailDialog" />
-        <ListItem title="Option Dialog" itemId="optionDialog" />
-        <ListItem platform="android" title="Progress Dialog (Determinant)" itemId="progressDialogDeterminant" />
-        <ListItem platform="android" title="Progress Dialog (Indeterminant)" itemId="progressDialogIndeterminant" />
+        <ListItem title="L('alert_dialog')" itemId="alertDialog"/>
+        <ListItem title="L('email_dialog')" itemId="emailDialog"/>
+        <ListItem title="L('option_dialog')" itemId="optionDialog"/>
+        <ListItem platform="android" title="L('progress_dialog_determinant')" itemId="progressDialogDeterminant"/>
+        <ListItem platform="android" title="L('progress_dialog_indeterminant')" itemId="progressDialogIndeterminant"/>
       </ListSection>
     </ListView>
   </Window>

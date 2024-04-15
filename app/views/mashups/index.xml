@@ -1,9 +1,9 @@
 <Alloy>
-  <Tab title="Mashups" icon='/images/icons/mashups.png'>
-    <Window title="Mashups">
+  <Tab title="L('mashups')" icon='/images/icons/mashups.png'>
+    <Window title="L('mashups')">
       <ListView id="listView" onItemclick="openComponent">
         <ListSection>
-          <ListItem title="Facebook" itemId="facebook" />
+          <ListItem title="L('facebook')" itemId="facebook"/>
         </ListSection>
       </ListView>
     </Window>

@@ -1,20 +1,20 @@
 <Alloy>
-  <Window title="Text Field">
+  <Window title="L('text_field')">
     <ScrollView id="textfieldsContainer" class="vertical ios:keyboard-dismiss-mode-interactive" onClick="blurTextfield">
-      <Label class="w-75 mt-5 text-center text-sm font-bold" text="Demonstration of multiple keyboard types" />
+      <Label class="w-75 mt-5 text-center text-sm font-bold" text="L('demonstration_of_multiple_keyboard_types')"/>
 
       <!-- Different textfields based on different keyboard types. There are more -->
       <!-- that can be found in the docs https://titaniumsdk.com/api/titanium/ui/textfield.html -->
-      <TextField id="regularTextfield" hintText="Regular TextField" class="keyboard-type textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="phoneTextfield" hintText="Phone TextField" class="keyboard-type-phone-pad textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="emailTextfield" hintText="Email TextField" class="keyboard-type-email autocorrect autocapitalization-text-none autofill-type-email textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="passwordTextfield" hintText="Type your password" class="autofill-type-password password-mask textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="urlTextfield" hintText="URL TextField" class="keyboard-type-url textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="numberTextfield" hintText="Number TextField" class="keyboard-type-number-pad textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="numberPunctuationTextfield" hintText="Number punctuation TextField" class="keyboard-type-numbers-punctuation textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-      <TextField id="decimalTextfield" hintText="Decimal TextField" class="keyboard-type-decimal-pad textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
+      <TextField id="regularTextfield" hintText="L('regular_textField')" class="keyboard-type textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="phoneTextfield" hintText="L('phone_textField')" class="keyboard-type-phone-pad textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="emailTextfield" hintText="L('email_textField')" class="keyboard-type-email autocorrect autocapitalization-text-none autofill-type-email textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="passwordTextfield" hintText="L('type_your_password')" class="autofill-type-password password-mask textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="urlTextfield" hintText="L('url_textField')" class="keyboard-type-url textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="numberTextfield" hintText="L('number_textField')" class="keyboard-type-number-pad textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="numberPunctuationTextfield" hintText="L('number_punctuation_textField')" class="keyboard-type-numbers-punctuation textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
+      <TextField id="decimalTextfield" hintText="L('decimal_textField')" class="keyboard-type-decimal-pad textlabel" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred"/>
 
-      <Label platform="ios" class="w-75 mt-5 text-center text-sm font-bold" text="You can drag down the keyboard when its and view is scrollable. This thanks to keyboardDismissMode property on wrapping ScrollView visible" />
+      <Label platform="ios" class="w-75 mt-5 text-center text-sm font-bold" text="L('you_can_drag_down_the_keyboard_')"/>
     </ScrollView>
   </Window>
 </Alloy>

@@ -1,25 +1,25 @@
 <Alloy>
-  <Tab module="tikit.ui" title="Controls" icon="mio mi-tune text-3xl" activeIcon="mit mi-tune text-3xl">
-    <Window id="window" title="Controls" onFocus="onFocus">
+  <Tab module="tikit.ui" title="L('controls')" icon="mio mi-tune text-3xl" activeIcon="mit mi-tune text-3xl">
+    <Window id="window" title="L('controls')" onFocus="onFocus">
       <ListView id="listView" onItemclick="openComponent">
         <ListSection>
-          <ListItem title="Activity Indicator" itemId="activityindicator" />
-          <ListItem title="Button Bar" itemId="buttonbar" />
-          <ListItem title="Button" itemId="button" />
-          <ListItem title="Dialogs" itemId="dialogs/index" />
-          <ListItem platform="android" title="Drawer Layout" itemId="drawer" />
-          <ListItem title="Label" itemId="label" />
-          <ListItem title="Option Bar" itemId="optionbar" />
-          <ListItem title="Pickers" itemId="pickers/index" />
-          <ListItem title="Progress Bar" itemId="progressbar" />
-          <ListItem title="Slider" itemId="slider" />
-          <ListItem platform="ios" title="Stepper" itemId="stepper" />
-          <ListItem title="Switch" itemId="switchcontrol" />
-          <ListItem title="Tabbed Bar" itemId="tabbedbar" />
-          <ListItem title="Text Area" itemId="textarea" />
-          <ListItem title="Text Field" itemId="textfield" />
-          <ListItem title="Toolbar" itemId="toolbar" />
-          <ListItem title="Views" itemId="views/index" />
+          <ListItem title="L('activity_indicator')" itemId="activityindicator"/>
+          <ListItem title="L('button_bar')" itemId="buttonbar"/>
+          <ListItem title="L('button')" itemId="button"/>
+          <ListItem title="L('dialogs')" itemId="dialogs/index"/>
+          <ListItem platform="android" title="L('drawer_layout')" itemId="drawer"/>
+          <ListItem title="L('label')" itemId="label"/>
+          <ListItem title="L('option_bar')" itemId="optionbar"/>
+          <ListItem title="L('pickers')" itemId="pickers/index"/>
+          <ListItem title="L('progress_bar')" itemId="progressbar"/>
+          <ListItem title="L('slider')" itemId="slider"/>
+          <ListItem platform="ios" title="L('stepper')" itemId="stepper"/>
+          <ListItem title="L('switch_string')" itemId="switchcontrol"/>
+          <ListItem title="L('tabbed_bar')" itemId="tabbedbar"/>
+          <ListItem title="L('text_area')" itemId="textarea"/>
+          <ListItem title="L('text_field')" itemId="textfield"/>
+          <ListItem title="L('toolbar')" itemId="toolbar"/>
+          <ListItem title="L('views')" itemId="views/index"/>
         </ListSection>
       </ListView>
     </Window>

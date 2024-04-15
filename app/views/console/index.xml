@@ -1,10 +1,10 @@
 <Alloy>
-  <Tab module="tikit.ui" title="Console" icon="mio mi-terminal text-3xl" activeIcon="mit mi-terminal text-3xl">
-    <Window title="Console" onOpen="showLogs">
-      <RightNavButton platform="ios" systemButton="TRASH" onClick="clearLogs" />
+  <Tab module="tikit.ui" title="L('console')" icon="mio mi-terminal text-3xl" activeIcon="mit mi-terminal text-3xl">
+    <Window title="L('console')" onOpen="showLogs">
+      <RightNavButton platform="ios" systemButton="TRASH" onClick="clearLogs"/>
 
       <ScrollView id="scrollView" class="content-w-screen content-h-auto">
-        <Label id="log" class="mx-2 mt-2 h-auto w-screen font-mono" />
+        <Label id="log" class="mx-2 mt-2 h-auto w-screen font-mono"/>
       </ScrollView>
     </Window>
   </Tab>

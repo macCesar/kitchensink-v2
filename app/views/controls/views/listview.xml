@@ -1,37 +1,37 @@
 <Alloy>
-  <Window title="List View">
+  <Window title="L('list_view')">
     <ListView onItemclick="handleListViewClick">
 
       <!-- Enable Pull-to-Refresh -->
-      <RefreshControl id="refresh" onRefreshstart="fetchData" />
+      <RefreshControl id="refresh" onRefreshstart="fetchData"/>
 
       <!-- Add custom item templates -->
       <Templates>
         <ItemTemplate name="MyCustomTemplate">
           <!-- Apply custom margins for Android since the ListItem -->
           <!-- behaves different natively -->
-          <Label bindId="title" class="android:ml-0 ml-4 h-10 text-red-500" />
-          <Label bindId="detail" class="mr-6 h-10 font-bold text-green-500" />
+          <Label bindId="title" class="android:ml-0 ml-4 h-10 text-red-500"/>
+          <Label bindId="detail" class="mr-6 h-10 font-bold text-green-500"/>
         </ItemTemplate>
       </Templates>
 
-      <ListSection headerTitle="System Item Templates">
-        <ListItem title="Bananas" image="/images/icons/tab.png" />
-        <ListItem title="Apples" subtitle="Oranges" class="list-item-template-subtitle" />
-        <ListItem title="Mangos" subtitle="Strawberries" class="list-item-template-settings" />
-        <ListItem title="Lemon" subtitle="Melone" class="list-item-template-contacts" />
+      <ListSection headerTitle="L('system_item_templates')">
+        <ListItem title="L('bananas')" image="/images/icons/tab.png"/>
+        <ListItem title="L('apples')" subtitle="L('oranges')" class="list-item-template-subtitle"/>
+        <ListItem title="L('mangos')" subtitle="L('strawberries')" class="list-item-template-settings"/>
+        <ListItem title="L('lemon')" subtitle="L('melone')" class="list-item-template-contacts"/>
       </ListSection>
 
-      <ListSection headerTitle="Custom Item Templates">
-        <ListItem template="MyCustomTemplate" title:text="Nectarine" detail:text="3" />
-        <ListItem template="MyCustomTemplate" title:text="Pear" detail:text="7" detail:color="blue" />
+      <ListSection headerTitle="L('custom_item_templates')">
+        <ListItem template="MyCustomTemplate" title:text="L('nectarine')" detail:text="3"/>
+        <ListItem template="MyCustomTemplate" title:text="L('pear')" detail:text="7" detail:color="blue"/>
       </ListSection>
 
-      <ListSection headerTitle="Accessory Types">
-        <ListItem title="No Accessory" class="accessory-type-list-none" />
-        <ListItem title="Detail Accessory" class="accessory-type-list-detail" />
-        <ListItem title="Disclosure Accessory" class="accessory-type-list-disclosure" />
-        <ListItem title="Checkmark Accessory" class="accessory-type-list-checkmark" />
+      <ListSection headerTitle="L('accesory_types')">
+        <ListItem title="L('no_accessory')" class="accessory-type-list-none"/>
+        <ListItem title="L('detail_accessory')" class="accessory-type-list-detail"/>
+        <ListItem title="L('disclosure_accessory')" class="accessory-type-list-disclosure"/>
+        <ListItem title="L('checkmark_accessory')" class="accessory-type-list-checkmark"/>
       </ListSection>
     </ListView>
   </Window>

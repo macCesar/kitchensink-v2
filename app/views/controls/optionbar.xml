@@ -1,41 +1,41 @@
 <Alloy>
-  <Window title="Option Bar">
+  <Window title="L('option_bar')">
     <ScrollView class="vertical">
-      <Label class="mt-10" text="Text-Only Buttons" />
+      <Label class="mt-10" text="L('text_only_buttons')"/>
       <OptionBar class="mt-2" onClick="onTextOptionBarClicked">
         <Labels>
-          <Label>One</Label>
-          <Label>Two</Label>
-          <Label>Three</Label>
+          <Label>L('one')</Label>
+          <Label>L('two')</Label>
+          <Label>L('three')</Label>
         </Labels>
       </OptionBar>
 
-      <Label class="mt-8" text="Image-Only Buttons" />
+      <Label class="mt-8" text="L('image_only_buttons')"/>
       <OptionBar class="mt-2" onClick="onImageOptionBarClicked">
         <Labels>
-          <Label image="/images/icons/controls.png" />
-          <Label image="/images/icons/phone.png" />
-          <Label image="/images/icons/mashups.png" />
+          <Label image="/images/icons/controls.png"/>
+          <Label image="/images/icons/phone.png"/>
+          <Label image="/images/icons/mashups.png"/>
         </Labels>
       </OptionBar>
 
       <!-- Only Android supports setting both images and text. -->
-      <Label platform="android" class="mt-8" text="Image/Text Buttons" />
+      <Label platform="android" class="mt-8" text="L('image_text_buttons')"/>
       <OptionBar platform="android" class="mt-2" onClick="onImageTextOptionBarClicked">
         <Labels>
-          <Label image="/images/icons/controls.png">One</Label>
-          <Label image="/images/icons/phone.png">Two</Label>
-          <Label image="/images/icons/mashups.png">Three</Label>
+          <Label image="/images/icons/controls.png">L('one')</Label>
+          <Label image="/images/icons/phone.png">L('two')</Label>
+          <Label image="/images/icons/mashups.png">L('three')</Label>
         </Labels>
       </OptionBar>
 
       <!-- Only Android supports vertical layout for OptionBar. -->
-      <Label platform="android" class="mt-8" text="Vertical Buttons" />
+      <Label platform="android" class="mt-8" text="L('vertical_buttons')"/>
       <OptionBar platform="android" class="vertical mt-2" onClick="onVerticalOptionBarClicked">
         <Labels>
-          <Label image="/images/icons/controls.png">One</Label>
-          <Label image="/images/icons/phone.png">Two</Label>
-          <Label image="/images/icons/mashups.png">Three</Label>
+          <Label image="/images/icons/controls.png">L('one')</Label>
+          <Label image="/images/icons/phone.png">L('two')</Label>
+          <Label image="/images/icons/mashups.png">L('three')</Label>
         </Labels>
       </OptionBar>
     </ScrollView>

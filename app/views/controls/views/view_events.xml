@@ -1,13 +1,13 @@
 <Alloy>
-  <Window title="View Events" onSingletap="onSingleTap" onDblclick="onDblclick" onClick="onClick" onDoubletap="onDbltap" onSwipe="onSwipe" onTouchstart="onTouchstart" onTouchend="onTouchend" onTouchmove="onTouchmove">
-    <Label text="Touch and swipe the screen" class="mt-2" />
+  <Window title="L('view_events')" onSingletap="onSingleTap" onDblclick="onDblclick" onClick="onClick" onDoubletap="onDbltap" onSwipe="onSwipe" onTouchstart="onTouchstart" onTouchend="onTouchend" onTouchmove="onTouchmove">
+    <Label text="L('touch_and_swipe_the_screen')" class="mt-2"/>
 
     <View class="vertical">
-      <Label id="lbl_click_event" text="Click: -" />
-      <Label id="lbl_tap_event" text="Tap: -" />
-      <Label id="lbl_swipe_event" text="Swipe: -" />
-      <Label id="lbl_touch_event" text="Touch start: -" />
-      <Label id="lbl_touch_move_event" text="Touch move: -" />
+      <Label id="lbl_click_event" text="L('click_')"/>
+      <Label id="lbl_tap_event" text="L('tap_')"/>
+      <Label id="lbl_swipe_event" text="L('swipe_')"/>
+      <Label id="lbl_touch_event" text="L('touch_start_')"/>
+      <Label id="lbl_touch_move_event" text="L('touch_move_')"/>
     </View>
   </Window>
 </Alloy>

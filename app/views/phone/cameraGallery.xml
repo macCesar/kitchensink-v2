@@ -1,15 +1,15 @@
 <Alloy>
-  <Window title="Camera + Gallery" id="window">
+  <Window title="L('camera_plus_gallery')" id="window">
     <ListView id="listView" onItemclick="openComponent">
       <ListSection headerTitle="Camera">
-        <ListItem title="Show Camera (Photo)" itemId="showCameraPhoto" />
-        <ListItem title="Show Camera (Video)" itemId="showCameraVideo" />
-        <ListItem title="Show Camera (Photo + Video)" itemId="showCameraPhotoVideo" />
+        <ListItem title="L('show_camera_photo')" itemId="showCameraPhoto"/>
+        <ListItem title="L('show_camera_video')" itemId="showCameraVideo"/>
+        <ListItem title="L('show_camera_photo_and_video')" itemId="showCameraPhotoVideo"/>
       </ListSection>
 
-      <ListSection headerTitle="Gallery">
-        <ListItem title="Save to Gallery" itemId="saveToGallery" />
-        <ListItem title="Open from Gallery" itemId="openFromGallery" />
+      <ListSection headerTitle="L('gallery')">
+        <ListItem title="L('save_to_gallery')" itemId="saveToGallery"/>
+        <ListItem title="L('open_from_gallery')" itemId="openFromGallery"/>
       </ListSection>
     </ListView>
   </Window>

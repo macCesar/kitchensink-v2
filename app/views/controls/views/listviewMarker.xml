@@ -1,12 +1,12 @@
 <Alloy>
-  <Window id="win" title="List View (Marker)">
+  <Window id="win" title="L('list_view_marker')">
     <View class="wh-screen vertical">
-      <Label class="my-1 h-auto" text="Scroll to the bottom." />
-      <ListView id="listView" class="allows-selection-false" onMarker="onMarker" />
+      <Label class="my-1 h-auto" text="L('scroll_to_the_bottom')"/>
+      <ListView id="listView" class="allows-selection-false" onMarker="onMarker"/>
     </View>
 
     <View id="activityOverlay" class="wh-screen hidden bg-black opacity-50">
-      <ActivityIndicator id="activityIndicator" class="style-activity-indicator-big" />
+      <ActivityIndicator id="activityIndicator" class="style-activity-indicator-big"/>
     </View>
   </Window>
 </Alloy>

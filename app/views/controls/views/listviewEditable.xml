@@ -1,9 +1,9 @@
 <Alloy>
-  <Window id="win" title="List View (Editable)">
+  <Window id="win" title="L('list_view_editable')">
     <RightNavButton platform="ios">
-      <Button class="system-button-add" onClick="onAddItem" />
+      <Button class="system-button-add" onClick="onAddItem"/>
     </RightNavButton>
 
-    <ListView id="listView" class="allows-selection-during-editing-false allows-multiple-selection-during-editing-false editing" onDelete="onDeletedItem" onMove="onMovedItem" />
+    <ListView id="listView" class="allows-selection-during-editing-false allows-multiple-selection-during-editing-false editing" onDelete="onDeletedItem" onMove="onMovedItem"/>
   </Window>
 </Alloy>

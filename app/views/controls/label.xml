@@ -1,15 +1,15 @@
 <Alloy>
-  <Window title="Label">
+  <Window title="L('label')">
     <Label id="myLabel" class="mx-12 mt-12 text-left">
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
     </Label>
 
     <View class="mt-50 vertical">
-      <Button title="Change text align to center" onClick="changeToCenterAlignment" />
-      <Button title="Change text align to left" onClick="changeToLeftAlignment" />
-      <Button title="Change text align to right" onClick="changeToRightAlignment" />
-      <Button platform="ios" title="Change text align to justify" onClick="changeToJustifyAlignment" />
-      <Button title="Change color to red" onClick="changeColor" />
+      <Button title="L('change_text_align_to_center')" onClick="changeToCenterAlignment"/>
+      <Button title="L('change_text_align_to_left')" onClick="changeToLeftAlignment"/>
+      <Button title="L('change_text_align_to_right')" onClick="changeToRightAlignment"/>
+      <Button platform="ios" title="L('change_text_align_to_justify')" onClick="changeToJustifyAlignment"/>
+      <Button title="L('change_color_to_red')" onClick="changeColor"/>
     </View>
   </Window>
 </Alloy>

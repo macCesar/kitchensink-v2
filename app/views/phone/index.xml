@@ -1,24 +1,24 @@
 <Alloy>
-  <Tab module="tikit.ui" title="Phone" icon="mio ios:mi-phone_iphone android:mi-phone_android text-3xl" activeIcon="mit ios:mi-phone_iphone android:mi-phone_android text-3xl">
-    <Window title="Phone">
+  <Tab module="tikit.ui" title="L('phone')" icon="mio ios:mi-phone_iphone android:mi-phone_android text-3xl" activeIcon="mit ios:mi-phone_iphone android:mi-phone_android text-3xl">
+    <Window title="L('phone')">
       <ListView id="listView" onItemclick="openComponent">
         <ListSection>
-          <ListItem itemId="accelerometer" title="Accelerometer" />
-          <ListItem itemId="audioPlayer" title="Audio Player" />
-          <ListItem itemId="audioRecorder" title="Audio Recorder" />
-          <ListItem platform="ios" itemId="bundleSettings" title="Bundle Settings" />
-          <ListItem itemId="cameraGallery" title="Camera + Gallery" />
-          <ListItem itemId="clipboard" title="Clipboard" />
-          <ListItem itemId="database" title="Database" />
-          <ListItem itemId="documentViewer" title="Document Viewer" />
-          <ListItem itemId="geolocation" title="Geolocation" />
-          <ListItem itemId="gesture" title="Gesture" />
-          <ListItem itemId="identity" title="Identity (Biometric Authentication)" />
-          <ListItem itemId="map" title="Maps" />
-          <ListItem itemId="network" title="Network" />
-          <ListItem platform="ios" itemId="shortcutItems" title="3D/Haptic Touch: Shortcut Items" />
-          <ListItem itemId="sound" title="Sound" />
-          <ListItem itemId="videoPlayer" title="Video Player" />
+          <ListItem itemId="accelerometer" title="L('accelerometer')"/>
+          <ListItem itemId="audioPlayer" title="L('audio_player')"/>
+          <ListItem itemId="audioRecorder" title="L('audio_recorder')"/>
+          <ListItem platform="ios" itemId="bundleSettings" title="L('bundle_settings')"/>
+          <ListItem itemId="cameraGallery" title="L('camera_plus_gallery')"/>
+          <ListItem itemId="clipboard" title="L('clipboard')"/>
+          <ListItem itemId="database" title="L('database')"/>
+          <ListItem itemId="documentViewer" title="L('document_viewer')"/>
+          <ListItem itemId="geolocation" title="L('geolocation')"/>
+          <ListItem itemId="gesture" title="L('gesture')"/>
+          <ListItem itemId="identity" title="L('identity_biometric_authentication')"/>
+          <ListItem itemId="map" title="L('maps')"/>
+          <ListItem itemId="network" title="L('network')"/>
+          <ListItem platform="ios" itemId="shortcutItems" title="L('three_d_haptic_touch_shortcut_items')"/>
+          <ListItem itemId="sound" title="L('sound')"/>
+          <ListItem itemId="videoPlayer" title="L('video_player')"/>
         </ListSection>
       </ListView>
     </Window>

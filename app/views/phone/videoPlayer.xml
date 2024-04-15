@@ -1,7 +1,7 @@
 <Alloy>
-  <Window title="Video Player">
-    <Button class="mt-12" onClick="changeVideoSource">Change to Remote Source</Button>
+  <Window title="L('video_player')">
+    <Button class="mt-12" onClick="changeVideoSource" title="L('change_to_remote_source')"/>
 
-    <VideoPlayer id="myPlayer" class="h-75 autoplay shows-controls bg-(#111)" url="/videos/example-video.mp4" />
+    <VideoPlayer id="myPlayer" class="h-75 autoplay shows-controls bg-(#111)" url="/videos/example-video.mp4"/>
   </Window>
 </Alloy>

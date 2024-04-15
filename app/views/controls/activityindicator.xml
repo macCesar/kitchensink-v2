@@ -1,16 +1,16 @@
 <Alloy>
-  <Window title="Activity Indicator" onOpen="showIndicator">
+  <Window title="L('activity_indicator')" onOpen="showIndicator">
     <RightNavButton>
-      <ActivityIndicator id="indicatorNavBar" class="mb-5 h-auto" />
+      <ActivityIndicator id="indicatorNavBar" class="mb-5 h-auto"/>
     </RightNavButton>
 
     <View class="w-75 bg-(#aaa) vertical">
-      <ActivityIndicator id="indicatorLight" class="style-activity-indicator-plain mb-5 mt-5 h-auto" />
-      <ActivityIndicator id="indicatorDark" class="style-activity-indicator-dark mb-5 h-auto" />
-      <ActivityIndicator id="indicatorBig" class="style-activity-indicator-big mb-5 h-auto" />
-      <ActivityIndicator id="indicatorMessage" message="L('loading')" class="style-activity-indicator-dark mb-5 h-auto" />
+      <ActivityIndicator id="indicatorLight" class="style-activity-indicator-plain mb-5 mt-5 h-auto"/>
+      <ActivityIndicator id="indicatorDark" class="style-activity-indicator-dark mb-5 h-auto"/>
+      <ActivityIndicator id="indicatorBig" class="style-activity-indicator-big mb-5 h-auto"/>
+      <ActivityIndicator id="indicatorMessage" message="L('loading')" class="style-activity-indicator-dark mb-5 h-auto"/>
     </View>
 
-    <Button class="action-button mt-10" onClick="changeTintColor" title="Change spinner to random color" />
+    <Button class="action-button mt-10" onClick="changeTintColor" title="L('change_spinner_to_random_color')"/>
   </Window>
 </Alloy>

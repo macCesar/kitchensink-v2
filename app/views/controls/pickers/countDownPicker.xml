@@ -1,7 +1,7 @@
 <Alloy>
-  <Window title="Count Down Picker">
-    <Label id="valueLabel" class="mt-8 text-center" />
+  <Window title="L('count_down_picker')">
+    <Label id="valueLabel" class="mt-8 text-center"/>
 
-    <Picker id="picker" class="type-picker-count-down-timer" onChange="onPickerValueChanged" />
+    <Picker id="picker" class="type-picker-count-down-timer" onChange="onPickerValueChanged"/>
   </Window>
 </Alloy>

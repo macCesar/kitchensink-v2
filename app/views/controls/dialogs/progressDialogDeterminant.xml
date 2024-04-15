@@ -1,6 +1,6 @@
 <Alloy>
-  <Window title="Progress Dialog (Determinant)">
-    <Button title="Show Progress Dialog" onClick="onShowProgressDialog" />
-    <ProgressIndicator ns="Ti.UI.Android" id="progressIndicator" min="0" max="100" message="Loading..." class="location-progress-indicator-dialog type-progress-indicator-determinant" />
+  <Window title="L('progress_dialog_determinant')">
+    <Button title="L('show_progress_dialog')" onClick="onShowProgressDialog"/>
+    <ProgressIndicator ns="Ti.UI.Android" id="progressIndicator" min="0" max="100" message="L('loading')" class="location-progress-indicator-dialog type-progress-indicator-determinant"/>
   </Window>
 </Alloy>

@@ -1,17 +1,17 @@
 <Alloy>
-  <Window title="Image View (Scaled)" class="vertical">
+  <Window title="L('image_view_scaled')" class="vertical">
     <OptionBar class="my-2 h-auto" onClick="onScaleOptionBarClicked">
       <Labels>
-        <Label>None</Label>
-        <Label>Fill</Label>
-        <Label>Aspect Fill</Label>
-        <Label>Aspect Fit</Label>
+        <Label>L('none')</Label>
+        <Label>L('fill', 'Fill')</Label>
+        <Label>L('aspect_fill')</Label>
+        <Label>L('aspect_fit')</Label>
       </Labels>
     </OptionBar>
 
-    <View class="h-(1) w-screen bg-gray-200" />
+    <View class="h-(1) w-screen bg-gray-200"/>
 
     <!-- scaling-mode-image-none', scaling-mode-image-aspect-fit, scaling-mode-image-aspect-fill, 'scaling-mode-image-fill -->
-    <ImageView id="myImage" class="wh-screen scaling-mode-image-none" image="/images/titanium-logo.png" />
+    <ImageView id="myImage" class="wh-screen scaling-mode-image-none" image="/images/titanium-logo.png"/>
   </Window>
 </Alloy>

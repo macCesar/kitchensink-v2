@@ -1,6 +1,6 @@
 <Alloy>
-  <Window title="Slider">
-    <Label id="state" class="state-label" />
-    <Slider class="min-(0) max-(1) w-50 value-(0.75) ios:tint-primary" onChange="sliderValueChanged" />
+  <Window title="L('slider')">
+    <Label id="state" class="state-label"/>
+    <Slider class="min-(0) max-(1) w-50 value-(0.75) ios:tint-primary" onChange="sliderValueChanged"/>
   </Window>
 </Alloy>

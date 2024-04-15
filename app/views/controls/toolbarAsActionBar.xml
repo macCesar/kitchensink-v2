@@ -1,17 +1,17 @@
 <Alloy>
-  <Window customToolbar="toolbar" theme="Theme.Titanium">
-    <Toolbar title="MyMenu" subtitle="Subtitle" class="bar-green-500 display-home-as-up home-button-enabled mt-0 w-screen">
+  <Window customToolbar="toolbar" class="theme-titanium">
+    <Toolbar title="L('my_menu')" subtitle="L('subtitle')" class="bar-green-500 display-home-as-up home-button-enabled mt-0 w-screen">
       <!-- The Items tag sets the Toolbar.items property. -->
       <Items>
-        <Button id="ok" title="OK" />
-        <Button id="cancel" title="Cancel" />
+        <Button id="ok" title="L('ok')"/>
+        <Button id="cancel" title="L('cancel')"/>
       </Items>
     </Toolbar>
 
     <!-- The MenuItem's to be mapped to the toolbar -->
     <Menu platform="android">
-      <MenuItem id="item1" title="Settings" showAsAction="Ti.Android.SHOW_AS_ACTION_NEVER" />
-      <MenuItem id="item2" title="Search" showAsAction="Ti.Android.SHOW_AS_ACTION_NEVER" />
+      <MenuItem id="item1" title="L('settings')" class="show-as-action-never"/>
+      <MenuItem id="item2" title="L('search')" class="show-as-action-never"/>
     </Menu>
   </Window>
 </Alloy>

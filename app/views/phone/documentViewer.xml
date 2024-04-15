@@ -1,10 +1,10 @@
 <Alloy>
-  <Window id="win" title="Document Viewer" layout="vertical">
-    <Button class="mt-5" onClick="onOpenTxtFile" title="Open TXT File" />
-    <Button class="mt-5" onClick="onOpenRtfFile" title="Open RTF File" />
-    <Button class="mt-5" onClick="onOpenPdfFile" title="Open PDF File" />
+  <Window id="win" title="L('document_viewer')" class="vertical">
+    <Button class="mt-5" onClick="onOpenTxtFile" title="L('open_txt_file')"/>
+    <Button class="mt-5" onClick="onOpenRtfFile" title="L('open_rtf_file')"/>
+    <Button class="mt-5" onClick="onOpenPdfFile" title="L('open_pdf_file')"/>
 
     <!-- This won't work on iOS unless you disable app thinning. -->
-    <Button platform="android" class="mt-5" onClick="onOpenJpegFile" title="Open JPEG File" />
+    <Button platform="android" class="mt-5" onClick="onOpenJpegFile" title="L('open_jpeg_file')"/>
   </Window>
 </Alloy>

@@ -1,5 +1,5 @@
 <Alloy>
-  <Window id="peekpop" title="Peek and Pop">
+  <Window id="peekpop" title="L('peek_and_pop')">
     <Button id="button"/>
   </Window>
 
@@ -12,11 +12,11 @@
       </Preview>
 
       <Actions>
-        <PreviewAction id="actionTitle" onClick="actionTitle" />
+        <PreviewAction id="actionTitle" onClick="actionTitle"/>
 
         <PreviewActionGroup id="actionGroup">
-          <PreviewAction id="action" onClick="action" />
-          <PreviewAction id="subAction" onClick="subAction" />
+          <PreviewAction id="action" onClick="action"/>
+          <PreviewAction id="subAction" onClick="subAction"/>
         </PreviewActionGroup>
       </Actions>
 

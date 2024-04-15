@@ -1,9 +1,9 @@
 <Alloy>
-  <Window title="Date Picker (Compact)">
-    <Label id="valueLabel" class="mt-8 text-center" />
+  <Window title="L('date_picker_compact')">
+    <Label id="valueLabel" class="mt-8 text-center"/>
 
-    <Picker id="datePicker" class="type-picker-date date-picker-style-compact border-style-rounded" hintText="Date" onChange="onPickerValueChanged" />
+    <Picker id="datePicker" class="type-picker-date date-picker-style-compact border-style-rounded" hintText="L('date')" onChange="onPickerValueChanged"/>
 
-    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="The 'compact' style is only supported on iOS 13.4+." />
+    <Label platform="ios" id="footnoteLabel" class="text-style-footnote mb-5" text="L('supported_on_ios_134_plus')"/>
   </Window>
 </Alloy>

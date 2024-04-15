@@ -1,18 +1,18 @@
 <Alloy>
-  <Window title="Switch" layout="vertical">
-    <Label class="mt-8" id="switchValueLabel1">value: false</Label>
-    <Switch class="ios:on-tint-blue-500 mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_SLIDER" title="Slider Style" onChange="onSwitch1Changed" />
+  <Window title="L('switch_string')" class="vertical">
+    <Label class="mt-8" id="switchValueLabel1">L('value_false')</Label>
+    <Switch class="ios:on-tint-blue-500 style-switch-slider mb-8 mt-2 h-auto" title="L('slider_style')" onChange="onSwitch1Changed"/>
 
-    <View platform="android" class="h-(1) w-screen bg-gray-100" />
-    <Label platform="android" class="mt-8" id="switchValueLabel2">value: false</Label>
-    <Switch platform="android" class="mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_CHECKBOX" title="Checkbox Style" onChange="onSwitch2Changed" />
+    <View platform="android" class="h-(1) w-screen bg-gray-100"/>
+    <Label platform="android" class="mt-8" id="switchValueLabel2">L('value_false')</Label>
+    <Switch platform="android" class="style-switch-checkbox mb-8 mt-2 h-auto" title="L('checkbox_style')" onChange="onSwitch2Changed"/>
 
-    <View platform="android" class="h-(1) w-screen bg-gray-100" />
-    <Label platform="android" class="mt-8" id="switchValueLabel3">value: false</Label>
-    <Switch platform="android" class="mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_CHIP" title="Chip Style" onChange="onSwitch3Changed" />
+    <View platform="android" class="h-(1) w-screen bg-gray-100"/>
+    <Label platform="android" class="mt-8" id="switchValueLabel3">L('value_false')</Label>
+    <Switch platform="android" class="style-switch-chip mb-8 mt-2 h-auto" title="L('chip_style')" onChange="onSwitch3Changed"/>
 
-    <View platform="android" class="h-(1) w-screen bg-gray-100" />
-    <Label platform="android" class="mt-8" id="switchValueLabel4">value: false</Label>
-    <Switch platform="android" class="mb-8 mt-2 h-auto" style="Ti.UI.SWITCH_STYLE_TOGGLE_BUTTON" onChange="onSwitch4Changed" />
+    <View platform="android" class="h-(1) w-screen bg-gray-100"/>
+    <Label platform="android" class="mt-8" id="switchValueLabel4">L('value_false')</Label>
+    <Switch platform="android" class="style-switch-toggle-button mb-8 mt-2 h-auto" onChange="onSwitch4Changed"/>
   </Window>
 </Alloy>

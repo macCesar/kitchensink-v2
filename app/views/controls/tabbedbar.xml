@@ -1,10 +1,10 @@
 <Alloy>
-  <Window title="Tabbed Bar">
+  <Window title="L('tabbed_bar')">
     <TabbedBar onClick="tabbedBarSelectedIndex" class="w-50 index-(1) tint-primary">
       <Labels>
-        <Label>One</Label>
-        <Label>Two</Label>
-        <Label>Three</Label>
+        <Label>L('one')</Label>
+        <Label>L('two')</Label>
+        <Label>L('three')</Label>
       </Labels>
     </TabbedBar>
   </Window>

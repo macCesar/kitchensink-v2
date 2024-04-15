@@ -1,16 +1,16 @@
 <Alloy>
-  <Window title="Audio Player" onOpen="handleOpen" onClose="handleClose">
+  <Window title="L('audio_player')" onOpen="handleOpen" onClose="handleClose">
 
-    <Label id="progress" class="ios:text-black mt-8 text-sm" />
+    <Label id="progress" class="ios:text-black mt-8 text-sm"/>
 
-    <Button id="toggleBattle" class="mt-20 w-44" title="Play battle sounds" onClick="toggleBattle" />
+    <Button id="toggleBattle" class="mt-20 w-44" title="L('play_battle_sounds')" onClick="toggleBattle"/>
 
-    <Slider id="volume" class="mx-5 mb-5" value="1" onChange="changeVolume" />
+    <Slider id="volume" class="mx-5 mb-5" value="1" onChange="changeVolume"/>
 
-    <Label id="credits" class="mb-2.5 text-xs" text="Soundtrack 'Epic' by bensound.com" />
+    <Label id="credits" class="mb-2.5 text-xs" text="L('soundtrack_epick_by_bensound')"/>
 
-    <AudioPlayer id="player" ns="Ti.Media" url="/sounds/epic.mp3" onProgress="audioProgression" onChange="changeMusic" onComplete="handleMusicComplete" />
-    <AudioPlayer id="battlePlayer" ns="Ti.Media" url="/sounds/war_sounds.mp3" onChange="completeBattle" onComplete="handleBattleComplete" />
-    <AudioPlayer id="applause" ns="Ti.Media" url="/sounds/applause.mp3" />
+    <AudioPlayer id="player" ns="Ti.Media" url="/sounds/epic.mp3" onProgress="audioProgression" onChange="changeMusic" onComplete="handleMusicComplete"/>
+    <AudioPlayer id="battlePlayer" ns="Ti.Media" url="/sounds/war_sounds.mp3" onChange="completeBattle" onComplete="handleBattleComplete"/>
+    <AudioPlayer id="applause" ns="Ti.Media" url="/sounds/applause.mp3"/>
   </Window>
 </Alloy>

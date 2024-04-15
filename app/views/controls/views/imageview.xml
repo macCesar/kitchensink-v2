@@ -1,5 +1,5 @@
 <Alloy>
-  <Window title="Image View">
-    <ImageView id="myImage" class="w-75" image="/images/titanium-logo.png" />
+  <Window title="L('image_view')">
+    <ImageView id="myImage" class="w-75" image="/images/titanium-logo.png"/>
   </Window>
 </Alloy>

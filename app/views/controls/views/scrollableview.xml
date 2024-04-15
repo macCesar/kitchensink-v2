@@ -1,26 +1,26 @@
 <Alloy>
-  <Window title="Scrollable View" class="vertical">
+  <Window title="L('scrollable_view')" class="vertical">
     <Toolbar class="w-screen">
       <Items>
-        <Button id="add" class="style-button-positive" title="Add" onClick="addNewView" />
-        <FlexSpace platform="ios" />
-        <Button id="remove" class="style-button-neutral" title="Remove Last" onClick="removeLastView" />
-        <FlexSpace platform="ios" />
-        <Button id="scrollTo" class="style-button-neutral" title="Scroll to View 2" onClick="scrollToView" />
+        <Button id="add" class="style-button-positive" title="L('add')" onClick="addNewView"/>
+        <FlexSpace platform="ios"/>
+        <Button id="remove" class="style-button-neutral" title="L('remove_last')" onClick="removeLastView"/>
+        <FlexSpace platform="ios"/>
+        <Button id="scrollTo" class="style-button-neutral" title="L('scroll_to_view_2')" onClick="scrollToView"/>
       </Items>
     </Toolbar>
 
     <ScrollableView id="scrollable" class="wh-screen show-paging-control paging-control-primary" onScrollend="scrollableViewDidScroll">
       <View id="view1" class="wh-screen bg-(#836)">
-        <Label text="View 1" />
+        <Label text="L('view_1')"/>
       </View>
 
       <View id="view2" class="wh-screen bg-(#246)">
-        <Label text="View 2" />
+        <Label text="L('view_2')"/>
       </View>
 
       <View id="view3" class="wh-screen bg-(#48b)">
-        <Label text="View 3" />
+        <Label text="L('view_3')"/>
       </View>
     </ScrollableView>
   </Window>

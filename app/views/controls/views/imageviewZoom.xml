@@ -1,11 +1,11 @@
 <Alloy>
-  <Window id="win" title="Image View (Zoom)" class="ios:extend-edges-all ios:include-opaque-bars ios:nav-bar-hidden-false ios:tab-bar-hidden android:extend-safe-area android:theme-titanium-dark-solid">
+  <Window id="win" title="L('image_view_zoom')" class="ios:extend-edges-all ios:include-opaque-bars ios:nav-bar-hidden-false ios:tab-bar-hidden android:extend-safe-area android:theme-titanium-dark-solid">
     <!-- On iOS, pinch-zooming an image is implemented via a ScrollView container. -->
     <ScrollView platform="ios" id="scrollView" class="max-zoom-scale-(5) disable-bounce" onSingletap="onSingleTap" onDoubletap="onDoubleTap" onScale="onScale" onScroll="onScroll">
-      <ImageView id="imageView" class="wh-full scaling-mode-image-aspect-fit" image="/images/road.jpg" />
+      <ImageView id="imageView" class="wh-full scaling-mode-image-aspect-fit" image="/images/road.jpg"/>
     </ScrollView>
 
     <!-- On Android, the ImageView itself supports a zoom feature. -->
-    <ImageView platform="android" id="imageView" class="enable-zoom-controls" />
+    <ImageView platform="android" id="imageView" class="enable-zoom-controls"/>
   </Window>
 </Alloy>

@@ -1,8 +1,8 @@
 <Alloy>
-  <Window title="Button" class="vertical">
-    <Button title="Text-Only Button" class="style-button-text mt-5" onClick="onButtonClicked" />
-    <Button platform="android" title="Outline Button" class="style-button-outlined mt-5" onClick="onButtonClicked" />
-    <Button platform="android" title="Filled Button" class="style-button-filled mt-5" onClick="onButtonClicked" />
-    <Button title="Image Button" image="/images/icons/controls.png" class="mt-5" onClick="onButtonClicked" />
+  <Window title="L('button')" class="vertical">
+    <Button title="L('text_only_button')" class="style-button-text mt-5" onClick="onButtonClicked"/>
+    <Button platform="android" title="L('outline_button')" class="style-button-outlined mt-5" onClick="onButtonClicked"/>
+    <Button platform="android" title="L('filled_button')" class="style-button-filled mt-5" onClick="onButtonClicked"/>
+    <Button title="L('image_button')" image="/images/icons/controls.png" class="mt-5" onClick="onButtonClicked"/>
   </Window>
 </Alloy>

@@ -1,7 +1,7 @@
 <Alloy>
-  <Window title="Masked Image" class="vertical">
-    <Label id="maskLabel" class="mt-8" title="Mask: None" />
-    <MaskedImage id="myMaskedImage" class="mt-8 h-40 w-72" image="/images/cloud-wallpaper.jpg" />
-    <Button class="mt-8" title="Select Mask" onClick="onMaskButtonClicked" />
+  <Window title="L('masked_image')" class="vertical">
+    <Label id="maskLabel" class="mt-8" title="L('mask_none')"/>
+    <MaskedImage id="myMaskedImage" class="mt-8 h-40 w-72" image="/images/cloud-wallpaper.jpg"/>
+    <Button class="mt-8" title="L('select_mask')" onClick="onMaskButtonClicked"/>
   </Window>
 </Alloy>

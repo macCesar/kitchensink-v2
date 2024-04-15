@@ -1,35 +1,45 @@
 <Alloy>
-  <Window title="Gradients" class="vertical" onPostlayout="updateGradient">
-    <View id="gradientView" class="h-1/2 w-screen bg-gray-500" onTouchmove="handleTouchMove" />
+  <Window title="L('gradients')" class="vertical" onPostlayout="updateGradient">
+    <View id="gradientView" class="h-1/2 w-screen bg-gray-500" onTouchmove="handleTouchMove"/>
 
-    <View class="horizontal">
+    <View class="vertical">
       <!-- Start Radius -->
-      <Label class="ml-2 mt-5" id="startRadiusLabel" width="30%">Start Radius:</Label>
-      <Slider class="min-(0) max-(100) value-(0) mx-5 mt-5 w-screen" id="startRadiusSlider" width="Ti.UI.FILL" onChange="updateGradient" />
+      <View class="horizontal clip-disabled mx-5 mt-5">
+        <Label class="w-(30%)" id="startRadiusLabel" text="L('start_radius')"/>
+        <Slider class="min-(0) max-(100) value-(0) w-screen" id="startRadiusSlider" onChange="updateGradient"/>
+      </View>
 
       <!-- End Radius -->
-      <Label class="ml-2 mt-5" id="endRadiusLabel" width="30%">End Radius:</Label>
-      <Slider class="min-(0) max-(100) value-(0) mx-5 mt-5 w-screen" id="endRadiusSlider" value="100" width="Ti.UI.FILL" onChange="updateGradient" />
+      <View class="horizontal clip-disabled mx-5 mt-5">
+        <Label class="w-(30%)" id="endRadiusLabel" text="L('end_radius')"/>
+        <Slider class="min-(0) max-(100) value-(100) w-screen" id="endRadiusSlider" onChange="updateGradient"/>
+      </View>
 
       <!-- Backfill Start -->
-      <Label class="ml-2 mt-5">Back Fill Start:</Label>
-      <Switch class="value-(0) ml-2 mt-5" id="startFillSwitch" onChange="updateGradient" />
+      <View class="horizontal clip-disabled mx-5 mt-5">
+        <Label text="L('back_fill_start')"/>
+        <Switch class="value-(0)" id="startFillSwitch" onChange="updateGradient"/>
+      </View>
 
       <!-- Backfill End -->
-      <Label class="ml-2 mt-5">Back Fill End:</Label>
-      <Switch class="value-(0) ml-2 mt-5" id="endFillSwitch" onChange="updateGradient" />
-      <View width="Ti.UI.FILL" height="0" />
+      <View class="horizontal clip-disabled mx-5 mt-5">
+        <Label text="L('back_fill_end')"/>
+        <Switch class="value-(0)" id="endFillSwitch" onChange="updateGradient"/>
+        <View class="h-0 w-screen"/>
+      </View>
 
-      <!-- Random color -->
-      <Button onClick="pickRandomColor" class="ml-2 mt-5" title="Randomize Colors" />
+      <View class="horizontal clip-disabled mt-5">
+        <!-- Random color -->
+        <Button onClick="pickRandomColor" title="L('randomize_colors')"/>
 
-      <!-- Radial / linear -->
-      <OptionBar class="index-(0) ml-2 mt-5" onClick="handleGradientType">
-        <Labels>
-          <Label>Radial</Label>
-          <Label>Linear</Label>
-        </Labels>
-      </OptionBar>
+        <!-- Radial / linear -->
+        <OptionBar class="index-(0) ml-2" onClick="handleGradientType">
+          <Labels>
+            <Label>L('radial')</Label>
+            <Label>L('linear')</Label>
+          </Labels>
+        </OptionBar>
+      </View>
     </View>
   </Window>
 </Alloy>
