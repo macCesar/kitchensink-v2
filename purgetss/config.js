@@ -65,14 +65,18 @@ module.exports = {
     ListItem: { default: { apply: 'accessory-type-list-disclosure subtitle-(#777) font-sans' } },
 
     // Custom Classes
+    '#playbackProgress': {
+      default: { apply: 'animated-false w-50 min-(0) value-(0) tint-color-primary mb-8' },
+      ios: { apply: 'h-screen' }
+    },
     '.state-label': { default: { apply: 'mt-(100) text-(15) mx-5 w-screen text-center' } },
-    '.action-button': { default: { apply: 'w-(300) tint-white rounded-2 bg-primary h-10 text-white' } },
+    '.action-button': { default: { apply: 'bg-primary tint-color-white rounded-2 w-75 mt-5 h-10 text-white' } },
     '.placeholder-label': { default: { apply: 'w-(250) h-(125) text-(#333) rounded-2 bg-(#eee) text-center' } },
     '.textfield': {
-      default: { apply: 'w-(300) bubble-parent-false mt-2.5' },
-      ios: { apply: 'rounded-2 py-(5) h-10 bg-white px-5' },
+      default: { apply: 'bubble-parent-false tint-color-primary mx-4 mt-2.5 w-screen' },
+      ios: { apply: 'rounded-2 py-(5) bg-(#f0f0f0) h-10 px-5' },
       android: { apply: 'hint-type-animated border-style-rounded h-auto' }
     },
-    '.textlabel': { default: { apply: 'w-(300) bubble-parent-false mt-2.5 text-sm font-bold' } }
+    '.textlabel': { default: { apply: 'w-(300) bubble-parent-false mt-2.5 text-sm font-bold' } },
   }
 }
