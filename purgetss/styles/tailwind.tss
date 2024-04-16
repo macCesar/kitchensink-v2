@@ -4,7 +4,7 @@
 // Tailwind-like styles
 // Generated with PurgeTSS
 // https://purgetss.com
-// config.js file updated on: Sun Dec 31 2023 20:00:15 GMT-0600 (Central Standard Time)
+// config.js file updated on: Mon Apr 15 2024 15:42:17 GMT-0500 (Central Daylight Time)
 
 // Ti Elements
 // Property: View
@@ -81,11 +81,13 @@
 'Window[platform=ios]': { backButtonTitle: '', backgroundColor: '#ffffff', barColor: '#c91326', navTintColor: '#ffffff', titleAttributes: { color: '#ffffff' }, translucent: true }
 
 // Custom Classes
+'#playbackProgress': { animated: false, bottom: 32, min: 0, tintColor: '#c91326', value: 0, width: 200 }
+'#playbackProgress[platform=ios]': { height: Ti.UI.FILL }
 '.state-label': { right: 20, left: 20, textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, top: 100, width: Ti.UI.FILL, font: { fontSize: 15 } }
-'.action-button': { backgroundColor: '#c91326', borderRadius: 4, color: '#ffffff', textColor: '#ffffff', height: 40, tint: '#ffffff', width: 300 }
+'.action-button': { backgroundColor: '#c91326', borderRadius: 4, color: '#ffffff', textColor: '#ffffff', height: 40, tintColor: '#ffffff', top: 20, width: 300 }
 '.placeholder-label': { backgroundColor: '#eeeeee', borderRadius: 4, color: '#333333', textColor: '#333333', height: 125, textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, width: 250 }
-'.textfield': { bubbleParent: false, top: 10, width: 300 }
-'.textfield[platform=ios]': { backgroundColor: '#ffffff', borderRadius: 4, height: 40, padding: { bottom: 5, left: 20, right: 20, top: 5 } }
+'.textfield': { bubbleParent: false, right: 16, left: 16, tintColor: '#c91326', top: 10, width: Ti.UI.FILL }
+'.textfield[platform=ios]': { backgroundColor: '#f0f0f0', borderRadius: 4, height: 40, padding: { bottom: 5, left: 20, right: 20, top: 5 } }
 '.textfield[platform=android]': { borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, height: Ti.UI.SIZE, hintType: Ti.UI.HINT_TYPE_ANIMATED }
 '.textlabel': { bubbleParent: false, top: 10, width: 300, font: { fontSize: 14, fontWeight: 'bold' } }
 // End of Custom Classes
