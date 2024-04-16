@@ -1,10 +1,10 @@
 <Alloy>
   <Window title="L('audio_recorder')" onOpen="onOpen" onClose="onClose">
     <View class="vertical">
-      <Button class="mt-8" id="startRecordingButton" title="L('start_recording')" onClick="startRecording"/>
-      <Button class="mt-8" id="pauseRecordingButton" title="L('pause_recording')" onClick="pauseRecording"/>
-      <Button class="mt-8" id="stopRecordingButton" title="L('stop_recording')" onClick="stopRecording"/>
-      <Button class="mt-8" id="playRecordingButton" title="L('play_recording')" onClick="playRecording"/>
+      <Button class="action-button" id="startRecordingButton" title="L('start_recording')" onClick="startRecording"/>
+      <Button class="action-button" id="pauseRecordingButton" title="L('pause_recording')" onClick="pauseRecording"/>
+      <Button class="action-button" id="stopRecordingButton" title="L('stop_recording')" onClick="stopRecording"/>
+      <Button class="action-button" id="playRecordingButton" title="L('play_recording')" onClick="playRecording"/>
     </View>
   </Window>
 </Alloy>

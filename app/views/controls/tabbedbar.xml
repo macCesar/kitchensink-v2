@@ -1,6 +1,6 @@
 <Alloy>
   <Window title="L('tabbed_bar')">
-    <TabbedBar onClick="tabbedBarSelectedIndex" class="w-50 index-(1) tint-primary">
+    <TabbedBar onClick="tabbedBarSelectedIndex" class="w-50 index-(1) tint-color-primary selected-text-white">
       <Labels>
         <Label>L('one')</Label>
         <Label>L('two')</Label>

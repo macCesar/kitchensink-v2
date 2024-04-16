@@ -1,5 +1,5 @@
 <Alloy>
   <Window title="L('progress_bar')" onOpen="onOpen" onClose="onClose">
-    <ProgressBar id="progressBar" class="min-(0) max-(100) value-(0) animated w-4/5"/>
+    <ProgressBar id="progressBar" class="min-(0) max-(100) value-(0) animated tint-color-primary w-4/5"/>
   </Window>
 </Alloy>

@@ -2,8 +2,8 @@
   <Window title="L('toolbar')">
     <Toolbar class="android:elevation-0.5 mb-0 w-screen">
       <Items>
-        <Button onClick="sayHello" class="style-button-positive" title="L('action_1')"/>
-        <Button onClick="sayHello" class="style-button-neutral" title="L('action_2')"/>
+        <Button onClick="sayHello" class="style-button-positive system-button-camera text-primary" title="L('camera')"/>
+        <Button onClick="sayHello" class="style-button-neutral tint-color-primary" title="L('action_2')"/>
         <Button onClick="sayHello" class="style-button-neutral" title="L('action_3')"/>
       </Items>
     </Toolbar>

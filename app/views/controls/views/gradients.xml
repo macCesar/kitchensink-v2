@@ -5,13 +5,13 @@
     <View class="vertical">
       <!-- Start Radius -->
       <View class="horizontal clip-disabled mx-5 mt-5">
-        <Label class="w-(30%)" id="startRadiusLabel" text="L('start_radius')"/>
+        <Label class="w-(30%)" id="startRadiusLabel" text="L('start_radius_')"/>
         <Slider class="min-(0) max-(100) value-(0) w-screen" id="startRadiusSlider" onChange="updateGradient"/>
       </View>
 
       <!-- End Radius -->
       <View class="horizontal clip-disabled mx-5 mt-5">
-        <Label class="w-(30%)" id="endRadiusLabel" text="L('end_radius')"/>
+        <Label class="w-(30%)" id="endRadiusLabel" text="L('end_radius_')"/>
         <Slider class="min-(0) max-(100) value-(100) w-screen" id="endRadiusSlider" onChange="updateGradient"/>
       </View>
 

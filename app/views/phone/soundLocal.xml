@@ -1,23 +1,23 @@
 <Alloy>
   <Window title="L('local_sound')" onOpen="startInterval" onClose="stopInterval">
-    <View class="verticalContainer">
+    <View class="vertical w-75">
       <Button onClick="startPlayback" class="action-button" title="L('start')"/>
       <Button onClick="stopPlayback" class="action-button" title="L('stop')"/>
       <Button onClick="pausePlayback" class="action-button" title="L('pause')"/>
       <Button onClick="resetPlayback" class="action-button" title="L('reset')"/>
 
-      <View class="horizontalContainer">
-        <Button onClick="setVolumeUp" class="action-button buttonVolume" id="buttonVolumeUp" title="L('volumne_up')"/>
-        <Button onClick="setVolumeDown" class="action-button buttonVolume" id="buttonVolumeDown" title="L('volumne_down')"/>
+      <View class="w-screen">
+        <Button onClick="setVolumeDown" class="action-button ml-0 w-32" id="buttonVolumeDown" title="L('volume_down')"/>
+        <Button onClick="setVolumeUp" class="action-button mr-0 w-32" id="buttonVolumeUp" title="L('volume_up')"/>
       </View>
 
       <Button onClick="toggleLooping" class="action-button" id="buttonLooping" title="L('looping_false')"/>
     </View>
 
-    <Toolbar platform="ios" class="playbackProgressToolbar">
+    <Toolbar platform="ios" class="ios:mb-0 android:mb-8">
       <Items>
         <FlexSpace/>
-        <ProgressBar id="playbackProgress"/>
+        <ProgressBar id="playbackProgress" class=""/>
         <FlexSpace/>
       </Items>
     </Toolbar>

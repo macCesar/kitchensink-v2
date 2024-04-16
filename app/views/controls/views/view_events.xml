@@ -3,11 +3,11 @@
     <Label text="L('touch_and_swipe_the_screen')" class="mt-2"/>
 
     <View class="vertical">
-      <Label id="lbl_click_event" text="L('click_')"/>
-      <Label id="lbl_tap_event" text="L('tap_')"/>
-      <Label id="lbl_swipe_event" text="L('swipe_')"/>
-      <Label id="lbl_touch_event" text="L('touch_start_')"/>
-      <Label id="lbl_touch_move_event" text="L('touch_move_')"/>
+      <Label id="lbl_click_event" text="L('click__')"/>
+      <Label id="lbl_tap_event" text="L('tap__')"/>
+      <Label id="lbl_swipe_event" text="L('swipe__')"/>
+      <Label id="lbl_touch_event" text="L('touch_start__')"/>
+      <Label id="lbl_touch_move_event" text="L('touch_move__')"/>
     </View>
   </Window>
 </Alloy>

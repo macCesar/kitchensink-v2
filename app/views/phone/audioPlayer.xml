@@ -3,7 +3,7 @@
 
     <Label id="progress" class="ios:text-black mt-8 text-sm"/>
 
-    <Button id="toggleBattle" class="mt-20 w-44" title="L('play_battle_sounds')" onClick="toggleBattle"/>
+    <Button id="toggleBattle" class="mt-20" title="L('play_battle_sounds')" onClick="toggleBattle"/>
 
     <Slider id="volume" class="mx-5 mb-5" value="1" onChange="changeVolume"/>
 

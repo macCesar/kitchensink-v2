@@ -1,7 +1,7 @@
 <Alloy>
   <Window title="L('switch_string')" class="vertical">
     <Label class="mt-8" id="switchValueLabel1">L('value_false')</Label>
-    <Switch class="ios:on-tint-blue-500 style-switch-slider mb-8 mt-2 h-auto" title="L('slider_style')" onChange="onSwitch1Changed"/>
+    <Switch class="ios:on-tint-primary style-switch-slider mb-8 mt-2 h-auto" title="L('slider_style')" onChange="onSwitch1Changed"/>
 
     <View platform="android" class="h-(1) w-screen bg-gray-100"/>
     <Label platform="android" class="mt-8" id="switchValueLabel2">L('value_false')</Label>
