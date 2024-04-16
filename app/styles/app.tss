@@ -1,4 +1,4 @@
-// PurgeTSS v6.2.43
+// PurgeTSS v6.2.44
 // Created by César Estrada
 // https://purgetss.com
 
@@ -24,13 +24,14 @@
 'Window[platform=ios]': { backButtonTitle: '', backgroundColor: '#ffffff', barColor: '#c91326', navTintColor: '#ffffff', titleAttributes: { color: '#ffffff' }, translucent: true }
 
 // Custom Styles
-'.action-button': { backgroundColor: '#c91326', borderRadius: 4, color: '#ffffff', textColor: '#ffffff', height: 40, tint: '#ffffff', width: 300 }
+'#playbackProgress': { animated: false, bottom: 32, min: 0, tintColor: '#c91326', value: 0, width: 200 }
+'#playbackProgress[platform=ios]': { height: Ti.UI.FILL }
+'.action-button': { backgroundColor: '#c91326', borderRadius: 4, color: '#ffffff', textColor: '#ffffff', height: 40, tintColor: '#ffffff', top: 20, width: 300 }
 '.placeholder-label': { backgroundColor: '#eeeeee', borderRadius: 4, color: '#333333', textColor: '#333333', height: 125, textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, width: 250 }
 '.state-label': { right: 20, left: 20, textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER, top: 100, width: Ti.UI.FILL, font: { fontSize: 15 } }
-'.textfield': { bubbleParent: false, top: 10, width: 300 }
+'.textfield': { bubbleParent: false, right: 16, left: 16, tintColor: '#c91326', top: 10, width: Ti.UI.FILL }
 '.textfield[platform=android]': { borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, height: Ti.UI.SIZE, hintType: Ti.UI.HINT_TYPE_ANIMATED }
-'.textfield[platform=ios]': { backgroundColor: '#ffffff', borderRadius: 4, height: 40, padding: { bottom: 5, left: 20, right: 20, top: 5 } }
-'.textlabel': { bubbleParent: false, top: 10, width: 300, font: { fontSize: 14, fontWeight: 'bold' } }
+'.textfield[platform=ios]': { backgroundColor: '#f0f0f0', borderRadius: 4, height: 40, padding: { bottom: 5, left: 20, right: 20, top: 5 } }
 
 // Main Styles
 '.accessory-type-list-checkmark': { accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_CHECKMARK }
@@ -42,8 +43,8 @@
 '.allows-selection-during-editing': { allowsSelectionDuringEditing: true }
 '.allows-selection-during-editing-false': { allowsSelectionDuringEditing: false }
 '.allows-selection-false': { allowsSelection: false }
-'.autocapitalization-text-none': { autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE }
-'.autocorrect': { autocorrect: true }
+'.animated': { animated: true }
+'.autocorrect-false': { autocorrect: false }
 '.autofill-type-email': { autofillType: Ti.UI.AUTOFILL_TYPE_EMAIL }
 '.autofill-type-password': { autofillType: Ti.UI.AUTOFILL_TYPE_PASSWORD }
 '.autoplay': { autoplay: true }
@@ -52,15 +53,17 @@
 '.bg-blue-500': { backgroundColor: '#3b82f6' }
 '.bg-gray-100': { backgroundColor: '#f3f4f6' }
 '.bg-gray-200': { backgroundColor: '#e5e7eb' }
+'.bg-gray-300': { backgroundColor: '#d1d5db' }
 '.bg-gray-500': { backgroundColor: '#6b7280' }
 '.bg-green-500': { backgroundColor: '#22c55e' }
 '.bg-primary-500': { backgroundColor: '#f93a4e' }
 '.bg-red-500': { backgroundColor: '#ef4444' }
+'.black': { color: '#000000' }
 '.block': { visible: true }
 '.border-1': { borderWidth: 1 }
 '.border-gray-500': { borderColor: '#6b7280' }
 '.border-style-rounded': { borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED }
-'.compact': { compact: true }
+'.clip-disabled[platform=ios]': { clipMode: Ti.UI.iOS.CLIP_MODE_DISABLED }
 '.content-h-auto': { contentHeight: Ti.UI.SIZE }
 '.content-w-screen': { contentWidth: Ti.UI.FILL }
 '.date-picker-style-compact': { datePickerStyle: Ti.UI.DATE_PICKER_STYLE_COMPACT }
@@ -106,8 +109,10 @@
 '.mb-25': { bottom: 100 }
 '.mb-5': { bottom: 20 }
 '.mb-8': { bottom: 32 }
+'.ml-0': { left: 0 }
 '.ml-2': { left: 8 }
 '.ml-4': { left: 16 }
+'.mr-0': { right: 0 }
 '.mr-6': { right: 24 }
 '.mt-0': { top: 0 }
 '.mt-1/6': { top: '16.666667%' }
@@ -128,17 +133,23 @@
 '.mx-5': { right: 20, left: 20 }
 '.my-1': { top: 4, bottom: 4 }
 '.my-2': { top: 8, bottom: 8 }
+'.normal-case': { autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE }
 '.opacity-0': { opacity: 0 }
 '.opacity-50': { opacity: 0.5 }
 '.padding-6': { padding: 24 }
 '.paging-control-primary': { pagingControlColor: '#c91326' }
 '.password-mask': { passwordMask: true }
 '.portrait': { orientationModes: [ Ti.UI.PORTRAIT ] }
+'.px-1': { padding: { right: 4, left: 4 } }
+'.py-2': { padding: { top: 8, bottom: 8 } }
+'.rounded-2': { borderRadius: 4 }
 '.scaling-mode-image-aspect-fit': { scalingMode: Ti.Media.IMAGE_SCALING_ASPECT_FIT }
 '.scaling-mode-image-fill': { scalingMode: Ti.Media.IMAGE_SCALING_FILL }
 '.scaling-mode-image-none': { scalingMode: Ti.Media.IMAGE_SCALING_NONE }
 '.scrollable': { scrollable: true }
+'.selected-text-white': { selectedTextColor: '#ffffff' }
 '.selection-indicator': { selectionIndicator: true }
+'.show-as-action-never[platform=android]': { showAsAction: Ti.Android.SHOW_AS_ACTION_NEVER }
 '.show-paging-control': { showPagingControl: true }
 '.show-selection-check': { showSelectionCheck: true }
 '.shows-controls': { showsControls: true }
@@ -150,8 +161,13 @@
 '.style-button-outlined': { style: Ti.UI.BUTTON_STYLE_OUTLINED }
 '.style-button-positive': { style: Ti.UI.BUTTON_STYLE_OPTION_POSITIVE }
 '.style-button-text': { style: Ti.UI.BUTTON_STYLE_TEXT }
+'.style-switch-checkbox': { style: Ti.UI.SWITCH_STYLE_CHECKBOX }
+'.style-switch-chip': { style: Ti.UI.SWITCH_STYLE_CHIP }
+'.style-switch-slider': { style: Ti.UI.SWITCH_STYLE_SLIDER }
+'.style-switch-toggle-button': { style: Ti.UI.SWITCH_STYLE_TOGGLE_BUTTON }
 '.system-button-action[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ACTION }
 '.system-button-add[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.ADD }
+'.system-button-camera[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.CAMERA }
 '.system-button-flexible-space[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE }
 '.system-button-trash[platform=ios]': { systemButton: Ti.UI.iOS.SystemButton.TRASH }
 '.tab-bar-hidden': { tabBarHidden: true }
@@ -167,7 +183,8 @@
 '.text-sm': { font: { fontSize: 14 } }
 '.text-style-footnote': { textStyle: Ti.UI.TEXT_STYLE_FOOTNOTE }
 '.text-xs': { font: { fontSize: 12 } }
-'.tint-primary': { tint: '#c91326' }
+'.theme-titanium': { theme: 'Theme.Titanium' }
+'.tint-color-primary': { tintColor: '#c91326' }
 '.touch-enabled-false': { touchEnabled: false }
 '.type-picker-count-down-timer': { type: Ti.UI.PICKER_TYPE_COUNT_DOWN_TIMER }
 '.type-picker-date': { type: Ti.UI.PICKER_TYPE_DATE }
@@ -178,9 +195,8 @@
 '.use-spinner': { useSpinner: true }
 '.use-spinner-false': { useSpinner: false }
 '.vertical': { layout: 'vertical' }
-'.visible': { visible: true }
+'.w-32': { width: 128 }
 '.w-4/5': { width: '80%' }
-'.w-44': { width: 176 }
 '.w-50': { width: 200 }
 '.w-72': { width: 288 }
 '.w-75': { width: 300 }
@@ -198,6 +214,7 @@
 '.android:extend-safe-area[platform=android]': { extendSafeArea: true }
 '.android:hint-type-animated[platform=android]': { hintType: Ti.UI.HINT_TYPE_ANIMATED }
 '.android:lines-4[platform=android]': { lines: 4 }
+'.android:mb-8[platform=android]': { bottom: 32 }
 '.android:ml-0[platform=android]': { left: 0 }
 '.android:shift-mode-none[platform=android]': { shiftMode: 0 }
 '.android:style-tabs-bottom-navigation[platform=android]': { style: Ti.UI.Android.TABS_STYLE_BOTTOM_NAVIGATION }
@@ -206,13 +223,14 @@
 '.ios:h-25[platform=ios]': { height: 100 }
 '.ios:include-opaque-bars[platform=ios]': { includeOpaqueBars: true }
 '.ios:keyboard-dismiss-mode-interactive[platform=ios]': { keyboardDismissMode: Ti.UI.iOS.KEYBOARD_DISMISS_MODE_INTERACTIVE }
+'.ios:mb-0[platform=ios]': { bottom: 0 }
 '.ios:nav-bar-hidden-false[platform=ios]': { navBarHidden: false }
-'.ios:on-tint-blue-500[platform=ios]': { onTintColor: '#3b82f6' }
+'.ios:on-tint-primary[platform=ios]': { onTintColor: '#c91326' }
 '.ios:rounded-2[platform=ios]': { borderRadius: 4 }
 '.ios:tab-bar-hidden[platform=ios]': { tabBarHidden: true }
 '.ios:text-black[platform=ios]': { color: '#000000', textColor: '#000000' }
 '.ios:text-xs[platform=ios]': { font: { fontSize: 12 } }
-'.ios:tint-primary[platform=ios]': { tint: '#c91326' }
+'.ios:tint-color-primary[platform=ios]': { tintColor: '#c91326' }
 '.ios:w-75[platform=ios]': { width: 300 }
 
 // Arbitrary Values
@@ -220,7 +238,6 @@
 '.bg-(#246)': { backgroundColor: '#224466' }
 '.bg-(#48b)': { backgroundColor: '#4488bb' }
 '.bg-(#836)': { backgroundColor: '#883366' }
-'.bg-(#aaa)': { backgroundColor: '#aaaaaa' }
 '.bg-(#f7f7f7)': { backgroundColor: '#f7f7f7' }
 '.cancel-(0)': { cancel: 0 }
 '.destructive-(1)': { destructive: 1 }
@@ -237,8 +254,10 @@
 '.mr-(10%)': { right: '10%' }
 '.preferred-(2)': { preferred: 2 }
 '.tint-(red)': { tint: 'red' }
-'.value-(0)': { value: '0' }
-'.value-(0.75)': { value: '0.75' }
+'.value-(0)': { value: 0 }
+'.value-(0.75)': { value: 0.75 }
+'.value-(100)': { value: 100 }
+'.w-(30%)': { width: '30%' }
 '.w-(80%)': { width: '80%' }
 
 // Material Icons
