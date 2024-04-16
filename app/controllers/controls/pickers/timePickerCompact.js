@@ -1,4 +1,6 @@
 function onPickerValueChanged() {
   const timeString = $.timePicker.value.toLocaleTimeString()
-  $.valueLabel.text = `Selected Time:\n${timeString}`
+  $.valueLabel.applyProperties({
+    text: `${L('selected_time_')}\n${timeString}`
+  })
 }

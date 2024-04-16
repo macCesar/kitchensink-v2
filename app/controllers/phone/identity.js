@@ -13,24 +13,24 @@ function handleOpen() {
   if (OS_IOS) {
     let authPhrase = ''
     if (Identity.biometryType === Identity.BIOMETRY_TYPE_FACE_ID) {
-      authPhrase = 'Face ID'
+      authPhrase = L('face_id')
     } else if (Identity.biometryType === Identity.BIOMETRY_TYPE_TOUCH_ID) {
-      authPhrase = 'Touch ID'
+      authPhrase = L('touch_id')
     } else {
-      authPhrase = 'Passcode'
+      authPhrase = L('passcode')
     }
-    $.authenticate.title = `Authenticate with: ${authPhrase}`
+    $.authenticate.title = `${L('authenticate_with_')} ${authPhrase}`
   }
 }
 
 function validate() {
   if (!Identity.isSupported()) {
-    alert('Biometric authentication is not supported on this device or no identities are enrolled!')
+    alert(L('biometric_authentication_is_not_supported___'))
     return
   }
 
   Identity.authenticate({
-    reason: 'Please authenticate to continue',
+    reason: L('please_authenticate_to_continue'),
     fallbackTitle: '',
     callback: ({ success, error }) => {
       Identity.invalidate()
@@ -38,7 +38,7 @@ function validate() {
         alert(error)
       } else {
         setTimeout(() => {
-          alert('Successfully authenticated!')
+          alert(L('successfully_authenticated_'))
         }, 1000)
       }
     }

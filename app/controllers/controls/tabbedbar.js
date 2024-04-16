@@ -8,7 +8,7 @@ import { logger } from 'logger';
 }())
 
 function tabbedBarSelectedIndex({ index }) {
-  const message = `Ti.UI.TabbedBar changed to index: ${index}`
+  const message = `${L('ti_ui_tabbedBar_changed_to_index_')} ${index}`
 
   alert(message)
   logger.log(message)

@@ -1,24 +1,24 @@
 function getNameFromOrientationId(orientationId) {
   switch (orientationId) {
     case Ti.UI.PORTRAIT:
-      return 'Portrait Upright'
+      return L('portrait_upright')
     case Ti.UI.UPSIDE_PORTRAIT:
-      return 'Portrait Upside-Down'
+      return L('portrait_upside_down')
     case Ti.UI.LANDSCAPE_LEFT:
-      return 'Landscape Left'
+      return L('landscape_left')
     case Ti.UI.LANDSCAPE_RIGHT:
-      return 'Landscape Right'
+      return L('landscape_right')
     case Ti.UI.FACE_UP:
-      return 'Face Up'
+      return L('face_up')
     case Ti.UI.FACE_DOWN:
-      return 'Face Down'
+      return L('face_down')
   }
-  return 'Unknown'
+  return L('unknown')
 }
 
 // Called when the device orientation changes. (This is not the window's orientation.)
 function onOrientationChanged({ orientation }) {
-  $.orientationLabel.text = `Device Orientation:\n${getNameFromOrientationId(orientation)}`
+  $.orientationLabel.applyProperties({ text: `${L('device_orientation_')}\n${getNameFromOrientationId(orientation)}` })
 }
 
 // Called when the device has been shaked.

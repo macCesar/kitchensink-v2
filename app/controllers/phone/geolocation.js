@@ -17,19 +17,19 @@ import { logger } from 'logger';
         Ti.API.info('Google Play services is installed.')
         break
       case Map.SERVICE_MISSING:
-        alert('Google Play services is missing. Please install Google Play services from the Google Play store.')
+        alert(L('google_play_services_is_missing___'))
         break
       case Map.SERVICE_VERSION_UPDATE_REQUIRED:
-        alert('Google Play services is out of date. Please update Google Play services.')
+        alert(L('google_play_services_is_out_of_date___'))
         break
       case Map.SERVICE_DISABLED:
-        alert('Google Play services is disabled. Please enable Google Play services.')
+        alert(L('google_play_services_is_disabled___'))
         break
       case Map.SERVICE_INVALID:
-        alert('Google Play services cannot be authenticated. Reinstall Google Play services.')
+        alert(L('google_play_services_cannot_be_authenticated___'))
         break
       default:
-        alert('Unknown error.')
+        alert(L('unknown_error'))
     }
   }
 

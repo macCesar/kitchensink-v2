@@ -8,16 +8,16 @@
 function copyText() {
   if ($.copyField.value.length > 0) {
     Ti.UI.Clipboard.setText($.copyField.value)
-    alert('Copied!')
+    alert(L('copied_'))
   } else {
-    alert('Enter some text before :-)')
+    alert(L('enter_some_text_before___'))
   }
 }
 
 function pasteText() {
   if (Ti.UI.Clipboard.hasText() === true) {
-    $.pasteField.value = Ti.UI.Clipboard.getText()
+    $.pasteField.applyProperties({ value: Ti.UI.Clipboard.getText() })
   } else {
-    alert('No text on clipboard!')
+    alert(L('no_text_on_clipboard_'))
   }
 }

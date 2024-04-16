@@ -67,8 +67,8 @@ import fb from 'facebook';
         logger.log('Modules.Facebook.requestWithGraphPath', respObj)
 
         $.fbUserImage.image = respObj.picture.data.url
-        $.fbUserName.text = `Welcome ${respObj.name}`
-        $.fbFriends.text = `Total Friends ${respObj.friends.summary.total_count}`
+        $.fbUserName.text = `L('welcome') ${respObj.name}`
+        $.fbFriends.text = `L('total_friends') ${respObj.friends.summary.total_count}`
       } else if (event.error) {
         logger.log(event.error)
       } else {

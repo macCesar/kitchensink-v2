@@ -1,16 +1,16 @@
 // Assign the 'pop' feature to the button
-$.button.previewContext = $.context
+$.button.applyProperties({ previewContext: $.context })
 
 function actionTitle(event) {
-  alert(`Title: ${event.title} / Style: ${event.style} / Index: ${event.index}`)
+  alert(`${L('title_')} ${event.title} / ${L('style_')} ${event.style} / ${L('index_')} ${event.index}`)
 }
 
 function action(event) {
-  alert(`Title: ${event.title} / Style: ${event.style} / Index: ${event.index}`)
+  alert(`${L('title_')} ${event.title} / ${L('style_')} ${event.style} / ${L('index_')} ${event.index}`)
 }
 
 function subAction(event) {
-  alert(`Title: ${event.title} / Style: ${event.style} / Subindex: ${event.index}`)
+  alert(`${L('title_')} ${event.title} / ${L('style_')} ${event.style} / ${L('subindex_')} ${event.index}`)
 }
 
 // Pop the preview

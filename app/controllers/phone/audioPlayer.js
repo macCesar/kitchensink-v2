@@ -20,10 +20,10 @@ function toggleBattle() {
   // Ignore button if already playing
   if ($.battlePlayer.playing) {
     $.battlePlayer.stop()
-    $.toggleBattle.title = 'Play battle sounds'
+    $.toggleBattle.applyProperties({ title: L('play_battle_sounds') })
   } else {
     $.battlePlayer.start()
-    $.toggleBattle.title = 'Stop battle sounds'
+    $.toggleBattle.applyProperties({ title: L('stop_battle_sounds') })
   }
 }
 
@@ -48,7 +48,7 @@ function changeMusic({ state }) {
 }
 
 function audioProgression({ progress }) {
-  $.progress.text = timeFormat(progress) + '/' + timeFormat($.player.duration)
+  $.progress.applyProperties({ text: `${timeFormat(progress)}/${timeFormat($.player.duration)}` })
 }
 
 // Android only because STATE_STOPPING/STATE_STOPPED doesn't fire there
@@ -64,7 +64,7 @@ function completeBattle({ state }) {
   if (state === Ti.Media.AUDIO_STATE_STOPPING) {
     $.applause.start()
   } else if (state === Ti.Media.AUDIO_STATE_STOPPED) {
-    $.toggleBattle.title = 'Play battle sounds'
+    $.toggleBattle.applyProperties({ title: L('play_battle_sounds') })
   }
 }
 

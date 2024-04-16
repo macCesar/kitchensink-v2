@@ -11,7 +11,7 @@ import { logger } from 'logger';
   }
 
   if (Ti.Platform.model === 'Simulator' || Ti.Platform.model.indexOf('sdk') !== -1) {
-    alert('Accelerometer does not work on a virtual device')
+    alert(L('accelerometer_does_not_work_on_a_virtual_device'))
     return
   }
 
@@ -29,5 +29,4 @@ import { logger } from 'logger';
       })
     })
   }
-
 }())

@@ -8,13 +8,13 @@ import { logger } from 'logger';
 }())
 
 function onTextButtonBarClicked(event) {
-  const message = `Clicked on button: ${event.source.labels[event.index].title}`
+  const message = `${L('clicked_on_button_')} ${event.source.labels[event.index].title}`
   alert(message)
   logger.log(message)
 }
 
 function onImageButtonBarClicked({ index }) {
-  const message = `Clicked on image button index: ${index}`
+  const message = `${L('clicked_on_image_button_index_')} ${index}`
   alert(message)
   logger.log(message)
 }

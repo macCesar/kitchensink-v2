@@ -7,7 +7,7 @@ function createListItemsStartingFrom(startIndex) {
   const items = []
   const maxIndex = startIndex + 49
   for (var index = startIndex; index <= maxIndex; index++) {
-    items.push({ properties: { title: `Row ${index}` } })
+    items.push({ properties: { title: `${L('row')} ${index}` } })
   }
   return items
 }

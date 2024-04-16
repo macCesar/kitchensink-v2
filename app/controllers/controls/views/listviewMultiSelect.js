@@ -9,7 +9,7 @@ function createListSection(sectionTitle, rowCount) {
   for (let index = 1; index <= rowCount; index++) {
     items.push({
       properties: {
-        title: `Row ${index}`,
+        title: `${L('row')} ${index}`,
         // This property normally enables swipe-to-delete,
         // but on iOS this shows a checkbox if ListView property "showSelectionCheck" is true.
         canEdit: !!OS_IOS,
@@ -34,7 +34,7 @@ function enableSelectionMode() {
   $.listView.applyProperties({ editing: true })
 
   // Show selection options in top title bar.
-  const selectedMessage = `${$.listView.selectedItems.length} Selected`
+  const selectedMessage = `${$.listView.selectedItems.length} ${L('selected')}`
   if (OS_IOS) {
     $.itemsSelectedLabel.text = selectedMessage
     $.editToolbar.applyProperties({ height: Ti.UI.SIZE, visible: true })
@@ -93,8 +93,8 @@ function deleteSelectedItems() {
 
   // Ask the end-user if it's okay to delete the selected items.
   const dialog = Ti.UI.createAlertDialog({
-    message: 'Are you sure you want to delete the selected items?',
-    buttonNames: ['Yes', 'No'],
+    message: L('are_you_sure_you_want_to_delete___', ''),
+    buttonNames: [L('yes'), L('no')],
   })
   dialog.addEventListener('click', function({ index }) {
     // Do not continue unless "Yes" was selected.
@@ -138,7 +138,7 @@ function shareSelectedItems() {
   }
 
   // Display a dialog listing all selected items.
-  let message = 'Sharing selected items:'
+  let message = L('sharing_selected_items_', '')
   for (const nextItem of selectedItems) {
     const section = nextItem.section
     message += `\n- ${section.headerTitle}: ${section.getItemAt(nextItem.itemIndex).properties.title}`
@@ -165,8 +165,8 @@ function onWindowPostLayout() {
   if (OS_IOS) {
     // Re-layout views to compensate for bottom safe-area padding such as iOS' bottom home indicator bar.
     // Note: We do this because our toolbar is docked to the bottom of the window.
-    $.listView.height = $.win.size.height - ($.editToolbar.size.height + $.win.safeAreaPadding.bottom)
-    $.bottomPaddingView.height = $.win.safeAreaPadding.bottom
+    $.listView.applyProperties({ height: $.win.size.height - ($.editToolbar.size.height + $.win.safeAreaPadding.bottom) })
+    $.bottomPaddingView.applyProperties({ height: $.win.safeAreaPadding.bottom })
   }
 }
 
@@ -195,12 +195,12 @@ function onLongPressed(event) {
  * @param {Object} e - The event object.
  */
 function onItemsSelected({ selectedItems }) {
-  const message = `${selectedItems.length} Selected`
+  const message = `${selectedItems.length} ${L('selected')}`
   if (OS_IOS) {
-    $.itemsSelectedLabel.text = message
+    $.itemsSelectedLabel.applyProperties({ text: message })
   } else if (OS_ANDROID) {
     // Update selection count in top toolbar.
-    $.editToolbar.title = message
+    $.editToolbar.applyProperties({ title: message })
 
     // Disable "edit" mode once all items have been unselected.
     if (selectedItems.length <= 0) {
@@ -215,7 +215,7 @@ function onItemsSelected({ selectedItems }) {
  */
 function onItemClicked(event) {
   if (!$.listView.editing) {
-    alert(`Tapped on...\n${event.section.headerTitle}: ${event.section.getItemAt(event.itemIndex).properties.title}`)
+    alert(`${L('tapped_on___', '')}\n${event.section.headerTitle}: ${event.section.getItemAt(event.itemIndex).properties.title}`)
   } else if (OS_IOS) {
     onItemsSelected({ selectedItems: $.listView.selectedItems })
   }
@@ -223,21 +223,21 @@ function onItemClicked(event) {
 
 // Add sections/rows to the ListView.
 $.listView.sections = [
-  createListSection('Section 1', 10),
-  createListSection('Section 2', 10),
-  createListSection('Section 3', 10),
-  createListSection('Section 4', 10),
+  createListSection(L('section_1'), 10),
+  createListSection(L('section_2'), 10),
+  createListSection(L('section_3'), 10),
+  createListSection(L('section_4'), 10),
 ]
 
 // Initialize iOS buttons to be used in navigation bar.
 if (OS_IOS) {
-  $.selectAllButton = Ti.UI.createButton({ title: 'Select All' })
+  $.selectAllButton = Ti.UI.createButton({ title: L('select_all') })
   $.selectAllButton.addEventListener('click', selectAll)
   $.editButton = Ti.UI.createButton({ systemButton: Ti.UI.iOS.SystemButton.EDIT })
   $.editButton.addEventListener('click', enableSelectionMode)
   $.cancelButton = Ti.UI.createButton({ systemButton: Ti.UI.iOS.SystemButton.CANCEL })
   $.cancelButton.addEventListener('click', disableSelectionMode)
-  $.win.rightNavButton = $.editButton
+  $.win.applyProperties({ rightNavButton: $.editButton })
 }
 
 // Initialize Android ActionBar, Toolbars, and menu items.
@@ -248,14 +248,14 @@ if (OS_ANDROID) {
   $.win.activity.onCreateOptionsMenu = ({ menu }) => {
     if ($.mainToolbar.visible) {
       const selectMenuItem = menu.add({
-        title: 'Select',
+        title: L('select'),
         showAsAction: Ti.Android.SHOW_AS_ACTION_NEVER,
       })
 
       selectMenuItem.addEventListener('click', enableSelectionMode)
     } else {
       const shareMenuItem = menu.add({
-        title: 'Share',
+        title: L('share'),
         titleCondensed: '',
         icon: Ti.App.Android.R.drawable.ic_baseline_share_24,
         showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
@@ -264,7 +264,7 @@ if (OS_ANDROID) {
       shareMenuItem.addEventListener('click', shareSelectedItems)
 
       const deleteMenuItem = menu.add({
-        title: 'Delete',
+        title: L('delete'),
         titleCondensed: '',
         icon: Ti.App.Android.R.drawable.ic_baseline_delete_24,
         showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
@@ -274,7 +274,7 @@ if (OS_ANDROID) {
     }
 
     const selectAllMenuItem = menu.add({
-      title: 'Select All',
+      title: L('select_all'),
       showAsAction: Ti.Android.SHOW_AS_ACTION_NEVER,
     })
 

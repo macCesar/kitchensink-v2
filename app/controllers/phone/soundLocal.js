@@ -21,16 +21,12 @@ let playbackInterval;
 
 function startPlayback() {
   soundPlayer.play()
-  if (OS_ANDROID) {
-    $.playbackProgress.max = soundPlayer.duration
-  } else {
-    $.playbackProgress.max = soundPlayer.duration * 1000
-  }
+  $.playbackProgress.applyProperties({ max: OS_ANDROID ? soundPlayer.duration : soundPlayer.duration * 1000 })
 }
 
 function stopPlayback() {
   soundPlayer.stop()
-  $.playbackProgress.value = 0
+  $.playbackProgress.applyProperties({ value: 0 })
 }
 
 function pausePlayback() {
@@ -39,35 +35,35 @@ function pausePlayback() {
 
 function resetPlayback() {
   soundPlayer.reset()
-  $.playbackProgress.value = 0
+  $.playbackProgress.applyProperties({ value: 0 })
 }
 
 function setVolumeUp() {
   if (soundPlayer.volume < 1.0) {
-    soundPlayer.volume = soundPlayer.volume += 0.1
+    soundPlayer.applyProperties({ volume: soundPlayer.volume += 0.1 })
 
-    $.buttonVolumeUp.title = 'Volume++ (' + Math.round(soundPlayer.volume * 1000) / 1000 + ')'
-    $.buttonVolumeDown.title = 'Volume--'
+    $.buttonVolumeUp.applyProperties({ title: `${L('volume_up')} (${Math.round(soundPlayer.volume * 1000) / 1000})` })
+    $.buttonVolumeDown.applyProperties({ title: L('volume_down') })
   }
 }
 
 function setVolumeDown() {
   if (soundPlayer.volume > 0.0) {
     // TODO: Too complicated for 1 line? :-)
-    soundPlayer.volume = soundPlayer.volume < 0.1 ? 0 : (soundPlayer.volume -= 0.1)
+    soundPlayer.applyProperties({ volume: soundPlayer.volume < 0.1 ? 0 : (soundPlayer.volume -= 0.1) })
 
-    $.buttonVolumeDown.title = 'Volume-- (' + Math.round(soundPlayer.volume * 1000) / 1000 + ')'
-    $.buttonVolumeUp.title = 'Volume++'
+    $.buttonVolumeDown.applyProperties({ title: `${L('volume_down')} (${Math.round(soundPlayer.volume * 1000) / 1000})` })
+    $.buttonVolumeUp.applyProperties({ title: L('volume_up') })
   }
 }
 
 function toggleLooping() {
   soundPlayer.setLooping(!soundPlayer.looping)
-  $.buttonLooping.title = 'Looping (' + soundPlayer.looping + ')'
+  $.buttonLooping.applyProperties({ title: `${L('looping')} (${soundPlayer.looping})` })
 }
 
 function onPlaybackComplete() {
-  $.playbackProgress.value = 0
+  $.playbackProgress.applyProperties({ value: 0 })
 }
 
 function onPlaybackResume() {

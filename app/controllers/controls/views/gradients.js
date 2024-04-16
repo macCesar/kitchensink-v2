@@ -94,8 +94,8 @@ function handleGradientType({ index }) {
   $.startFillSwitch.applyProperties({ enabled: !isLinear })
   $.endFillSwitch.applyProperties({ enabled: !isLinear })
 
-  $.startRadiusLabel.applyProperties({ text: isLinear ? 'Start Point:' : 'Start Radius:' })
-  $.endRadiusLabel.applyProperties({ text: isLinear ? 'End Point' : 'End Radius' })
+  $.startRadiusLabel.applyProperties({ text: isLinear ? L('start_point_', '') : L('start_radius_', '') })
+  $.endRadiusLabel.applyProperties({ text: isLinear ? L('end_point_', '') : L('end_radius_', '') })
 
   updateGradient()
 }

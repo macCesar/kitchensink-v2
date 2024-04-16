@@ -12,7 +12,7 @@ function startProgress() {
   timerId = setInterval(() => {
     if ($.progressBar.value < $.progressBar.max) {
       $.progressBar.value++
-      $.progressBar.message = `Progress at ${$.progressBar.value}%`
+      $.progressBar.message = `${L('progress_at')} ${$.progressBar.value}%`
     } else {
       stopProgress()
     }

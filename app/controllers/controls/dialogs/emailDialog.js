@@ -2,12 +2,12 @@ function onShowEMailDialog() {
   const dialog = Ti.UI.createEmailDialog()
   if (dialog.isSupported()) {
     dialog.applyProperties({
-      subject: 'This is the subject',
-      messageBody: 'This is the body.\nThis is the second line.',
+      subject: L('this_is_the_subject'),
+      messageBody: L('this_is_the_body___'),
       toRecipients: ['john.doe@domain.com', 'jane.doe@domain.com'],
     })
     dialog.open()
   } else {
-    alert('E-mail app not configured on this device.')
+    alert(L('email_app_not_configured___'))
   }
 }

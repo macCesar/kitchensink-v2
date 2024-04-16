@@ -6,21 +6,21 @@
 }())
 
 function changeToCenterAlignment() {
-  $.myLabel.textAlign = 'center'
+  $.myLabel.applyProperties({ textAlign: 'center' })
 }
 
 function changeToLeftAlignment() {
-  $.myLabel.textAlign = 'left'
+  $.myLabel.applyProperties({ textAlign: 'left' })
 }
 
 function changeToRightAlignment() {
-  $.myLabel.textAlign = 'right'
+  $.myLabel.applyProperties({ textAlign: 'right' })
 }
 
 function changeToJustifyAlignment() {
-  $.myLabel.textAlign = 'justify'
+  $.myLabel.applyProperties({ textAlign: 'justify' })
 }
 
 function changeColor() {
-  $.myLabel.color = 'red' // or: '#ff0', '#ff0000', rgba('255, 0,0 , 1.0')
+  $.myLabel.applyProperties({ color: 'red' }) // or: '#ff0', '#ff0000', rgba('255, 0,0 , 1.0')
 }

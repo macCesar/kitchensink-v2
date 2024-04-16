@@ -1,3 +1,5 @@
 function onPickerValueChanged(event) {
-  $.valueLabel.text = `Selected: ${event.row.title}`
+  $.valueLabel.applyProperties({
+    text: `${L('selected_')} ${event.row.title}`
+  })
 }

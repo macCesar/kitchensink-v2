@@ -8,6 +8,6 @@ import { logger } from 'logger';
 }())
 
 function stepperValueChanged({ value }) {
-  $.state.text = `The stepper value changed to ${value}`
+  $.state.applyProperties({ text: `${L('the_stepper_value_changed_to')} ${value}` })
   logger.log(`Ti.UI.Stepper value changed to ${value}`)
 }

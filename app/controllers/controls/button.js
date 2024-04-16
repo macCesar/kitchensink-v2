@@ -1,3 +1,3 @@
 function onButtonClicked(event) {
-  alert(`Clicked on: ${event.source.title}`)
+  alert(`${L('clicked_on_')} ${event.source.title}`)
 }

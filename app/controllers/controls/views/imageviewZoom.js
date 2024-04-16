@@ -3,17 +3,23 @@
 function hideNavBar() {
   if ($.win.navBarHidden === false) {
     $.win.hideNavBar()
-    $.win.backgroundColor = 'black'
+    $.win.applyProperties({
+      backgroundColor: 'black'
+    })
   }
 }
 
 function onSingleTap() {
   if ($.win.navBarHidden) {
     $.win.showNavBar()
-    $.win.backgroundColor = 'white'
+    $.win.applyProperties({
+      backgroundColor: 'white'
+    })
   } else {
     $.win.hideNavBar()
-    $.win.backgroundColor = 'black'
+    $.win.applyProperties({
+      backgroundColor: 'black'
+    })
   }
 }
 

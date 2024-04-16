@@ -1,3 +1,5 @@
 function onPickerValueChanged(event) {
-  $.state.text = `Selected: ${event.selectedValue}`
+  $.state.applyProperties({
+    text: `${L('selected')}  ${event.selectedValue}`
+  })
 }

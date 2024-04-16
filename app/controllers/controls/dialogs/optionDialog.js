@@ -5,6 +5,6 @@ function onShowOptionDialog() {
 }
 
 function onOptionDialogClicked({ index }) {
-  $.resultLabel.text = `Selected option at index: ${index}`
+  $.resultLabel.text = `${L('selected_button_at_index_')} ${index}`
   logger.log(`Ti.UI.OptionDialog selected option at index: ${index}`)
 }

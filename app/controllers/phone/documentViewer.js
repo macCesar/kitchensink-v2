@@ -14,12 +14,12 @@ function openFile(filePath) {
     if (Ti.Platform.canOpenURL(filePath)) {
       Ti.Platform.openURL(filePath, ({ success }) => {
         if (!success) {
-          alert('Failed to open PDF file.')
+          alert(L('failed_to_open_pdf_file'))
         }
       })
     } else {
       const fileExtension = Ti.Filesystem.getFile(filePath).extension()
-      alert(`Please install a ${fileExtension.toUpperCase()} viewer app to open this file.`)
+      alert(`${L('please_install_a_')} ${fileExtension.toUpperCase()} L('_viewer_app_to_open_this_file', 'viewer app to open this file.')`)
     }
   }
 }

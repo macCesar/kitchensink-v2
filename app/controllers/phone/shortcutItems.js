@@ -18,7 +18,7 @@ let appShortcuts;
 
 function listStaticShortcuts() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -31,7 +31,7 @@ function listStaticShortcuts() {
 
 function listDynamicShortcuts() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -43,7 +43,7 @@ function listDynamicShortcuts() {
   if (res.length === 0) {
     Ti.UI.createAlertDialog({
       title: 'None',
-      message: 'Use createDynamicShortcut() to create a dynamic shortcut.'
+      message: L('use___to_create_a_dynamic shortcut')
     }).show()
   }
 }
@@ -54,7 +54,7 @@ function listDynamicShortcuts() {
 
 function dynamicShortcutExists() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -65,8 +65,8 @@ function dynamicShortcutExists() {
   // If don't have it, explain how to create it
   if (!res) {
     Ti.UI.createAlertDialog({
-      title: 'Does not exist',
-      message: 'Use createDynamicShortcut() to create a dynamic shortcut.'
+      title: L('does_not_exist'),
+      message: L('use___to_create_a_dynamic shortcut', 'Use createDynamicShortcut() to create a dynamic shortcut.')
     }).show()
   }
 }
@@ -77,7 +77,7 @@ function dynamicShortcutExists() {
 
 function getDynamicShortcut() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -88,8 +88,8 @@ function getDynamicShortcut() {
   // If don't have it, explain how to create it
   if (!res) {
     Ti.UI.createAlertDialog({
-      title: 'Does not exist',
-      message: 'Use createDynamicShortcut() to create a dynamic shortcut.'
+      title: L('does_not_exist'),
+      message: L('use___to_create_a_dynamic shortcut')
     }).show()
   }
 }
@@ -100,7 +100,7 @@ function getDynamicShortcut() {
 
 function removeDynamicShortcut() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -109,7 +109,7 @@ function removeDynamicShortcut() {
   // Explain how to (re)create it
   Ti.UI.createAlertDialog({
     title: 'Removed',
-    message: 'Use createDynamicShortcut() to create a dynamic shortcut.'
+    message: L('use___to_create_a_dynamic shortcut')
   }).show()
 }
 
@@ -119,7 +119,7 @@ function removeDynamicShortcut() {
 
 function createDynamicShortcut() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -150,7 +150,7 @@ function createDynamicShortcut() {
 
 function removeAllDynamicShortcuts() {
   if (!appShortcuts) {
-    alert('This device does not support Force Touch')
+    alert(L('this_device_does_not_support_force_touch'))
     return
   }
 
@@ -159,6 +159,6 @@ function removeAllDynamicShortcuts() {
   // Explain how to create our dynamic shortcut
   Ti.UI.createAlertDialog({
     title: 'Removed',
-    message: 'Use createDynamicShortcut() to create a dynamic shortcut.'
+    message: L('use___to_create_a_dynamic shortcut')
   }).show()
 }

@@ -39,7 +39,7 @@ function openComponent(event) {
 function showCamera(mediaTypes) {
   require('../../../../../../../../permissions').checkCameraPermission(success => {
     if (!success) {
-      alert('No permissions!')
+      alert(L('no_permissions_'))
       return
     }
     Ti.Media.showCamera({
@@ -60,13 +60,13 @@ function showCamera(mediaTypes) {
 
 function processImage(image) {
   const imageView = Ti.UI.createImageView({
-    autorotate: true,
+    opacity: 0,
     image: image,
-    opacity: 0
+    autorotate: true,
   })
 
   const label = Ti.UI.createLabel({
-    text: 'Tap to close'
+    text: L('tap_to_close')
   })
 
   imageView.addEventListener('click', () => {
@@ -89,10 +89,10 @@ function processImage(image) {
 
 function saveToGallery() {
   const view = Ti.UI.createView({
-    backgroundColor: 'red',
     width: 400,
     height: 400,
-    borderRadius: 200
+    borderRadius: 200,
+    backgroundColor: 'red'
   })
 
   // Convert the view to an image-blog and save it to your Gallery
@@ -109,7 +109,7 @@ function saveToGallery() {
 function openFromGallery() {
   require('../../../../../../../../permissions').checkCameraPermission(success => {
     if (!success) {
-      alert('No permissions!')
+      alert(L('no_permissions_'))
       return
     }
 

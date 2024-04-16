@@ -1,6 +1,6 @@
 // Create global items array this view will add, delete, and move items from via ListView events.
 if (!Alloy.Globals.listViewEditData) {
-  const itemArray = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6']
+  const itemArray = [L('item_1'), L('item_2'), L('item_3'), L('item_4'), L('item_5'), L('item_6')]
   Alloy.Globals.listViewEditData = {
     itemNames: itemArray,
     lastItemNumber: itemArray.length,
@@ -58,7 +58,7 @@ function onMovedItem(event) {
 /** Called when user has tapped on the "Add" button in the top title bar. */
 function onAddItem() {
   globalData.lastItemNumber++
-  const newItemName = `Item ${globalData.lastItemNumber}`
+  const newItemName = `${L('item')} ${globalData.lastItemNumber}`
   globalData.itemNames.push(newItemName)
   $.listView.sections[0].appendItems(createListItemsFromArray([newItemName]))
 }
@@ -74,7 +74,7 @@ $.listView.sections = [
 if (OS_ANDROID) {
   $.win.activity.onCreateOptionsMenu = ({ menu }) => {
     const addMenuItem = menu.add({
-      title: 'Add',
+      title: L('add'),
       showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
     })
     addMenuItem.addEventListener('click', onAddItem)
